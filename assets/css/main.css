@@ -36,8 +36,9 @@ body{
     bottom: 75%;
     margin: auto;
     padding: 30px 75px 50px 75px;
-    border: 0.5px solid greenyellow;
+    /*border: 0.5px solid greenyellow;*/
     width: 650px;
+    border-radius: 8px;
 }
 
 .header__texto__titulo{
@@ -64,7 +65,7 @@ body{
     position: fixed;
     width: 100%;
     height: 50px;
-    background-color: #2f2f3bb0;
+    background-color: #2f2f3bb0
 
 }
 
@@ -133,6 +134,59 @@ body{
     .header__texto__parrafo{
         font-size: 25px;
     }
+}
 
 
+@media(max-width: 644px){
+
+    .header__texto{
+        width: 400px;
+        padding-top: 40px;
+    }
+    
+    .header__texto__titulo{
+        font-size: 60px;;
+    }
+
+    .header__texto__parrafo{
+        font-size: 20px;
+    }
+
+    .github{
+        font-size: 18px
+    }
+}
+
+@media(max-width: 420px){
+
+    .header__texto{
+        width: 300px;
+    }
+
+    .header__texto__titulo{
+        font-size: 50px;
+    }
+
+}
+
+@media(max-width: 322px){
+    .header__texto{
+        padding: 20px;
+        width: 200px;
+        bottom: 65%;
+    }
+
+    .header__texto__titulo{
+        font-size: 40px
+    }
+
+    .header__texto__parrafo{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    p{
+        position: absolute;
+        visibility: hidden;
+    }
 }
