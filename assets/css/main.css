@@ -17,9 +17,9 @@ h1{
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     color: aliceblue;
-    background-color: black;
+    background-color: rgb(251, 251, 251);
 }
 
 .header{
@@ -75,16 +75,13 @@ body{
     margin-right: 25px;
 }
 
-
-
 .nav__lista__item{   
-
     cursor: pointer;
     display: flex;
     align-items: center;
     height: 50px;
     padding: 0 20px;
-    font-weight: 650;
+    font-weight: 60;
     font-size: 14pt;
 }
 
@@ -116,3 +113,26 @@ body{
 
 }
 
+
+@media(max-width: 872px){
+
+    .nav__lista__item:not(:first-child){
+        visibility: hidden;
+    }
+
+    .header__texto{
+        padding: 50px;
+        width: 560px;
+        bottom: 75%;
+    }
+
+    .header__texto__titulo{
+        font-size: 70px
+    }
+
+    .header__texto__parrafo{
+        font-size: 25px;
+    }
+
+
+}
