@@ -10,3 +10,7 @@ document.getElementById("title").onmouseover = ()=>{
     }, 1000)
 
 }
+
+document.getElementById("nav__btn").onclick = function(){
+    this.classList.toggle("btn_animation");
+}
