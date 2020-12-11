@@ -39,6 +39,7 @@ body{
     /*border: 0.5px solid greenyellow;*/
     width: 650px;
     border-radius: 8px;
+    z-index: 1;
 }
 
 .header__texto__titulo{
@@ -65,8 +66,8 @@ body{
     position: fixed;
     width: 100%;
     height: 50px;
-    background-color: #2f2f3bb0
-
+    background-color: #2f2f3bb0;
+    z-index: 2;
 }
 
 .nav__lista{
@@ -114,8 +115,56 @@ body{
 
 }
 
+.boton{
+    position: relative;
+    top: 22px;
+    right: 25px;
+    margin-left: auto;
+    height: 3.5px;
+    width: 40px;
+    background-color:aliceblue;
+    border-radius: 3px;
+}
+
+.boton::after, .boton::before{
+    height: 3.5px;
+    width: 40px;
+    position: absolute;
+    content: '';
+    background-color: aliceblue;
+    border-radius: 3px;
+}
+.boton::after{
+    top: 10px
+}
+.boton::before{
+    bottom: 10px;
+}
+.boton,
+.boton::before,
+.boton::after{
+    transition: all ease-out .5s;
+}
+
+.boton.btn_animation{
+     background: transparent;
+}
+
+.boton.btn_animation::before{
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.boton.btn_animation::after{
+    top: 0;
+    transform: rotate(-45deg);
+}
 
 @media(max-width: 872px){
+
+    .boton{
+        visibility: visible;
+    }
 
     .nav__lista__item:not(:first-child){
         visibility: hidden;
@@ -134,6 +183,7 @@ body{
     .header__texto__parrafo{
         font-size: 25px;
     }
+
 }
 
 
@@ -170,6 +220,7 @@ body{
 }
 
 @media(max-width: 322px){
+
     .header__texto{
         padding: 20px;
         width: 200px;
@@ -189,4 +240,5 @@ body{
         position: absolute;
         visibility: hidden;
     }
+
 }
