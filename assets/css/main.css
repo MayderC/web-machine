@@ -124,6 +124,7 @@ body{
     width: 40px;
     background-color:aliceblue;
     border-radius: 3px;
+    visibility: hidden;
 }
 
 .boton::after, .boton::before{
@@ -140,10 +141,11 @@ body{
 .boton::before{
     bottom: 10px;
 }
+
 .boton,
 .boton::before,
 .boton::after{
-    transition: all ease-out .5s;
+    transition: all ease-out .3s;
 }
 
 .boton.btn_animation{
@@ -242,3 +244,4 @@ body{
     }
 
 }
+
