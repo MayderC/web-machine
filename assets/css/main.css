@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;   
+}
+
+h1{
+    font-family: 'Parisienne', cursive;
+
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    color: aliceblue;
+    background-color: #420c7e;
+}
+
+
+
+.header__texto{
+    background-color: #00000054;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    padding: 30px 75px 50px 75px;
+    /*border: 0.5px solid greenyellow;*/
+    width: 650px;
+    top: 22%;
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.header__texto__titulo{
+    font-size: 90px; 
+}
+
+.header__texto__parrafo{
+    font-size: 30px;
+}
+
+.header__img{
+    width: 100%;
+    height: autopx;
+}
+
+
+.nav{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: #201f24;
+    z-index: 2;
+    align-items: center;
+}
+
+.nav__lista{
+    width: 100%;
+    display: flex;
+    float: right;
+    margin-right: 25px;
+}
+
+.nav__lista__item{   
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    font-weight: 60;
+    font-size: 14pt;
+}
+
+.item__home{
+    margin-left: 25px;
+    margin-right: auto;
+    font-size: 25pt;
+    font-weight: 1000;
+}
+
+.nav__lista__item:hover:not(:first-child){
+    background-color: rgba(0, 0, 0, 0.164);
+    
+}
+
+.nav__lista__item:hover:last-child{
+
+    background-color: rgb(55, 236, 94);
+    color:white;
+}
+
+.item__contact{
+    color: black;
+    margin-left: 25px;
+    margin-top: 11px;
+    background-color: rgb(55, 236, 94);
+    border-radius: 5px;
+    height: 30px;
+
+}
+
+.boton{
+    position: relative;
+    top: 22px;
+    right: 25px;
+    margin-left: auto;
+    height: 3.5px;
+    width: 40px;
+    background-color:aliceblue;
+    border-radius: 3px;
+    visibility: hidden;
+}
+
+.boton::after, .boton::before{
+    height: 3.5px;
+    width: 40px;
+    position: absolute;
+    content: '';
+    background-color: aliceblue;
+    border-radius: 3px;
+}
+.boton::after{
+    top: 10px
+}
+.boton::before{
+    bottom: 10px;
+}
+
+.boton,
+.boton::before,
+.boton::after{
+    transition: all ease-out .3s;
+}
+
+.boton.btn_animation{
+     background: transparent;
+}
+
+.boton.btn_animation::before{
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.boton.btn_animation::after{
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+
+.contenedor1{
+    padding-top: 150px;
+    width: 90%;
+    margin:auto;
+    height: 700px;
+    border-radius: 15px;
+}
+
+.contenedor1__titulo{
+    margin-top: 40px;
+    background-color: #201f24;
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.contenedor1__cuerpo{
+    margin-top: 40px;
+    background-color: #201f24;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.cuerpo__titulo{
+    padding: 20px 15px;
+}
+
+.cuerpo__parrafo{
+    padding: 0px 20px 20px 20px
+}
+
+@media(max-width: 872px){
+
+    .boton{
+        visibility: visible;
+    }
+
+    .nav__lista__item:not(:first-child){
+        visibility: hidden;
+    }
+
+    .header__texto{
+        top: 10%;
+        padding: 50px;
+        width: 460px;
+        height: 250px;
+    }
+
+    .header__texto__titulo{
+        font-size: 70px
+    }
+
+    .header__texto__parrafo{
+        font-size: 25px;
+    }
+
+}
+
+@media(max-width: 644px){
+
+    .header__texto{
+        width: 400px;
+        padding-top: 40px;
+    }
+    
+    .header__texto__titulo{
+        font-size: 60px;;
+    }
+
+    .header__texto__parrafo{
+        font-size: 20px;
+    }
+
+    .github{
+        font-size: 18px
+    }
+}
+
+@media(max-width: 420px){
+
+    .header__texto{
+        width: 300px;
+    }
+
+    .header__texto__titulo{
+        font-size: 50px;
+    }
+
+}
+
+@media(max-width: 322px){
+
+    .header__texto{
+        padding: 20px;
+        width: 200px;
+    }
+
+    .header__texto__titulo{
+        font-size: 40px
+    }
+
+    .header__texto__parrafo{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    p{
+        position: absolute;
+        visibility: hidden;
+    }
+
+}
+
+.nav2{
+    background-color: #201f24;
+}
+
+.nav__lista2{
+    display: block;
+    text-align: center;
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+.item__home2{
+    margin-left: 0px;
+}
+
+.nav__lista__item2:not(:first-child){
+    visibility: visible;
+    margin: auto;
+    
+}
+
+.item__contact2{
+    width: 110px;;
+}
