@@ -156,7 +156,7 @@ body{
 
 
 .contenedor1{
-    padding-top: 150px;
+    padding-top: 100px;
     width: 90%;
     margin:auto;
     height: 700px;
@@ -166,7 +166,7 @@ body{
 .contenedor1__titulo{
     margin-top: 40px;
     background-color: #201f24;
-    width: 60%;
+    width: 40%;
     padding: 20px;
     text-align: center;
     border-radius: 15px;
@@ -217,6 +217,15 @@ body{
 
 @media(max-width: 644px){
 
+    .contenedor1{
+        padding-top: 130px
+    }
+    
+
+    .contenedor1__titulo{
+        width: 100%;
+    }
+
     .header__texto{
         width: 400px;
         padding-top: 40px;
@@ -236,15 +245,16 @@ body{
 }
 
 @media(max-width: 420px){
-
+    .contenedor1{
+        padding-top: 170px;
+    }
     .header__texto{
         width: 300px;
+        height: 200px;
     }
-
     .header__texto__titulo{
         font-size: 50px;
     }
-
 }
 
 @media(max-width: 322px){
@@ -252,22 +262,19 @@ body{
     .header__texto{
         padding: 20px;
         width: 200px;
+        height: 160px;
     }
-
     .header__texto__titulo{
         font-size: 40px
     }
-
     .header__texto__parrafo{
         position: absolute;
         visibility: hidden;
     }
-
-    p{
+    .header__texto > p{
         position: absolute;
         visibility: hidden;
     }
-
 }
 
 .nav2{
