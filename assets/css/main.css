@@ -19,25 +19,22 @@ h1{
 body{
     font-family: 'Quicksand', sans-serif;
     color: aliceblue;
-    background-color: rgb(251, 251, 251);
+    background-color: #420c7e;
 }
 
-.header{
-    height: 670px;
-    background-repeat: no-repeat;
-    background-size: contain;
 
-}
 
 .header__texto{
-    background-color: #2f2f3bb0;
+    background-color: #00000054;
     text-align: center;
-    position: relative;
-    bottom: 75%;
+    position: absolute;
     margin: auto;
     padding: 30px 75px 50px 75px;
     /*border: 0.5px solid greenyellow;*/
     width: 650px;
+    top: 22%;
+    left: 0;
+    right: 0;
     border-radius: 8px;
     z-index: 1;
 }
@@ -52,22 +49,17 @@ body{
 
 .header__img{
     width: 100%;
-    height: auto;
-  }
-  @supports(object-fit: cover){
-      .header__img{
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
-      }
-  }
+    height: autopx;
+}
+
 
 .nav{
     position: fixed;
     width: 100%;
     height: 50px;
-    background-color: #2f2f3bb0;
+    background-color: #201f24;
     z-index: 2;
+    align-items: center;
 }
 
 .nav__lista{
@@ -162,6 +154,40 @@ body{
     transform: rotate(-45deg);
 }
 
+
+.contenedor1{
+    padding-top: 150px;
+    width: 90%;
+    margin:auto;
+    height: 700px;
+    border-radius: 15px;
+}
+
+.contenedor1__titulo{
+    margin-top: 40px;
+    background-color: #201f24;
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.contenedor1__cuerpo{
+    margin-top: 40px;
+    background-color: #201f24;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.cuerpo__titulo{
+    padding: 20px 15px;
+}
+
+.cuerpo__parrafo{
+    padding: 0px 20px 20px 20px
+}
+
 @media(max-width: 872px){
 
     .boton{
@@ -173,9 +199,10 @@ body{
     }
 
     .header__texto{
+        top: 10%;
         padding: 50px;
-        width: 560px;
-        bottom: 75%;
+        width: 460px;
+        height: 250px;
     }
 
     .header__texto__titulo{
@@ -187,7 +214,6 @@ body{
     }
 
 }
-
 
 @media(max-width: 644px){
 
@@ -226,7 +252,6 @@ body{
     .header__texto{
         padding: 20px;
         width: 200px;
-        bottom: 65%;
     }
 
     .header__texto__titulo{
@@ -245,3 +270,27 @@ body{
 
 }
 
+.nav2{
+    background-color: #201f24;
+}
+
+.nav__lista2{
+    display: block;
+    text-align: center;
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+.item__home2{
+    margin-left: 0px;
+}
+
+.nav__lista__item2:not(:first-child){
+    visibility: visible;
+    margin: auto;
+    
+}
+
+.item__contact2{
+    width: 110px;;
+}
