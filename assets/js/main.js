@@ -22,8 +22,15 @@ document.getElementById("nav__btn").onclick = function(){
     nav_lista.classList.toggle("nav2");
     home.classList.toggle("item__home2")
 
-    
+    let elementos_li = document.getElementsByClassName("nav__lista__item")
 
+    for(let i =1; i<elementos_li.length; i++){
+        elementos_li[i].classList.toggle("nav__lista__item2")
+    }
+
+    let contact = document.getElementById("btn_contact");
+    contact.classList.toggle("item__contact2")
+    console.log(contact)
 
 }
 

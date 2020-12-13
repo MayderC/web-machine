@@ -108,13 +108,13 @@ body{
 }
 
 .boton{
-    position: relative;
-    top: 22px;
+    position: absolute;
+    top: 16px;
     right: 25px;
     margin-left: auto;
-    height: 3.5px;
+    height: 3.6px;
     width: 40px;
-    background-color:aliceblue;
+    background-color: aliceblue;
     border-radius: 3px;
     visibility: hidden;
 }
@@ -123,15 +123,16 @@ body{
     height: 3.5px;
     width: 40px;
     position: absolute;
-    content: '';
     background-color: aliceblue;
+    content: '';
     border-radius: 3px;
 }
 .boton::after{
-    top: 10px
+    top: 12px;
 }
 .boton::before{
-    bottom: 10px;
+    top: 24px;
+    background-color: aliceblue;
 }
 
 .boton,
@@ -141,16 +142,18 @@ body{
 }
 
 .boton.btn_animation{
-     background: transparent;
+    height: 30px;
+    background-color: #201f24;
+  
 }
 
 .boton.btn_animation::before{
-    top: 0;
+    top: 13px;
     transform: rotate(45deg);
 }
 
 .boton.btn_animation::after{
-    top: 0;
+    top: 13px;
     transform: rotate(-45deg);
 }
 
@@ -227,6 +230,7 @@ body{
     }
 
     .header__texto{
+        top: 90px;
         width: 400px;
         padding-top: 40px;
     }
@@ -299,5 +303,5 @@ body{
 }
 
 .item__contact2{
-    width: 115px;;
+    width: 115px;
 }
