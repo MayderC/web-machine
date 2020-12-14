@@ -237,7 +237,7 @@ img{
     .nav__lista__item:hover:not(:first-child):not(:last-child){
         height: 50px;
         border:0px;
-        background-color: #0000008c;
+        background-color: #00000044;
     }
 
     .boton{
