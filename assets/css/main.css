@@ -123,7 +123,7 @@ img{
     width: 40px;
     background-color: aliceblue;
     border-radius: 3px;
-    visibility: hidden;
+    visibility: hidden ;
 }
 
 .boton::after, .boton::before{
@@ -145,7 +145,7 @@ img{
 .boton.btn_animation{
     height: 30px;
     background-color: #201f24;
-  
+    visibility: visible;
 }
 
 .boton.btn_animation::before{
@@ -267,7 +267,8 @@ img{
 }
 
 .footer__end{
-    padding-top: 15px;
+    margin: 15px;
+    margin-bottom: 0%;
 }
 
 .copy{

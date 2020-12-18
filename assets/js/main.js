@@ -1,5 +1,4 @@
-
-
+// ANIMACION DE H1 CON ANIMATE CSS
 document.getElementById("title").onmouseover = () => {
 
     this.title.classList.add("animate__bounce");
@@ -9,17 +8,29 @@ document.getElementById("title").onmouseover = () => {
         this.title.classList.remove("animate__bounce");
         this.title.classList.remove("animate__animated");
     }, 1000)
-
 }
 
-document.getElementById("nav__btn").onclick = function () {
 
+
+// EVENTO CLICK BOTON RESPONSIVE  ALICACION Y ELIMINACION DE ESTILOS
+var boton_responsive = false;
+document.getElementById("nav__btn").onclick = function () {
+    //Aañade o quita animacion de menu en cada click. abre o cierra
     this.classList.toggle("btn_animation");
 
-    let bandera_btn = this.classList.contains("btn_animation")
-    if (bandera_btn == false && window.matchMedia("(min-width: 872px)").matches) {
-        this.style.visibility = "";
-    }
+
+    // comprueba si esta abierto o cerrado el menu, boton menu.
+    boton_responsive = document.getElementById("nav__btn").classList.value.split(" ").includes("btn_animation")
+
+    //FUNCION QUE AÑADE Y QUITA ESTILOS
+    estilosMenuResponsive();
+
+    //activa border-top del menu, cuando este se cierra.
+    activar_borde(boton_responsive)
+}
+
+// Todos los estilos que se deben quitar o añadir al dar click en boton responsive
+function estilosMenuResponsive(){
 
     let nav_lista = document.getElementById("nav_res");
     let home = document.getElementById("home_li");
@@ -28,36 +39,61 @@ document.getElementById("nav__btn").onclick = function () {
     nav_lista.classList.toggle("nav2");
     home.classList.toggle("item__home2")
 
-    let elementos_li = document.getElementsByClassName("nav__lista__item")
-    for (let i = 1; i < elementos_li.length; i++) {
-        elementos_li[i].classList.toggle("nav__lista__item2")
-    }
+    let elementos_li = Array.from(document.getElementsByClassName("nav__lista__item"))
+    elementos_li.map(function (element){
+        element.classList.toggle("nav__lista__item2")
+    })
 
     let contact = document.getElementById("btn_contact");
     contact.classList.toggle("item__contact2")
+
 }
 
 
-// Arregla, boton responsive, se mantiene cuando la ventana se hace grande.
-
-function media_resize() {
-    let mql = window.matchMedia("(min-width: 872px)")
-    let lista_clases = document.getElementsByClassName("nav__lista__item");
-    let bandera = lista_clases[2].classList.contains("nav__lista__item2")
-    //console.log("el macht es :",mql.matches)
-    //console.log(bandera)
-    if (bandera == true && mql.matches) {
-        //console.log("Ya entre")
-        //cuando desaparece es true y entra al if para volverle a aplicar vivibility en boton,
-        document.getElementById("nav__btn").style.visibility = "visible";
-        let elementos_li = document.getElementsByClassName("nav__lista__item")
-        for (let i = 1; i < elementos_li.length; i++) {
-
-        }
-        console.log("entre")
+// avtiva el border-top del menu. cuando se cierra el menu responsive
+function activar_borde(animation){
+    if(animation == false){
+        let menu_border = Array.from(document.querySelectorAll(".nav__lista__item:not(:first-child):not(:last-child)"));
+        
+        menu_border.map(function(element){
+            element.style.cssText = "border-top: ; height: "
+            console.log("APLIQUE LOS ESTILOS")
+        })
+        console.log("ENTRE AL OTRO NO RESPONSIVE")
     }
-
 }
+
+
+/*Quita el border menu  cuando supera los 872px que no cubren las media queries, 
+cuando se expande la ventana con el menu responsive abierto  las media queries activan el bordertop 
+del menu, pero no deben activarse ya que el menu esta abierto.  esta funcion  las desactiva el superar esa resolusion
+y las activa cuando se desactiva los estilos del menu responsive. y la ventana es superior a 872px
+*/
+function media_resize() {
+    
+    let med = window.matchMedia("(min-width: 872px)");
+    let btn = document.getElementById("nav__btn");
+    let estilo_responsive = btn.classList.value.split(" ").includes("btn_animation")
+    
+    if(med.matches && estilo_responsive ){
+        let menu_border = Array.from(document.querySelectorAll(".nav__lista__item:not(:first-child):not(:last-child)"));
+        menu_border.map(function(element){
+            element.style.cssText = "border-top: 0px; height: 50px"
+        })
+    }
+    
+    if(med.matches && estilo_responsive == false){
+        let menu_border = Array.from(document.querySelectorAll(".nav__lista__item:not(:first-child):not(:last-child)"));
+        menu_border.map(function(element){
+            element.style.cssText = "border-top: ; height: "
+        })
+    }
+}
+
+//evento onreize al cambiar el tamaño del la ventana
 window.onresize = () => { media_resize(); }
 media_resize()
+
+
+
 
