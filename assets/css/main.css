@@ -216,8 +216,6 @@ img{
 
 }
 
-
-
 .contenedor{
     display:flex;
     flex-wrap: wrap;
@@ -376,11 +374,6 @@ img{
  
     .header__texto__titulo{
         font-size: 55px;
-       
-    }
-
-    .github{
-        font-size: 18px
     }
 }
 
