@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 24px;   
 }
@@ -19,7 +19,9 @@ h1{
 body{
     font-family: 'Quicksand', sans-serif;
     color: aliceblue;
-    background-color: #420c7e;
+    background-color:#ffffff;
+   /*background-color: #420c7e;*/
+   
 }
 img{
     display: block;
@@ -48,7 +50,7 @@ img{
 }
 
 .header__texto__titulo{
-    font-size: 70px; 
+    font-size: 5vw; 
 }
 
 .header__texto__parrafo{
@@ -162,6 +164,46 @@ img{
     transform: rotate(-45deg);
 }
 
+.yo__soy{
+    color: #532c92;
+    text-align: center;
+    margin: 50px;
+    font-size: 45px;
+}
+.content__head{
+    /*background-color: #8074af;*/
+    width: 90%;
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.content__header__avatar{
+    margin: auto;
+    width: 550px;
+    padding: 30px;
+}
+
+.cont__head__img{
+
+    width: 100%;
+    height: auto;
+}
+
+.content__header__info{
+    width: 700px;
+    padding: 60px;
+}
+
+.content__header__info > p{
+    color: #532c92;
+    font-size: 25px;
+    text-align: justify;
+}   
+
 .avatar{
     margin-top: 80px;
     margin-bottom: 50px;
@@ -169,7 +211,7 @@ img{
 }
 
 .avatar__container{
-    background-color: #201f24;
+    background-color: #8074af;
     border-radius: 15px;
     margin: auto;
     height: 350px;
@@ -206,7 +248,7 @@ img{
 
 .repositorios__titulo{
     /*background-color: #201f24;*/
-    background-color: #201f24;
+    background-color: #8074af;
     margin: auto;
     width: 50%;
     padding: 13px;
@@ -227,7 +269,7 @@ img{
 
 
 .contenedor__item{
-    background-color: #201f24;
+    background-color: #8074af;
     width: 370px;
     border-radius: 15px;
     height: 200px;
@@ -241,12 +283,12 @@ img{
 }
 
 .cuerpo__parrafo >a, .cuerpo__parrafo > p{
-    color:rgb(55, 236, 94);
+    color:rgb(246, 246, 246);
     font-size: 20px;
 }
 
 .footer{
-    background-color: #201f24;
+    background-color: #8074af;
     padding: 15px 0px 15px 0px;
     text-align: center; 
     width: 90%;
@@ -258,6 +300,7 @@ img{
 
 .footer__head{
     padding-bottom: 15px;
+    font-size: 25px;
 }
 
 
