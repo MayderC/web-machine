@@ -90,10 +90,26 @@ function media_resize() {
     }
 }
 
+
+function animacion_scroll(){
+    let animacion = document.getElementById('flipX')
+    let pos_animacion = animacion.getBoundingClientRect().top;
+    let pantalla = window.innerHeight-200;
+    if(pos_animacion < pantalla){
+        animacion.classList.add("visible");
+        animacion.classList.add("animate__flipInX");
+    }else if(pos_animacion>pantalla){
+        animacion.classList.remove("visible");
+        animacion.classList.remove("animate__flipInX");
+
+    }
+}
+
+
 //evento onreize al cambiar el tamaño del la ventana
 window.onresize = () => { media_resize(); }
 media_resize()
 
-
+window.onscroll = () =>{ animacion_scroll(); }
 
 
