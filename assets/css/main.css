@@ -1,5 +1,5 @@
 
-*{
+body, ul, h1, p{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -18,26 +18,37 @@ body{
     font-family: 'Quicksand', sans-serif;
     color: aliceblue;
     background-color:#ffffff;
-   /*background-color: #420c7e;*/
-   
+    /*background-color: #420c7e;*/
 }
-img{
-    display: block;
-}
-.header{
-    display: flex;
 
+
+.header img{
+    width: 100%;
+    height: auto;
+}
+@supports(object-fit: cover){
+    .header img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+.header{
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;    
     align-items: center;
     justify-content: center;
-
 }
 
 .header__texto{
-    background-color: #00000054;
+    background-color: #0000009c;
     position: absolute;
-    padding: 20px 45px 50px 45px;
+    padding: 30px 0;
     width: 65%;
     border-radius: 8px;
     z-index: 1;
@@ -55,21 +66,15 @@ img{
     font-size: 30px;
 }
 
-.header__img{
-    width: 100%;
-    height: auto;
-}
-
 
 .nav{
-    position: fixed;
+    position: relative;
     width: 100%;
     height: 50px;
-    background-color: #201f24;
+    background-color: #242424;
     /*background-color: #201f24;*/
     z-index: 2;
     align-items: center;
-    
 }
 
 .nav__lista{
@@ -93,25 +98,24 @@ img{
 .item__home{
     margin-left: 25px;
     margin-right: auto;
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 35px;
 }
 
 .nav__lista__item:hover:not(:first-child):not(:last-child){
-    height: 45px;
-    border-top: solid 5px #37ec5e; 
+    height: 40px;           
+    border-top: solid 5px #b573b8 ; 
 }
 
 .nav__lista__item:hover:last-child{
-    background-color: rgb(55, 236, 94);
+    background-color: #b573b8;
     color:white;
 }
 
 .item__contact{
-    color: black;
+    color: aliceblue;
     margin-left: 25px;
     margin-top: 11px;
-    background-color: rgb(55, 236, 94);
+    background-color: #8a568d;
     border-radius: 5px;
     height: 30px;
 
@@ -164,6 +168,7 @@ img{
 
 .yo__soy{
     color: #532c92;
+    /*color: #383838;*/
     text-align: center;
     margin: 50px;
     font-size: 45px;
@@ -291,15 +296,15 @@ img{
 }
 
 .footer{
-   /* background-color: #8074af;*/
-   background-color: #532c92;
+    /*background-color: #8074af;*/
+    /*background-color: #532c92;*/
+    background-color: #242424;
     padding: 15px 0px 15px 0px;
-    text-align: center; 
-    width: 90%;
+    text-align: center;
+    width: 100%;
     margin: auto;
-    margin-top: 120px;
-    margin-bottom: 40px;
-    border-radius: 15px;
+    margin-top: 50px;
+
 }
 
 .footer__head{
@@ -350,15 +355,15 @@ img{
 }
 
 .content--youtube> a> i:hover{
-    color:rgb(199, 41, 41);
+    color:#b2071d;
 }
 
 .content--github > a>i:hover{
-    color: rgb(51, 51, 51);
+    color: #171515;
 }
 
 .content--linkedin>a > i:hover{
-    color:royalblue;
+    color: #0072b1;
 }
 
 
@@ -393,9 +398,9 @@ img{
     .nav__lista__item:not(:first-child){
         visibility: hidden;
     }
- 
+    
     .header__texto__titulo{
-       /* font-size: 70px;*/
+        /* font-size: 70px;*/
         text-align: center;
     }
     .header__texto__parrafo{
@@ -423,13 +428,9 @@ img{
         width: 100%;
     }
 
-    .header__texto{
-        margin-top: 100px;
-    }
- 
     .header__texto__titulo{
-       /* font-size: 55px;*/
-       font-size: 7vw;
+        /* font-size: 55px;*/
+        font-size: 7vw;
     }
 }
 
@@ -482,15 +483,6 @@ img{
         margin-top: 80px;
     }
 
-    .header__texto{
-        padding: 20px;
-        width: 200px;
-    }
-    /* 
-    .header__texto__titulo{
-       font-size: 40px;
-    }
-    */
     .header__texto__parrafo{
         position: absolute;
         visibility: hidden;
@@ -502,7 +494,7 @@ img{
 
     .avatar__container{
         width: 80%;
-        height: 350 px;
+        height: 350px;
         padding-top: 25px;
     }
     
@@ -522,12 +514,13 @@ img{
 
 .nav2{
     background-color: #201f24;
+    position: absolute;
 }
 
 .nav__lista2{
     display: block;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     margin: auto;
 }
 
@@ -542,5 +535,5 @@ img{
 }
 
 .item__contact2{
-    width: 115px;
+    width: 45px;
 }

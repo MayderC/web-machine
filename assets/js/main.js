@@ -1,16 +1,3 @@
-// ANIMACION DE H1 CON ANIMATE CSS
-document.getElementById("title").onmouseover = () => {
-
-    this.title.classList.add("animate__bounce");
-    this.title.classList.add("animate__animated");
-
-    setTimeout(() => {
-        this.title.classList.remove("animate__bounce");
-        this.title.classList.remove("animate__animated");
-    }, 1000)
-}
-
-
 
 // EVENTO CLICK BOTON RESPONSIVE  ALICACION Y ELIMINACION DE ESTILOS
 var boton_responsive = false;
@@ -54,12 +41,10 @@ function estilosMenuResponsive(){
 function activar_borde(animation){
     if(animation == false){
         let menu_border = Array.from(document.querySelectorAll(".nav__lista__item:not(:first-child):not(:last-child)"));
-        
+        //document.getElementById("nav").style.cssText = "position: absolute;"
         menu_border.map(function(element){
-            element.style.cssText = "border-top: ; height: "
-            console.log("APLIQUE LOS ESTILOS")
+            element.style.cssText = "border-top: ; height: ;"
         })
-        console.log("ENTRE AL OTRO NO RESPONSIVE")
     }
 }
 
