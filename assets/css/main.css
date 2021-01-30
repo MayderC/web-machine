@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 
 body, ul, h1, p{
     margin: 0px;
@@ -9,6 +12,7 @@ a {
     text-decoration: none;
     font-size: 24px;   
 }
+
 
 h1{
     font-family: 'Quicksand', sans-serif;
@@ -81,7 +85,6 @@ body{
     width: 100%;
     display: flex;
     float: right;
-    margin-right: 25px;
 }
 
 .nav__lista__item{   
@@ -95,7 +98,12 @@ body{
     
 }
 
-.item__home{
+.item__link{
+
+    font-size: 20px;
+    
+}
+.item__home, .item__home > a{
     margin-left: 25px;
     margin-right: auto;
     font-size: 35px;
@@ -106,13 +114,14 @@ body{
     border-top: solid 5px #b573b8 ; 
 }
 
+
 .nav__lista__item:hover:last-child{
     background-color: #b573b8;
     color:white;
 }
 
 .item__contact{
-    color: aliceblue;
+    margin-right: 25px;
     margin-left: 25px;
     margin-top: 11px;
     background-color: #8a568d;
@@ -316,8 +325,6 @@ body{
 .footer__content{
     display: flex;
     flex-wrap: wrap;
-    padding-left: 40px;
-    padding-right: 40px;
     justify-content: space-around;
     align-items: center;
 
@@ -327,8 +334,8 @@ body{
 .footer__content__item{ 
     display: flex;
     flex-direction: column;
-    width: 160px;
-    height: 100px;
+    width: 250px;
+    height: 130px;
     align-items: center;
     justify-content: center;
 }
@@ -376,8 +383,15 @@ body{
     font-size:16px;
 }
 
+.li_relative{
+    position: relative;
+}
 
 @media(max-width: 872px){
+
+    li{
+        position: absolute;
+    }
 
     .footer__head{
         font-size: 18px;

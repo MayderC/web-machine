@@ -26,9 +26,11 @@ function estilosMenuResponsive(){
     nav_lista.classList.toggle("nav2");
     home.classList.toggle("item__home2")
 
+    
     let elementos_li = Array.from(document.getElementsByClassName("nav__lista__item"))
     elementos_li.map(function (element){
-        element.classList.toggle("nav__lista__item2")
+        element.classList.toggle("nav__lista__item2");
+        element.classList.toggle("li_relative");
     })
 
     let contact = document.getElementById("btn_contact");
