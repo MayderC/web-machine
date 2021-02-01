@@ -114,7 +114,6 @@ body{
     
 }
 .item__home, .item__home > a{
-    margin-left: 25px;
     margin-right: auto;
     font-size: 35px;
 }
