@@ -1,3 +1,3 @@
 # web-machine
 web
-![imagen](https://github.com/MayderC/web-machine/blob/master/img/meta_img.PNG)
+![imagen](https://raw.githubusercontent.com/MayderC/web-machine/vdos/img/meta_img.PNG)
