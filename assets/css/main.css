@@ -16,6 +16,7 @@ a {
 
 h1{
     font-family: 'Quicksand', sans-serif;
+    color: white; text-shadow: rgb(209, 131, 186) 0.1em 0.1em 0.2em
 }
 
 body{
@@ -50,7 +51,7 @@ body{
 }
 
 .header__texto{
-    background-color: #0000009c;
+    background-color: #00000000;
     position: absolute;
     padding: 30px 0;
     width: 65%;
@@ -68,6 +69,7 @@ body{
 
 .header__texto__parrafo{
     font-size: 30px;
+    color: rgb(119, 46, 97); text-shadow: rgb(173, 33, 33) 0.1em 0.1em 0.2em
 }
 
 
@@ -184,7 +186,7 @@ body{
     transform: rotate(-45deg);
 }
 
-.yo__soy{
+.subtitulo{
     color: #532c92;
     /*color: #383838;*/
     text-align: center;
@@ -502,7 +504,7 @@ body{
         text-align: center;
     }
 
-    .yo__soy{
+    .sub--acerca{
         margin-top: 80px;
     }
 
