@@ -315,6 +315,57 @@ body{
     font-size: 20px;
 }
 
+
+.skills{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+    gap: 10px;
+    padding: 10px;
+}
+
+.skills__item{
+    background-color: rgb(41, 58, 58);
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.proyects{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.proyects__item{
+    width: 50%;
+    height: 600px;
+    background-color: rgb(59, 59, 59);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer{
     /*background-color: #8074af;*/
     /*background-color: #532c92;*/
@@ -483,10 +534,17 @@ body{
     .footer__link--p{
         display: none;
     }
+
+    .skills{
+        width: 80%;
+    }
 }
 
 @media(max-width: 420px){
 
+    .skills{
+        width: 80%;
+    }
 
 
     .content__header__info > p{
