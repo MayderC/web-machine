@@ -64,7 +64,7 @@ body{
 }
 
 .header__texto__titulo{
-    font-size: 5vw; 
+    font-size: 6vw; 
 }
 
 .header__texto__parrafo{
@@ -319,7 +319,7 @@ body{
     /*background-color: #8074af;*/
     /*background-color: #532c92;*/
     background-color: #242424;
-    padding: 15px 0px 15px 0px;
+    /*padding: 15px 0px 15px 0px;*/
     text-align: center;
     width: 100%;
     margin: auto;
@@ -328,14 +328,25 @@ body{
 }
 
 .footer__head{
-    padding-bottom: 15px;
-    font-size: 25px;
+    /*padding-bottom: 15px;*/
+    position: relative;
+    height: 50px;
+    font-size: 18px;
+}
+
+.footer--p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+
 }
 
 
 .footer__content{
+    box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: space-around;
     align-items: center;
 
@@ -345,16 +356,17 @@ body{
 .footer__content__item{ 
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 130px;
+    min-width: 115px;
+    height: 110px;
     align-items: center;
     justify-content: center;
 }
 
-.footer__content__item > a > p{
-    font-size: 20px;
-
+.footer__link--p{
+    font-size: 18px;
+    margin-top: 15px;
 }
+
 
 .content--youtube> a:not(:last-child){
     color: rgb(255, 255, 255);
@@ -364,7 +376,6 @@ body{
 .content--github >a >i{
     color: rgb(255, 255, 255);
     font-size: 50px;
-    margin-bottom: 10px;
 }
 
 .content--linkedin > a:not(:last-child){
@@ -372,12 +383,22 @@ body{
     font-size: 50px;
 }
 
+.item__content--footer{
+    height: 50px;
+}
+
+
+
+.content--github{
+    height: 86px;
+}
+
 .content--youtube> a> i:hover{
     color:#b2071d;
 }
 
 .content--github > a>i:hover{
-    color: #171515;
+    color: #1d1a1a ;
 }
 
 .content--linkedin>a > i:hover{
@@ -386,9 +407,10 @@ body{
 
 
 .footer__end{
-    margin: 15px;
-    margin-bottom: 0%;
+    height: 50px;
+    position: relative;
 }
+
 
 .copy{
     font-size:16px;
@@ -457,14 +479,15 @@ body{
         /* font-size: 55px;*/
         font-size: 7vw;
     }
+
+    .footer__link--p{
+        display: none;
+    }
 }
 
 @media(max-width: 420px){
 
-    .footer__content__item > a > p{
-        font-size: 17px;
-    
-    }
+
 
     .content__header__info > p{
         text-align: center;
@@ -495,10 +518,7 @@ body{
 
 @media(max-width: 322px){
 
-    .footer__content__item > a > p{
-        font-size: 15px;
-    
-    }
+
 
     .content__header__info > p{
         text-align: center;
@@ -534,6 +554,10 @@ body{
         width: 117px;
         height: 117px;
         border-radius: 50%;
+    }
+
+    .footer__content{
+        flex-wrap: wrap;
     }
 }
 
