@@ -456,25 +456,13 @@ body{
 
 .item__content--footer{
     height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
 }
 
 
 
-.content--github{
-    height: 86px;
-}
-
-.content--youtube> a> i:hover{
-    color:#b2071d;
-}
-
-.content--github > a>i:hover{
-    color: #1d1a1a ;
-}
-
-.content--linkedin>a > i:hover{
-    color: #0072b1;
-}
 
 
 .footer__end{
@@ -489,6 +477,10 @@ body{
 
 .li_relative{
     position: relative;
+}
+
+.img__icons{
+    max-width: 100%;
 }
 
 @media(max-width: 872px){
