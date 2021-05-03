@@ -520,7 +520,11 @@ body{
     .header__texto__titulo{
         /* font-size: 70px;*/
         text-align: center;
+        font-size: 10vw;
     }
+
+
+
     .header__texto__parrafo{
         font-size: 25px;
         visibility: hidden;
@@ -529,6 +533,10 @@ body{
 }
 
 @media(max-width: 644px){
+
+    .header{
+        height: 50vh;
+    }
 
     .content__header__info > p{
         text-align: center;
@@ -548,7 +556,7 @@ body{
 
     .header__texto__titulo{
         /* font-size: 55px;*/
-        font-size: 7vw;
+        font-size: 10vw;
     }
 
     .footer__link--p{
@@ -572,7 +580,9 @@ body{
         width: 90%;
     }
 
-
+    .header{
+        height: 50vh;
+    }
 
     .content__header__info > p{
         text-align: center;
