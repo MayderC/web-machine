@@ -387,9 +387,10 @@ body {
 }
 
 .proyects__item {
+
   box-sizing: border-box;
   width: calc(25% - 8px);
-  height: 560px;
+  height: 600px;
   min-width: 400px;
   background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
   border-radius: 10px;
@@ -445,6 +446,8 @@ body {
 
 
 .proyects__body {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 75%;
   box-sizing: border-box;
