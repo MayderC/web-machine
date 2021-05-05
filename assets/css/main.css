@@ -335,7 +335,7 @@ body {
 
 .skills__item {
   height: 180px;
-  min-width: 180px;
+  min-width: 150px;
   border: 0px solid #532c92;
   border-radius: 15px;
 
@@ -367,6 +367,11 @@ body {
 .skills__item:hover {
   transform: scale(1.1);
   transition: 0.2s;
+}
+
+.repo__text{
+  font-size: 20px;
+  color: rgb(59, 59, 59);
 }
 
 .proyects {
