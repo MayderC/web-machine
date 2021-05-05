@@ -45,12 +45,15 @@ class Consulta{
 //let consulta = new Consulta("img_avatar")
 //consulta.getData("https://api.github.com/users/MayderC")
 var ctx = document.getElementById('myChart');
+Chart.defaults.font.size = 16;
+Chart.defaults.color= "white"
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
         labels: ['Html', 'css', 'Js'],
         datasets: [{
             data: [ 130, 700, 300],
+
             backgroundColor: [
                 'rgba(255, 99, 132)',
                 'rgba(54, 162, 235)',
@@ -62,6 +65,7 @@ var myChart = new Chart(ctx, {
                 'rgba(255, 206, 86)'
             ],
             borderWidth: 3
-        }]
+        }],
+
     }
 });
