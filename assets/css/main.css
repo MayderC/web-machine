@@ -389,7 +389,7 @@ body {
 .proyects__item {
   box-sizing: border-box;
   width: calc(25% - 8px);
-  height: 600px;
+  height: 560px;
   min-width: 400px;
   background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
   border-radius: 10px;
@@ -448,6 +448,8 @@ body {
   width: 100%;
   height: 75%;
   box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .footer {
@@ -728,4 +730,10 @@ body {
 
 .item__contact2 {
   width: 45px;
+}
+
+canvas{
+
+  width: 450px;
+
 }
