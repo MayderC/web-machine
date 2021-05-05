@@ -8,13 +8,12 @@ class Consulta{
         this.repositorios = []
     }
     // Metodo que hace peticion a api.
-     getData(url){
+    getData(url){
         fetch(url)
             .then( response => response.json())
             .then( data => {
-                //metodos que muestran info de la api en el dom
                 this.printAvatar(data)
-                console.log(data)
+
             }).catch( error => console.error(error))
     }
 
@@ -26,6 +25,11 @@ class Consulta{
         }).catch( error => {
             console.error(error)
         })
+    }
+
+    printRepositories(data, config){
+        
+
     }
 
 
