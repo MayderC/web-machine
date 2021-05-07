@@ -391,7 +391,7 @@ body {
   box-sizing: border-box;
   width: calc(20% - 8px);
   height: 550px;
-  min-width: 300px;
+  min-width: 3650px;
   background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
   border-radius: 10px;
   padding: 15px;
