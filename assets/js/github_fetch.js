@@ -8,7 +8,8 @@ class Consulta {
 	// Metodo que hace peticion a api.
 
 	getData(uri, callback) {
-		fetch(uri)
+		try {
+			fetch(uri)
 			.then((response) => response.json())
 			.then((data) => {
 				this.repositorios = data;
@@ -19,13 +20,16 @@ class Consulta {
 				let error_api = new Error(error);
 				return callback(error_api, null);
 			});
+		} catch (errorTry) {
+			console.log(errorTry)
+		}
 	}
 }
 //Estructura de URL para lenguajes usados y su porcentaje
 //https://api.github.com/repos/MayderC/App_contactos/languages
 
 let consulta = new Consulta();
- let uri = "https://api.github.com/users/MayderC/repos"
+let uri = "https://api.github.com/users/MayderC/repos"
 consulta.getData(
 	uri,
 	(error, response) => {
@@ -74,92 +78,80 @@ function prepareChart(data) {
 		dataValue.push(Object.values(data[i].data))
 	}
 
-
 	let newColors = []
-	
+
+	for(let i =0; i < labels.length; i++){generateElementDom(data[i].name);}
 	for(let i =0; i < labels.length; i++){
-		
+
 		newColors = getColorFrom(labels.length);
-		generateElementDom(data[i].name);
-		
-	}
-	for(let i =0; i < labels.length; i++){
-		
 		printChart(labels[i], dataValue[i], newColors, data[i].name)
+
 	}
-
-
-
-	console.log(arrayChart)
-
-
 }
 
-let arrayChart = []
+
 function printChart(labels, data, colors, id){
 
 	Chart.defaults.font.size = 16;
 	Chart.defaults.color = "white";
 
-
-		new Chart(document.getElementById(id), {
-			type: "pie",
-			data: {
-				labels: labels,
-				datasets: [
-					{
-						data: data,
-						backgroundColor: colors,
-						borderWidth: 2,
-					},
-				],
-			},
-		})
-	
-
+	new Chart(document.getElementById(id), {
+		type: "pie",
+		data: {
+			labels: labels,
+			datasets: [
+				{
+					data: data,
+					backgroundColor: colors,
+					borderWidth: 2,
+				},
+			],
+		},
+	})
 }
 
 function getColorFrom(n) {
-	const colors = [
-		"#92F0A1",
-		"#585186",
-		"#F02996",
-		"purple",
-		"#7DF029",
-		"#29EDF0",
-		"#2956F0",
-		"#59B7D5",
-		"#15657F",
-	];
 
-	return colors.slice(0, n);
+	let  simbolos = "0123456789ABCDEF"
+	let color = "#"
+	let colors = []
+
+	for(let i =0; i< n; i++){
+		color = "#"
+		for(let j = 0; j < 6; j++){
+			color = color + simbolos[Math.floor(Math.random() * 16)];
+		}
+		colors.push(color)
+	}
+	return colors
 }
 
 function generateElementDom(name) {
 	const cardContainer = document.getElementById("card_container");
-
 	let htmlString = ``;
 
 		htmlString = `
 		<div class="proyects__item">
-
 			<div class="proyects__header">
 
 				<div class="proyects__img">
 					<img src="https://avatars.githubusercontent.com/u/44930667?v=4" alt="">
 				</div>
+
 				<div class="header__text--user">
 					<p>MayderC</p>
 				</div>
-				<div class="header__text--title_repo">
-				</div>
-				
-				</div>
-				<div class="proyects__body">
+
+				<div class="header__text--title_repo"></div>
+			</div>
+
+			<div class="proyects__body">
+
 				<p>${name}</p>
-					<div class="chart-container chart-container">
-						<canvas id="${name}" width="400" height="400"></canvas>
-					</div>
+				<div class="chart-container chart-container">
+					<canvas id="${name}" width="400" height="400"></canvas>
+				</div>
+
 			</div>
 
 		</div>
