@@ -110,7 +110,7 @@ function printChart(labels, data, colors, id){
 					{
 						data: data,
 						backgroundColor: colors,
-						borderWidth: 5,
+						borderWidth: 2,
 					},
 				],
 			},
