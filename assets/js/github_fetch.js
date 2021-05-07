@@ -99,7 +99,7 @@ let arrayChart = []
 function printChart(labels, data, colors, id){
 
 	Chart.defaults.font.size = 16;
-	Chart.defaults.color = "black";
+	Chart.defaults.color = "white";
 
 
 		new Chart(document.getElementById(id), {
