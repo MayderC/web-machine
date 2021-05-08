@@ -30,6 +30,7 @@ class Consulta {
 
 let consulta = new Consulta();
 let uri = "https://api.github.com/users/MayderC/repos"
+
 consulta.getData(
 	uri,
 	(error, response) => {
@@ -88,7 +89,6 @@ function prepareChart(data) {
 
 	}
 }
-
 
 function printChart(labels, data, colors, id){
 
@@ -158,5 +158,4 @@ function generateElementDom(name) {
 		`;
 	
 	cardContainer.innerHTML += htmlString;
-	console.log(htmlString)
 }

@@ -644,6 +644,11 @@ body {
 }
 
 @media (max-width: 420px) {
+
+  .subtitulo{
+    font-size: 10vw;
+  }
+
   .skills {
     width: 90%;
   }
@@ -674,6 +679,11 @@ body {
     /*font-size: 50px;*/
     font-size: 8vw;
   }
+
+  .proyects__item{
+    min-width: 350px;
+  }
+
 }
 
 @media (max-width: 322px) {
@@ -683,6 +693,9 @@ body {
 
   .sub--acerca {
     margin-top: 80px;
+  }
+  .header__texto__titulo{
+    font-size: 10vw;
   }
 
   .header__texto__parrafo {
@@ -714,6 +727,16 @@ body {
 
   .footer__content {
     flex-wrap: wrap;
+  }
+
+
+  .proyects__item{
+    min-width: 240px;
+    height: 400px;
+  }
+
+  .header__text--user{
+    font-size: 18px;
   }
 }
 
