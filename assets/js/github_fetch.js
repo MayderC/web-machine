@@ -93,19 +93,28 @@ function prepareChart(data) {
 function printChart(labels, data, colors, id){
 
 	Chart.defaults.font.size = 16;
-	Chart.defaults.color = "white";
+	Chart.defaults.color = "rgb(71 71 71)";
 
 	new Chart(document.getElementById(id), {
-		type: "pie",
+		type: "bar",
 		data: {
 			labels: labels,
 			datasets: [
 				{
+					label: "",
 					data: data,
 					backgroundColor: colors,
 					borderWidth: 2,
 				},
 			],
+			options:{
+				responsive: true,
+				plugins: {
+					legend: {
+					position: 'top',
+					}
+				}
+			}
 		},
 	})
 }
