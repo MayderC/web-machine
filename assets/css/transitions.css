@@ -1,0 +1,31 @@
+.skills__item{
+    transition: 1s;
+}
+
+.skill:hover .skills__item{
+    transform: rotatey(360deg)
+}
+
+.flip-img{
+    animation: flipimg 1.5s;
+    animation-delay: 1s;
+
+}
+
+
+@keyframes flipimg {
+
+    from{
+
+        transform:  rotatex(0deg);
+    }
+    to{
+        transform: rotatex(360deg);
+    }
+}
+
+
+.item__content--footer:hover{
+    transform: translateY(-10px);
+    transition: .3s;;
+}

@@ -91,11 +91,10 @@ function animacion_scroll() {
     let pos_animacion = animacion.getBoundingClientRect().top;
     let pantalla = window.innerHeight - 200;
     if (pos_animacion < pantalla) {
-        animacion.classList.add("visible");
-        animacion.classList.add("animate__flipInX");
-    } else if (pos_animacion > pantalla) {
-        animacion.classList.remove("visible");
-        animacion.classList.remove("animate__flipInX");
+
+        animacion.classList.add("flip-img");
+    } else if (pos_animacion > pantalla+50) {
+        animacion.classList.remove("flip-img");
 
     }
 }

@@ -1,3 +1,19 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc25ff;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -25,7 +41,6 @@ a {
 h1 {
   font-family: "Quicksand", sans-serif;
   color: white;
-  text-shadow: rgb(209, 131, 186) 0.1em 0.1em 0.2em;
 }
 
 body {
@@ -43,7 +58,7 @@ body {
   .header img {
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: bottom;
   }
 }
 
@@ -73,6 +88,8 @@ body {
 
 .header__texto__titulo {
   font-size: 6vw;
+  text-shadow: rgb(59, 59, 59) 0.1em 0.1em 0.2em;
+
 }
 
 .header__texto__parrafo {
@@ -98,7 +115,7 @@ body {
 .hidden {
   transform: translate(0, -255px);
   height: 0px;
-  transition: .2s;
+  transition: .5s;
 }
 
 .nav__lista {
@@ -142,7 +159,7 @@ body {
   margin-right: 25px;
   margin-left: 25px;
   margin-top: 11px;
-  background-color: #8a568d;
+  background-color: #8829a5;
   border-radius: 5px;
   height: 30px;
 }
@@ -216,13 +233,11 @@ body {
   visibility: hidden;
 }
 
-.visible {
-  visibility: visible;
-}
 
 .cont__head__img {
   width: 100%;
   height: auto;
+  visibility: visible;
 }
 
 .content__header__info {
@@ -366,10 +381,7 @@ body {
   white-space: nowrap;
 }
 
-.skills__item:hover {
-  transform: scale(1.1);
-  transition: 0.2s;
-}
+
 
 .repo__text{
   font-size: 20px;

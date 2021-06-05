@@ -1,96 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--Mis estilos-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/transitions.css" />
+    <link rel="stylesheet" href="/assets/css/phone.css" />
 
-	<!--Mis estilos-->
-	<link rel="stylesheet" href="assets/css/main.css" />
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
-	<!--FUENTES-->
-	<link rel="preconnect" href="https://fonts.gstatic.com" />
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="/img/dev.ico" />
+    <title>Mayder</title>
 
-	<link rel="shortcut icon" href="/img/dev.ico" />
-	<title>Mayder</title>
+    <!--Primary Meta Tags -->
+    <meta name="title" content="Mayder Codes" />
+    <meta
+      name="description"
+      content="Pagina web personal Mayder, Portafolio de proyectos y repositorios mayder codes"
+    />
 
-	<!--Primary Meta Tags -->
-	<meta name="title" content="Mayder Codes" />
-	<meta name="description"
-		content="Pagina web personal Mayder, Portafolio de proyectos y repositorios mayder codes" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mayder.codes/" />
+    <meta property="og:title" content="Mayder Codes" />
+    <meta
+      property="og:description"
+      content="Pagina web personal Mayder, Portafolio de proyectos y repositorios mayder codes"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/MayderC/web-machine/vdos/img/meta_img.PNG"
+    />
 
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://mayder.codes/" />
-	<meta property="og:title" content="Mayder Codes" />
-	<meta property="og:description"
-		content="Pagina web personal Mayder, Portafolio de proyectos y repositorios mayder codes" />
-	<meta property="og:image" content="https://raw.githubusercontent.com/MayderC/web-machine/vdos/img/meta_img.PNG" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://mayder.codes/" />
+    <meta property="twitter:title" content="Mayder Codes" />
+    <meta
+      property="twitter:description"
+      content="Pagina web personal Mayder, Portafolio de proyectos y repositorios mayder codes"
+    />
+    <meta
+      property="twitter:image"
+      content="https://raw.githubusercontent.com/MayderC/web-machine/vdos/img/meta_img.PNG"
+    />
+  </head>
 
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="https://mayder.codes/" />
-	<meta property="twitter:title" content="Mayder Codes" />
-	<meta property="twitter:description"
-		content="Pagina web personal Mayder, Portafolio de proyectos y repositorios mayder codes" />
-	<meta property="twitter:image"
-		content="https://raw.githubusercontent.com/MayderC/web-machine/vdos/img/meta_img.PNG" />
-</head>
-
-<body>
-	<nav id="nav" class="nav">
-		<ul id="nav_res" class="nav__lista">
-			<li id="home_li" class="nav__lista__item item__home">
-				<a class="item__link link__home" href="https://mayder.codes/#nav">MayderC</a>
-			</li>
-			<!--<li class="nav__lista__item"><a class="nav_lista__item--link link__learn" href="#"></a>Learn</li>
+  <body>
+    <nav id="nav" class="nav">
+      <ul id="nav_res" class="nav__lista">
+        <li id="home_li" class="nav__lista__item item__home">
+          <a class="item__link link__home" href="https://mayder.codes/#nav"
+            >MayderC</a
+          >
+        </li>
+        <!--<li class="nav__lista__item"><a class="nav_lista__item--link link__learn" href="#"></a>Learn</li>
             <li class="nav__lista__item"><a class="nav_lista__item--link link__codes" href="#"></a>Codes</li>-->
-            <li class="nav__lista__item">
-				<a class="item__link link__galeria" href="#">Galería</a>
-			</li>
-			<li class="nav__lista__item item__python">
-				<a class="item__link link__python" href="https://mayder.codes/#about">Acerca de mi</a>
-			</li>
-			<li class="nav__lista__item item__backend">
-				<a class="item__link link__backend" href="#">Proyectos</a>
-			</li>
-			<li id="btn_contact" class="nav__lista__item item__contact">
-				<a class="item__link link__contact" href="https://mayder.cogit des/#footer">Info</a>
-			</li>
-		</ul>
-		<div id="nav__btn" class="boton"></div>
-	</nav>
+        <li class="nav__lista__item">
+          <a class="item__link link__galeria" href="#">Galería</a>
+        </li>
+        <li class="nav__lista__item item__python">
+          <a class="item__link link__python" href="https://mayder.codes/#about"
+            >Acerca de mi</a
+          >
+        </li>
+        <li class="nav__lista__item item__backend">
+          <a class="item__link link__backend" href="#">Proyectos</a>
+        </li>
+        <li id="btn_contact" class="nav__lista__item item__contact">
+          <a
+            class="item__link link__contact"
+            href="https://mayder.cogit des/#footer"
+            >Info</a
+          >
+        </li>
+      </ul>
+      <div id="nav__btn" class="boton"></div>
+    </nav>
 
-	<header class="header">
-		<div class="header__texto">
-			<h1 id="title" class="header__texto__titulo">Mayder Codes</h1>
-			<!--<p class="header__texto__parrafo">
+    <header class="header">
+      <div class="header__texto">
+        <h1 id="title" class="header__texto__titulo">Mayder Codes</h1>
+        <!--<p class="header__texto__parrafo">
 				Desarrollo Web
 			</p>-->
-		</div>
-		<img class="header__img" src="img/pexels_header_img.webp" alt="mayder Codes" />
-		<!--<img class="header__img" src="/img/header.svg" alt="mayder.codes_header_img">-->
-	</header>
+      </div>
+      <img class="header__img" src="img/header-2.svg" alt="mayder Codes" />
+      <!--<img class="header__img" src="/img/header.svg" alt="mayder.codes_header_img">-->
+    </header>
 
-	<h2 id="about" class="subtitulo sub--acerca">Acerca de mi</h2>
-	<div class="content__head">
-		<div class="content__header__avatar">
-			<img id="flipX" class="animate__animated cont__head__img" src="/img/about_img.svg"
-				alt="mayder codes, acerca de mi" />
-		</div>
-		<div class="content__header__info">
-			<p>
-				Soy un estudiante de TI "Tecnologías de información" que le gusta el
-				desarrollo web. Estudio en la Universidad y aprendo diferentes
-				tecnologias y lenguajes de programación.
-			</p>
-		</div>
-	</div>
+    <h2 id="about" class="subtitulo sub--acerca">Acerca de mi</h2>
+    <div class="content__head">
+      <div class="content__header__avatar">
+        <img
+          id="flipX"
+          class="cont__head__img"
+          src="/img/about_img.svg"
+          alt="mayder codes, acerca de mi"
+        />
+      </div>
+      <div class="content__header__info">
+        <p>
+          Soy un estudiante de TI "Tecnologías de información" que le gusta el
+          desarrollo web. Estudio en la Universidad y aprendo diferentes
+          tecnologias y lenguajes de programación.
+        </p>
+      </div>
+    </div>
 
-	<!--
+    <!--
     <div class="avatar">
         <div id="mi_avatar" class="avatar__container">
             <div id="img_avatar" class="avatar__container__img"></div>
@@ -115,131 +141,204 @@
     
 -->
 
-	<div class="white_space"></div>
+    <div class="white_space"></div>
 
-	<h2 id="skills" class="subtitulo sub--acerca">
-		Mis Conocimientos <br />
-		<span class="text__skill">Conocimientos básicos e intermedios</span>
-	</h2>
+    <h2 id="skills" class="subtitulo sub--acerca">
+      Mis Conocimientos <br />
+      <span class="text__skill">Conocimientos básicos e intermedios</span>
+    </h2>
 
-	<section class="skills">
-		<div class="skills__item">
-			<img src="img/html.svg" alt="" class="skills_img" />
-			<p class="skills__text">HTML5</p>
-		</div>
-		<div class="skills__item">
-			<img src="img/css.svg" alt="" class="skills_img" />
-			<p class="skills__text">CSS3</p>
-		</div>
-		<div class="skills__item">
-			<img src="img/javascript.svg" alt="" class="skills_img" />
-			<p class="skills__text">JavaScript</p>
-		</div>
-		<div class="skills__item">
-			<img src="img/bootstrap.svg" alt="" class="skills_img" />
-			<p class="skills__text">Bootstrap</p>
-		</div>
-		<div class="skills__item">
-			<img src="img/php.svg" alt="" class="skills_img" />
-			<p class="skills__text">PHP</p>
-		</div>
-		<div class="skills__item">
-			<img src="img/python.svg" alt="" class="skills_img" />
-			<p class="skills__text">Python</p>
-		</div>
-		<div class="skills__item">
-			<img src="img/git-icon.svg" alt="" class="skills_img" />
-			<p class="skills__text">Git</p>
-		</div>
-		<div class="skills__item">
-			<img src="img/linux-tux.svg" alt="" class="skills_img" />
-			<p class="skills__text">Linux-terminal</p>
-		</div>
+    <section class="skills">
+      <div class="skill">
+        <div class="skills__item">
+          <img src="img/html.svg" alt="" class="skills_img" />
+          <p class="skills__text">HTML5</p>
+        </div>
+      </div>
 
-		<div class="skills__item">
-			<img src="img/mysql.svg" alt="" class="skills_img" />
-			<p class="skills__text">MySQL</p>
-		</div>
+      <div class="skill">
+        <div class="skills__item">
+          <img src="img/css.svg" alt="" class="skills_img" />
+          <p class="skills__text">CSS3</p>
+        </div>
+      </div>
 
-		<div class="skills__item">
-			<img src="img/wordpress-icon.svg" alt="" class="skills_img" />
-			<p class="skills__text">Wordpress</p>
-		</div>
+      <div class="skill">
+        <div class="skills__item">
+          <img src="img/javascript.svg" alt="" class="skills_img" />
+          <p class="skills__text">JavaScript</p>
+        </div>
+      </div>
 
-	</section>
-	<div class="white_space"></div>
+      <div class="skill">
+        <div class="skills__item">
+          <img src="img/bootstrap.svg" alt="" class="skills_img" />
+          <p class="skills__text">Bootstrap</p>
+        </div>
+      </div>
 
-	<h2 id="proyects" class="subtitulo sub--acerca">Repositorios <br><span class="repo__text">Github</span></h2>
-	
-	
-	<section id="card_container" class="proyects">	
+      <div class="skill">
+        <div class="skills__item">
+          <img src="img/php.svg" alt="" class="skills_img" />
+          <p class="skills__text">PHP</p>
+        </div>
+      </div>
 
-	</section>
+      <div class="skill">
+        <div class="skills__item">
+          <img src="img/python.svg" alt="" class="skills_img" />
+          <p class="skills__text">Python</p>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skills__item">
+          <img src="img/git-icon.svg" alt="" class="skills_img" />
+          <p class="skills__text">Git</p>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skills__item">
+          <img src="img/linux-tux.svg" alt="" class="skills_img" />
+          <p class="skills__text">Linux-terminal</p>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skills__item">
+          <img src="img/mysql.svg" alt="" class="skills_img" />
+          <p class="skills__text">MySQL</p>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skills__item">
+          <img src="img/wordpress-icon.svg" alt="" class="skills_img" />
+          <p class="skills__text">Wordpress</p>
+        </div>
+      </div>
+    </section>
 
 
+		<!--
 
-	<footer id="footer" class="footer">
-		<div class="footer__head">
-			<p class="footer--p">Pagina web personal</p>
-		</div>
-
-		<div class="footer__content">
-			<div class="footer__content__item content--youtube">
-				<a class="item__content--footer" href="https://www.youtube.com/channel/UCN6QP97Il86O08qEPE7gXvQ"
-					target="_blank">
-					<img class="img__icons" src="/img/youtube-icon.svg" alt="" />
-				</a>
-				<a class="footer__link--p" href="https://www.youtube.com/channel/UCN6QP97Il86O08qEPE7gXvQ"
-					target="_blank">
-					<p>youtube</p>
-				</a>
+			<div class="white_space"></div>
+			<h2 class="subtitulo">Animaciones css</h2>
+			
+			<section class="animation">
+				<div class="animation__item">
+					<div class="main-phone">
+						<div class="phone">
+							<div class="layer-0"></div>
+							<div class="layer-1">
+								<div class="rabbit-1"></div>
+            </div>
+            <div class="layer-2">
+							<div class="rabbit-2"></div>
+            </div>
+            <div class="layer-3"></div>
+            <div class="layer-4">
+							<div class="rabbit-3"></div>
+            </div>
+            <div class="layer-5"></div>
+            <div class="layer-6">
+							<div class="rabbit-4"></div>
+            </div>
+            <div class="layer-7"></div>
+            <div class="layer-8"></div>
+						
+            <div class="layer-9"></div>
+            <div class="layer-10"></div>
+          </div>
+        </div>
 			</div>
-
-			<div class="footer__content__item content--github">
-				<a class="item__content--footer" href="https://github.com/MayderC" target="_blank">
-					<img class="img__icons" src="/img/github-octocat.svg" alt="" />
-				</a>
-				<a class="footer__link--p" href="https://github.com/MayderC" target="_blank">
-					<p>GitHub</p>
-				</a>
-			</div>
-
-			<div class="footer__content__item content--linkedin">
-				<a class="item__content--footer" href="" target="_blank">
-					<img class="img__icons" src="/img/linkedin-icon.svg" alt="" />
-				</a>
-				<a class="footer__link--p" href="">
-					<p>Linkedin</p>
-				</a>
-			</div>
-		</div>
-
-		<div class="footer__end">
-			<!-- Todos los derechos reservados <span class="copy">&copy<a class="copy"  href="#">MayderC</a></span>-->
-			<p class="footer--p">hola@mayder.codes</p>
-			<p class="footer--p-2">
-				<a href="https://iconscout.com/icons/css" target="_blank">Css Logo Icon</a>
-				by
-				<a href="https://iconscout.com/contributors/pixel-icons">Pixel Icons</a>
-				on
-				<a href="https://iconscout.com">Iconscout</a>
-			</p>
-		</div>
-
-	
-
-
-	</footer>
-
-	<!--Script de graficos cdn-->
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+			<div class="animation__item"></div>
+			
+    </section>
+	-->
 		
-	<!--Mis scripts-->
-	<script src="/assets/js/main.js"></script>
+    <div class="white_space"></div>
 
+    <h2 id="proyects" class="subtitulo sub--acerca">
+      Repositorios <br /><span class="repo__text">Github</span>
+    </h2>
 
-	
+    <section id="card_container" class="proyects"></section>
+
+    <footer id="footer" class="footer">
+      <div class="footer__head">
+        <p class="footer--p">Pagina web personal</p>
+      </div>
+
+      <div class="footer__content">
+        <div class="footer__content__item content--youtube">
+          <a
+            class="item__content--footer"
+            href="https://www.youtube.com/channel/UCN6QP97Il86O08qEPE7gXvQ"
+            target="_blank"
+          >
+            <img class="img__icons" src="/img/youtube-icon.svg" alt="" />
+          </a>
+          <a
+            class="footer__link--p"
+            href="https://www.youtube.com/channel/UCN6QP97Il86O08qEPE7gXvQ"
+            target="_blank"
+          >
+            <p>youtube</p>
+          </a>
+        </div>
+
+        <div class="footer__content__item content--github">
+          <a
+            class="item__content--footer"
+            href="https://github.com/MayderC"
+            target="_blank"
+          >
+            <img class="img__icons" src="/img/github-octocat.svg" alt="" />
+          </a>
+          <a
+            class="footer__link--p"
+            href="https://github.com/MayderC"
+            target="_blank"
+          >
+            <p>GitHub</p>
+          </a>
+        </div>
+
+        <div class="footer__content__item content--linkedin">
+          <a class="item__content--footer" href="" target="_blank">
+            <img class="img__icons" src="/img/linkedin-icon.svg" alt="" />
+          </a>
+          <a class="footer__link--p" href="">
+            <p>Linkedin</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__end">
+        <!-- Todos los derechos reservados <span class="copy">&copy<a class="copy"  href="#">MayderC</a></span>-->
+        <p class="footer--p">hola@mayder.codes</p>
+        <p class="footer--p-2">
+          <a href="https://iconscout.com/icons/css" target="_blank"
+            >Css Logo Icon</a
+          >
+          by
+          <a href="https://iconscout.com/contributors/pixel-icons"
+            >Pixel Icons</a
+          >
+          on
+          <a href="https://iconscout.com">Iconscout</a>
+        </p>
+      </div>
+    </footer>
+
+    <!--Script de graficos cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+
+    <!--Mis scripts-->
+    <script src="/assets/js/main.js"></script>
+
     <script src="/assets/js/github_fetch.js"></script>
-</body>
-
+  </body>
 </html>
