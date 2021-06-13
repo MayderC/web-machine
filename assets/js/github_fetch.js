@@ -93,10 +93,10 @@ function prepareChart(data) {
 function printChart(labels, data, colors, id){
 
 	Chart.defaults.font.size = 16;
-	Chart.defaults.color = "rgb(71 71 71)";
+	Chart.defaults.color = " ";
 
 	new Chart(document.getElementById(id), {
-		type: "bar",
+		type: "doughnut",
 		data: {
 			labels: labels,
 			datasets: [
