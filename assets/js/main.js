@@ -10,6 +10,7 @@ sc[0] = window.scrollY
 var y = 0;
 
 let nav_lista = document.getElementById("nav_res");
+nav_lista.style.backgroundColor = ""
 let home = document.getElementById("home_li");
 
 let isMenuClose = true;
