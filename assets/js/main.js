@@ -131,18 +131,18 @@ function changeStyleNavOnScroll() {
 
     if (window.scrollY > 175 && !isColor && isMenuClose) {
 
-        //document.getElementsByClassName('link__contact')[0].style.color = "white"
-        //document.getElementById('btn_contact').style.backgroundColor = ""
+        document.getElementsByClassName('link__contact')[0].style.color = "white"
+        document.getElementById('btn_contact').style.backgroundColor = ""
         document.getElementById('nav').classList.remove('nav__tranparent-scrolly')
         document.getElementById('nav').classList.add('nav__color-scrolly')
 
     } else if (window.scrollY < 176 && !isTranparent && isMenuClose) {
 
 
-        //document.getElementById('btn_contact').style.backgroundColor = "white"
+        document.getElementById('btn_contact').style.backgroundColor = "white"
         document.getElementById('nav').classList.remove('nav__color-scrolly')
         document.getElementById('nav').classList.add('nav__tranparent-scrolly')
-        //document.getElementsByClassName('link__contact')[0].style.color = "rgb(36, 36, 36)"
+        document.getElementsByClassName('link__contact')[0].style.color = "rgb(36, 36, 36)"
 
     }
 }
