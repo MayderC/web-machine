@@ -1,61 +1,61 @@
-h
-function getData(url, callback) {
-	fetch(url)
-		.then((response) => response.json())
-		.then((data) => {
-			callback(null, data);
-		})
-		.catch((error) => {
-			let error_api = new Error(error);
-			return callback(error_api, null);
-		});
-}
-//Estructura de URL para lenguajes usados y su porcentaje
-//https://api.github.com/repos/MayderC/App_contactos/languages
-
-
 let url = "https://api.github.com/users/MayderC/repos"
-// todo: Mejorar esta consulta anidada. todos los nombres de los repos
-// todo: consultar porcentaje de lenjuage usado, con todos los nombres - segunda consulta
-// todo: los nombres no vienen en la segunda consulta. 
-// todo: se necesita el nombre y la data de cada nombre en un solo objeto.
-getData(url, (error, response) => {
-	if (error) { return; }
-	let namesOfRepoAndRepo = [];
 
 
-	for (let i in response) {
-		if (response[i].name == undefined) { return; }
-
-		// Todo: Nombre de todos los repositorios. 
-		let nombre = `https://api.github.com/repos/MayderC/${response[i].name}/languages`
-		//let nombre = `http://127.0.0.1:5501/localdata/${response[i].name}.json`;
-
-		// todo: repos a omitir
-		if (
-			response[i].name != "MayderC" &&
-			response[i].name != "MayderC.github.io" &&
-			response[i].name != "uptask"
-		) {
-			getData(nombre, (error2, response2) => {
-				if (error2) {
-					return;
-				}
-				// Todo: name es una propiedad de la primera consulta. se adjunta con el data de la segunda.
-				// Todo: response2 no obtiene el nombre del repositorio y es necesario.
-
-				namesOfRepoAndRepo.push({ "name": response[i].name, "data": response2 })
-
-				//todo: error mejorar esto. entra a la funcion que prepara el grafico, despudes de recorrer...
-				// todo: la consulta y antes de terminar el for.
-				if (i == response.length - 1) {
-					prepareChart(namesOfRepoAndRepo);
-				}
-			});
-		}
+async function getRepos(url) {
+	try {
+		const response = await fetch(url)
+		const data = await response.json()
+		const nameRepos = data.map(d => d.name)
+		return nameRepos
+	} catch (error) {
+		//console.log(error)
 	}
 }
-);
+
+function preparePromise(name) {
+	const arrayPromises = []
+	let url3 = 'https://api.github.com/repos/MayderC'
+	for (let i in name) {
+		arrayPromises.push(fetch(`${url3}/${name[i]}/languages`).then(response => response.json()))
+	}
+	return arrayPromises;
+}
+
+async function getPercent(url) {
+	try {
+		const names = await getRepos(url)
+		let namesToPromises = []
+		let promises = []
+
+		//Filtro de repos a omitir
+		namesToPromises = names.filter(n => n != "uptask" && n != "MayderC" && n != "33-js-concepts")
+		promises = preparePromise(namesToPromises)
+
+		return { promises, namesToPromises }
+	} catch (error) {
+		//console.log(error)
+	}
+}
+
+async function getData(url) {
+	try {
+		let { promises, namesToPromises } = await getPercent(url)
+		let infoArray = []
+
+		Promise.all(promises).then(languajes => {
+
+			for (let i in languajes) { infoArray.push({ name: namesToPromises[i], data: languajes[i] }) }
+			prepareChart(infoArray)
+
+		})
+	} catch (error) {
+		//console.log(erro)
+	}
+}
+
+
+getData(url)
+
 
 function prepareChart(data) {
 
