@@ -1,4 +1,4 @@
-
+h
 function getData(url, callback) {
 	fetch(url)
 		.then((response) => response.json())
@@ -41,8 +41,6 @@ getData(url, (error, response) => {
 				if (error2) {
 					return;
 				}
-
-				console.log(response2)
 				// Todo: name es una propiedad de la primera consulta. se adjunta con el data de la segunda.
 				// Todo: response2 no obtiene el nombre del repositorio y es necesario.
 
