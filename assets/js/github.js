@@ -21,6 +21,12 @@ function preparePromise(name) {
 	return arrayPromises;
 }
 
+function JustMeRepos(n) {
+	if (n != "uptask" && n != "MayderC" && n != "33-js-concepts" && n != "CSS2020") {
+		return n
+	}
+}
+
 async function getPercent(url) {
 	try {
 		const names = await getRepos(url)
@@ -28,7 +34,7 @@ async function getPercent(url) {
 		let promises = []
 
 		//Filtro de repos a omitir
-		namesToPromises = names.filter(n => n != "uptask" && n != "MayderC" && n != "33-js-concepts")
+		namesToPromises = names.filter(n => JustMeRepos(n))
 		promises = preparePromise(namesToPromises)
 
 		return { promises, namesToPromises }
@@ -42,9 +48,9 @@ async function getData(url) {
 		let { promises, namesToPromises } = await getPercent(url)
 		let infoArray = []
 
-		Promise.all(promises).then(languajes => {
+		Promise.all(promises).then(languages => {
 
-			for (let i in languajes) { infoArray.push({ name: namesToPromises[i], data: languajes[i] }) }
+			for (let i in languages) { infoArray.push({ name: namesToPromises[i], data: languages[i] }) }
 			prepareChart(infoArray)
 
 		})
@@ -61,7 +67,6 @@ function prepareChart(data) {
 
 	let labels = [];
 	let dataValue = [];
-	let globalArray = []
 
 	for (let i = 0; i < data.length; i++) {
 
