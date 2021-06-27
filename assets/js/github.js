@@ -21,7 +21,7 @@ function preparePromise(name) {
 	return arrayPromises;
 }
 
-function JustMeRepos(n) {
+function JustMyRepos(n) {
 	if (n != "uptask" && n != "MayderC" && n != "33-js-concepts" && n != "CSS2020") {
 		return n
 	}
@@ -34,7 +34,7 @@ async function getPercent(url) {
 		let promises = []
 
 		//Filtro de repos a omitir
-		namesToPromises = names.filter(n => JustMeRepos(n))
+		namesToPromises = names.filter(n => JustMyRepos(n))
 		promises = preparePromise(namesToPromises)
 
 		return { promises, namesToPromises }
