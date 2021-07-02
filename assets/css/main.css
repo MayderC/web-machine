@@ -195,9 +195,13 @@ body {
   margin-right: 25px;
   margin-left: 25px;
   margin-top: 11px;
-  background-color: #8829a5;
+  background-color: #fff;
   border-radius: 5px;
   height: 30px;
+}
+
+.link__contact {
+  color: black;
 }
 
 .boton {

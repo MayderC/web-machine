@@ -131,23 +131,29 @@ function changeStyleNavOnScroll() {
     let items_menu = [...document.querySelectorAll('.item__link')]
 
     if (window.scrollY > 175 && !isColor && isMenuClose) {
-
-        document.getElementsByClassName('link__contact')[0].style.color = "white"
-        document.getElementById('btn_contact').style.backgroundColor = ""
-        document.getElementById('nav').classList.remove('nav__tranparent-scrolly')
-        document.getElementById('nav').classList.add('nav__color-scrolly')
+        stylesNavTransparent()
 
     } else if (window.scrollY < 176 && !isTranparent && isMenuClose) {
 
-
-        document.getElementById('btn_contact').style.backgroundColor = "white"
-        document.getElementById('nav').classList.remove('nav__color-scrolly')
-        document.getElementById('nav').classList.add('nav__tranparent-scrolly')
-        document.getElementsByClassName('link__contact')[0].style.color = "rgb(36, 36, 36)"
-
+        stylesNavWhitColor()
     }
 }
 
+function stylesNavWhitColor() {
+    document.getElementById('btn_contact').style.backgroundColor = "white"
+    document.getElementById('nav').classList.remove('nav__color-scrolly')
+    document.getElementById('nav').classList.add('nav__tranparent-scrolly')
+    document.getElementsByClassName('link__contact')[0].style.color = "rgb(36, 36, 36)"
+}
+
+function stylesNavTransparent() {
+    document.getElementsByClassName('link__contact')[0].style.color = "white"
+    document.getElementById('btn_contact').style.backgroundColor = ""
+    document.getElementById('nav').classList.remove('nav__tranparent-scrolly')
+    document.getElementById('nav').classList.add('nav__color-scrolly')
+    document.getElementsByClassName('link__contact')[0].style.color = "white"
+    document.getElementsByClassName('item__contact')[0].style.background = "#9727e7"
+}
 
 
 function autoHide() {
