@@ -1,0 +1,33 @@
+.navbar__menu
+  height: $nav-height
+  display: flex
+
+.navbar__list
+  list-style: none
+  position: relative
+  width: 100px
+  display: flex
+  justify-content: center
+
+.navbar__link
+  display: flex
+  height: $nav-height
+  align-items: center
+  text-decoration: none
+  padding: 0 15px
+  transition: .2s
+
+.nav-menu-animation
+  width: 0
+  height: 5px
+  position: absolute
+  top: 40px
+  transition: .2s
+
+.navbar__list:hover .nav-menu-animation
+  width: 100%  
+  transition: .2s
+
+.navbar__list:hover .navbar__link
+  transform: translatey(-5px)
+  transition: .2s
