@@ -1,0 +1,31 @@
+.header
+  min-height: 50vh
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  overflow: hidden
+
+.header__title
+  color: white
+  text-shadow: 10px 10px 25px black
+  font-size: 80px
+  text-align: center
+
+.header__img
+  position: absolute
+  object-fit: cover
+  object-position: left top
+  z-index: -1
+  top: 0
+
+@media (min-width: $movil-lg)
+  .header__img
+    max-width: 100%
+
+
+@media (max-width: $movil-lg)
+  .header__img
+    height: 50vh
+    left: 0

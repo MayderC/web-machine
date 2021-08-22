@@ -1,5 +1,11 @@
 [
   {
+    "name": "gallery",
+    "path": "/gallery",
+    "component": "D:\\\\Programing\\\\Web\\\\web-machine\\\\web-machine-nuxt\\\\pages\\\\gallery.vue",
+    "chunkName": "pages/gallery"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "D:\\\\Programing\\\\Web\\\\web-machine\\\\web-machine-nuxt\\\\pages\\\\index.vue",

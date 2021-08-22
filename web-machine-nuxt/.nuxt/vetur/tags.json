@@ -1,4 +1,13 @@
 {
+  "MButtonNav": {
+    "description": "Auto imported from components/MButtonNav.vue"
+  },
+  "MHeader": {
+    "description": "Auto imported from components/MHeader.vue"
+  },
+  "MHeaderSvg": {
+    "description": "Auto imported from components/MHeaderSvg.vue"
+  },
   "MNavbar": {
     "description": "Auto imported from components/MNavbar.vue"
   },

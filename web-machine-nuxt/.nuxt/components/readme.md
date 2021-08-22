@@ -6,6 +6,9 @@ You can directly use them in pages and other components without the need to impo
 
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
+- `<MButtonNav>` | `<m-button-nav>` (components/MButtonNav.vue)
+- `<MHeader>` | `<m-header>` (components/MHeader.vue)
+- `<MHeaderSvg>` | `<m-header-svg>` (components/MHeaderSvg.vue)
 - `<MNavbar>` | `<m-navbar>` (components/MNavbar.vue)
 - `<MNavbarMenu>` | `<m-navbar-menu>` (components/MNavbarMenu.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)

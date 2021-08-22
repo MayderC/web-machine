@@ -31,3 +31,23 @@
 .navbar__list:hover .navbar__link
   transform: translatey(-5px)
   transition: .2s
+
+
+
+@media (max-width: $movil-lg)
+  .navbar__menu
+    display: flex
+    flex-direction: column
+    align-items: center
+    z-index: 2
+    background: #7c2cbe 
+    overflow: hidden
+    padding: 0 0
+    border-radius: 10px
+
+
+  .showMenuMovil
+    height: 250px
+
+  .hideMenuMovil
+    height: 0
