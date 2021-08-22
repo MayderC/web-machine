@@ -22,7 +22,7 @@ function preparePromise(name) {
 }
 
 function JustMyRepos(n) {
-	if (n != "uptask" && n != "MayderC" && n != "33-js-concepts" && n != "CSS2020") {
+	if (n != "uptask" && n != "MayderC" && n != "33-js-concepts" && n != "CSS2020" && n != "AspNetCore-Developer-Roadmap") {
 		return n
 	}
 }
@@ -135,6 +135,7 @@ function generateElementDom(name) {
 	let htmlString = ``;
 
 	htmlString = `
+	<a  href="https://github.com/MayderC/${name}" target="_blank" >
 		<div class="proyects__item">
 			<div class="proyects__header">
 
@@ -159,6 +160,7 @@ function generateElementDom(name) {
 			</div>
 
 		</div>
+	</a>
 		`;
 
 	cardContainer.innerHTML += htmlString;
