@@ -22,7 +22,7 @@ function preparePromise(name) {
 }
 
 function JustMyRepos(n) {
-	if (n != "uptask" && n != "MayderC" && n != "33-js-concepts" && n != "CSS2020" && n != "AspNetCore-Developer-Roadmap") {
+	if (n != "uptask" && n != "MayderC" && n != "33-js-concepts" && n != "CSS2020" && n != "AspNetCore-Developer-Roadmap" && n != "faztware") {
 		return n
 	}
 }
