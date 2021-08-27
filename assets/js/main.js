@@ -15,6 +15,27 @@ let home = document.getElementById("home_li");
 
 let isMenuClose = true;
 
+const email = document.getElementById('email')
+
+
+email.addEventListener('click', updateClipboard)
+
+function updateClipboard(newClip) {
+
+    const text = newClip.target.innerText
+    navigator.clipboard.writeText(text).then(function() {
+
+        const copied = document.querySelector('.email-copied')
+        copied.style.display = " block"
+
+        setTimeout(()=>{
+            copied.style.display = "none"
+        }, 800)
+
+    }, function() {
+      /* clipboard write failed */
+    });
+  }
 
 document.getElementById("nav__btn").onclick = function () {
     //Aañade o quita animacion de menu en cada click. abre o cierra

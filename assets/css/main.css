@@ -91,6 +91,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .header__texto {
@@ -116,6 +117,42 @@ body {
   color: #624dcf;
   font-weight: lighter;
   text-shadow: rgb(140, 100, 241) 0.1em 0.1em 0.2em;
+}
+
+.header__email{
+  position: absolute;
+  color: #ffffff;
+  font-size: 20px;
+  bottom: 90px;
+  background: #624dcf;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+
+}
+
+.header__email:hover {
+  transform: translateY(7px);
+  transition: .2s;
+}
+
+.email-back{
+  position: absolute;
+  width: 232px;
+  height: 45px;
+  background-color: #4f4097;
+  border-radius: 10px;
+  margin: auto;
+  bottom: 80px;
+}
+
+.email-copied{
+  position: absolute;
+  background: rgb(6, 161, 45);
+  padding: 10px;
+  border-radius: 10px;
+  bottom: 30px;
+  transition: .2s;
+  display: none;
 }
 
 .nav {
@@ -744,6 +781,11 @@ body {
     font-size: 15px;
     font-weight: lighter;
   }
+
+  .header__email{
+    font-size: 16px;
+  }
+
 }
 
 @media (max-width: 420px) {
