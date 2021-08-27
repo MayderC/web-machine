@@ -22,10 +22,6 @@ document.getElementById("nav__btn").onclick = function () {
 
     isMenuClose = !isMenuClose;
 
-
-
-
-
     // comprueba si esta abierto o cerrado el menu, boton menu.
     boton_responsive = document.getElementById("nav__btn").classList.value.split(" ").includes("btn_animation")
 
@@ -65,7 +61,7 @@ function estilosMenuResponsive() {
 }
 
 
-// avtiva el border-top del menu. cuando se cierra el menu responsive
+// activa el border-top del menu. cuando se cierra el menu responsive
 function activar_borde(animation) {
     if (animation == false) {
         let menu_border = Array.from(document.querySelectorAll(".nav__lista__item:not(:first-child):not(:last-child)"));
