@@ -88,7 +88,7 @@ function prepareChart(data) {
 function printChart(labels, data, colors, id) {
 
 	Chart.defaults.font.size = 16;
-	Chart.defaults.color = " ";
+	Chart.defaults.color = "white";
 
 	new Chart(document.getElementById(id), {
 		type: "doughnut",
@@ -135,7 +135,7 @@ function generateElementDom(name) {
 	let htmlString = ``;
 
 	htmlString = `
-	<a  href="https://github.com/MayderC/${name}" target="_blank" >
+	<a class="card__container"  href="https://github.com/MayderC/${name}" target="_blank" >
 		<div class="proyects__item">
 			<div class="proyects__header">
 
