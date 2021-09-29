@@ -127,11 +127,11 @@ body {
   background: #624dcf;
   padding: 0.5em 1em;
   border-radius: 10px;
-
+  transition: .2s;
 }
 
 .header__email:hover {
-  transform: translateY(7px);
+  transform: scale(1.08);
   transition: .2s;
 }
 
@@ -528,11 +528,11 @@ body {
   width: calc(20% - 8px);
   height: 440px;
   min-width: 300px;
-  /*
-    background-color: rgb(44, 41, 53);
-  background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
-  */
+  
   background-color: rgb(44, 41, 53);
+  background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+  
+  /*background-color: rgb(44, 41, 53);*/
   border-radius: 10px;
   padding: 15px;
   box-shadow: 10px 10px 20px #be7bb2;

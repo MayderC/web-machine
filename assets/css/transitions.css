@@ -26,11 +26,13 @@
 }
 
 .path1 {
-  animation: 4s move infinite linear alternate;
+  animation: 6s move infinite linear alternate;
+  
 }
 
 .path2 {
-  animation: 4s move infinite linear alternate-reverse;
+  animation: 6s move infinite linear alternate-reverse;
+
 }
 
 
@@ -39,9 +41,11 @@
   from {
     transform: translate(-30px, 0px);
     opacity: 0.9;
+    fill: #761dd6;
   }
   to {
-    transform: translate(-160px, 50px);
-    opacity: 1;
+    transform: translate(-160px, 100px);
+    opacity: 0.9;
+    fill: #9035c4;
   }
 }
