@@ -15,8 +15,4 @@ conexion()
 
 
 
-
-
-
-
 module.exports = app
