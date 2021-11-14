@@ -4,7 +4,7 @@ const conexion = async() =>{
 
   try {
     
-    await mongoose.connect('mongodb://localhost:27017/nuxweb');
+    await mongoose.connect(process.env.MONGO_CNN);
     console.log('Conectado')
   } catch (error) {console.error(error)}
 

@@ -1,16 +1,16 @@
-export { default as BarLoading } from '../../components/BarLoading.vue'
-export { default as CardGithubProyects } from '../../components/CardGithubProyects.vue'
-export { default as CircleJump } from '../../components/CircleJump.vue'
-export { default as HandLink } from '../../components/HandLink.vue'
-export { default as MButtonNav } from '../../components/MButtonNav.vue'
-export { default as MContact } from '../../components/MContact.vue'
-export { default as MFooter } from '../../components/MFooter.vue'
-export { default as MHeader } from '../../components/MHeader.vue'
-export { default as MHeaderSvg } from '../../components/MHeaderSvg.vue'
-export { default as MNavbar } from '../../components/MNavbar.vue'
-export { default as MNavbarMenu } from '../../components/MNavbarMenu.vue'
-export { default as PhoneAnimated } from '../../components/PhoneAnimated.vue'
-export { default as ProyectCard } from '../../components/ProyectCard.vue'
+export const BarLoading = () => import('../../components/BarLoading.vue' /* webpackChunkName: "components/bar-loading" */).then(c => wrapFunctional(c.default || c))
+export const CardGithubProyects = () => import('../../components/CardGithubProyects.vue' /* webpackChunkName: "components/card-github-proyects" */).then(c => wrapFunctional(c.default || c))
+export const CircleJump = () => import('../../components/CircleJump.vue' /* webpackChunkName: "components/circle-jump" */).then(c => wrapFunctional(c.default || c))
+export const HandLink = () => import('../../components/HandLink.vue' /* webpackChunkName: "components/hand-link" */).then(c => wrapFunctional(c.default || c))
+export const MButtonNav = () => import('../../components/MButtonNav.vue' /* webpackChunkName: "components/m-button-nav" */).then(c => wrapFunctional(c.default || c))
+export const MContact = () => import('../../components/MContact.vue' /* webpackChunkName: "components/m-contact" */).then(c => wrapFunctional(c.default || c))
+export const MFooter = () => import('../../components/MFooter.vue' /* webpackChunkName: "components/m-footer" */).then(c => wrapFunctional(c.default || c))
+export const MHeader = () => import('../../components/MHeader.vue' /* webpackChunkName: "components/m-header" */).then(c => wrapFunctional(c.default || c))
+export const MHeaderSvg = () => import('../../components/MHeaderSvg.vue' /* webpackChunkName: "components/m-header-svg" */).then(c => wrapFunctional(c.default || c))
+export const MNavbar = () => import('../../components/MNavbar.vue' /* webpackChunkName: "components/m-navbar" */).then(c => wrapFunctional(c.default || c))
+export const MNavbarMenu = () => import('../../components/MNavbarMenu.vue' /* webpackChunkName: "components/m-navbar-menu" */).then(c => wrapFunctional(c.default || c))
+export const PhoneAnimated = () => import('../../components/PhoneAnimated.vue' /* webpackChunkName: "components/phone-animated" */).then(c => wrapFunctional(c.default || c))
+export const ProyectCard = () => import('../../components/ProyectCard.vue' /* webpackChunkName: "components/proyect-card" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
