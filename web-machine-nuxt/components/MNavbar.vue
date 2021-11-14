@@ -10,7 +10,9 @@
 
     m-button-nav(
       :isOpen = "isMenuOpen"  
-      v-on:toggleOpen="show")
+      v-on:toggleOpen="show"
+      :color = "colorButton"
+      )
 
 </template>
 
@@ -19,7 +21,8 @@ export default {
   data(){
     return{
       isNavOnTop: true,
-      isMenuOpen: false
+      isMenuOpen: false,
+      colorButton : "#fff"
     }
   },
 
@@ -35,8 +38,10 @@ export default {
     onScrollNavbarColor(){
       if(window.scrollY > 95){
         this.isNavOnTop = false
+        this.colorButton = "#222222"
       }else{
         this.isNavOnTop = true
+        this.colorButton = "#fff"
       }
     },
 

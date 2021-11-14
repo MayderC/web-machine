@@ -2,8 +2,8 @@
 
   ul.navbar__menu
     li(v-for="i in items").navbar__list
+      div( :class="isNavOnTop ? 'nav-menu-animation-w' : 'nav-menu-animation-b'").nav-menu-animation
       nuxt-link(:to="i.route" :class="isNavOnTop ? 'colornavOn' : 'colornavOff'" ).navbar__link {{i.name}}
-      div(:class="isNavOnTop ? 'nav-menu-animation-w' : 'nav-menu-animation-b'").nav-menu-animation
 
 
 
@@ -17,10 +17,9 @@ export default {
     return{
       items : [
         {name : "Home", route: "/"},
-        {name : "About", route: "/about"},
-        {name : "Gallery", route: "/gallery"},
+        {name : "Proyects", route: "/proyects"},
         {name : "Blog", route: "/blog"},
-        {name : "Info", route: "/info"}
+        {name : "Gallery", route: "/gallery"},
       ]
     }
   }

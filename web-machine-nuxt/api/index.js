@@ -1,15 +1,20 @@
-const app = require('express')()
-const post_routes = require('./routes/post.routes')
+const express = require('express');
+const postRoutes = require('./routes/github.routes')
+const contactRoutes = require('./routes/contact.routes')
+const {conexion} = require('./database/conexion')
 
-app.get('/', (req, res)=>{
+const app = express()
 
-  res.send({hola : "Hola main"})
-})
+app.use(express.json())
+
+app.use('/github', postRoutes())
+app.use('/contact', contactRoutes())
+
+
+conexion()
 
 
 
-
-app.use('/post', post_routes())
 
 
 

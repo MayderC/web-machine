@@ -1,9 +1,10 @@
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'web-machine-nuxt',
+    title: 'MayderC',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'es'
     },
     meta: [
       { charset: 'utf-8' },
@@ -45,7 +46,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+   
   ],
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

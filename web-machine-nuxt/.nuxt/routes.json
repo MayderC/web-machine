@@ -1,14 +1,51 @@
 [
   {
+    "name": "about",
+    "path": "/about",
+    "component": "/home/mayder/Documentos/Programing/WEB/web-machine/web-machine-nuxt/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_bcc0b514"
+  },
+  {
+    "name": "admin",
+    "path": "/admin",
+    "component": "/home/mayder/Documentos/Programing/WEB/web-machine/web-machine-nuxt/pages/admin.vue",
+    "chunkName": "pages/admin",
+    "_name": "_1a725790"
+  },
+  {
+    "name": "Blog",
+    "path": "/Blog",
+    "component": "/home/mayder/Documentos/Programing/WEB/web-machine/web-machine-nuxt/pages/Blog.vue",
+    "chunkName": "pages/Blog",
+    "_name": "_bbd66d2e"
+  },
+  {
     "name": "gallery",
     "path": "/gallery",
-    "component": "D:\\\\Programing\\\\Web\\\\web-machine\\\\web-machine-nuxt\\\\pages\\\\gallery.vue",
-    "chunkName": "pages/gallery"
+    "component": "/home/mayder/Documentos/Programing/WEB/web-machine/web-machine-nuxt/pages/gallery.vue",
+    "chunkName": "pages/gallery",
+    "_name": "_383d5e7b"
+  },
+  {
+    "name": "ProyectDetail",
+    "path": "/ProyectDetail",
+    "component": "/home/mayder/Documentos/Programing/WEB/web-machine/web-machine-nuxt/pages/ProyectDetail.vue",
+    "chunkName": "pages/ProyectDetail",
+    "_name": "_5881b938"
+  },
+  {
+    "name": "proyects",
+    "path": "/proyects",
+    "component": "/home/mayder/Documentos/Programing/WEB/web-machine/web-machine-nuxt/pages/proyects.vue",
+    "chunkName": "pages/proyects",
+    "_name": "_3dd903b0"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\Programing\\\\Web\\\\web-machine\\\\web-machine-nuxt\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "component": "/home/mayder/Documentos/Programing/WEB/web-machine/web-machine-nuxt/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_7d50ff8a"
   }
 ]

@@ -1,9 +1,10 @@
 <template lang="pug">
 main
   m-navbar
-  h1 Mayder
+  .nav__ghost
+  m-header(title="Gallery", description="Imagenes de mis proyectos")
 
-  section.gallery
+
 
 
 </template>
