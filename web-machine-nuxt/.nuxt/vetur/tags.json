@@ -1,0 +1,41 @@
+{
+  "BarLoading": {
+    "description": "Auto imported from components/BarLoading.vue"
+  },
+  "CardGithubProyects": {
+    "description": "Auto imported from components/CardGithubProyects.vue"
+  },
+  "CircleJump": {
+    "description": "Auto imported from components/CircleJump.vue"
+  },
+  "HandLink": {
+    "description": "Auto imported from components/HandLink.vue"
+  },
+  "MButtonNav": {
+    "description": "Auto imported from components/MButtonNav.vue"
+  },
+  "MContact": {
+    "description": "Auto imported from components/MContact.vue"
+  },
+  "MFooter": {
+    "description": "Auto imported from components/MFooter.vue"
+  },
+  "MHeader": {
+    "description": "Auto imported from components/MHeader.vue"
+  },
+  "MHeaderSvg": {
+    "description": "Auto imported from components/MHeaderSvg.vue"
+  },
+  "MNavbar": {
+    "description": "Auto imported from components/MNavbar.vue"
+  },
+  "MNavbarMenu": {
+    "description": "Auto imported from components/MNavbarMenu.vue"
+  },
+  "PhoneAnimated": {
+    "description": "Auto imported from components/PhoneAnimated.vue"
+  },
+  "ProyectCard": {
+    "description": "Auto imported from components/ProyectCard.vue"
+  }
+}
