@@ -1,5 +1,5 @@
 //  consoleconst URL = 'http://localhost:3000/api/contact'
-const URL = 'https://mayder.herokuapp.com/contact'
+const URL = 'https://mayder.herokuapp.com/api/contact'
 
 
 const sendContactForm = async(data)=>{
