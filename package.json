@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": "14.x",
-    "nom" : "6.x"
+    "nom": "6.x"
   },
   "private": true,
   "scripts": {
@@ -24,7 +24,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.12",
     "node-fetch": "^3.1.0",
-    "nuxt": "^2.15.8",
+    "nuxt": "^2.13.3",
     "ufo": "^0.7.9"
   },
   "devDependencies": {
