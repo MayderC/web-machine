@@ -11,13 +11,22 @@ main
       h3.subtitle-3 Proyectos en VueJs
       section.proyects__vue
         section.vue__item
-          proyect-card(:img="task")
+          proyect-card(
+            :img="task" 
+            live="https://tasskapp.netlify.app/#/"
+            github="https://github.com/MayderC/taskapp-frontend")
 
         section.vue__item
-          proyect-card(:img="dev")
+          proyect-card(
+            :img="dev"
+            live="https://may-devfinder.netlify.app/"
+            github="https://github.com/MayderC/devfinder")
 
         section.vue__item
-          proyect-card(:img="rick")
+          proyect-card(
+            :img="rick"
+            live="https://mayderc-rick-and-morty.netlify.app/"
+            github="https://github.com/MayderC/rick-morty-frontend-vue")
 
   
     article.proyects__item

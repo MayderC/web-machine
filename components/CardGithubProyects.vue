@@ -98,9 +98,6 @@ export default {
           },        
         }
       })
-
-
-        console.log(myChart)
         
         return myChart
     }
