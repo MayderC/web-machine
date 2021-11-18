@@ -285,34 +285,5 @@
   transform: perspective(1500px) rotateY(0deg) rotateX(0deg);
   overflow: hidden;
 }
-/*  capa de atras  3d
-.phone:before{
-  position: absolute;
-  content: "";
-  width: 23px;
-  height: 650px;
-  left: -27px;
-  top: 32px;
-  background: var(--bordeTelefono);
-  border-top-left-radius: 60px;
-  border-bottom-left-radius: 50%;
-  z-index: -1;
-  transform: skewy(-56deg)
-}
-
-
-.phone:after{
-  position: absolute;
-  content: "";
-  height: 23px;
-  width: 358px;
-  bottom: -23px;
-  background: var(--bordeTelefono);
-  transform: skewx(-40deg) translatex(-15px);
-  border-bottom-right-radius: 40px;
-  border-bottom-left-radius: 30px;
-}
-*/
-
 
 </style>

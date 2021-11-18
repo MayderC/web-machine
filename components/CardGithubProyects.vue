@@ -1,9 +1,9 @@
 <template lang="pug">
+
 a(:href="`https://github.com/MayderC/${repo.name}`" target="_blank").card__link
   section().card__repo
     .card__title
       h4 {{repo.name}}
-
     .card__body
       canvas(:id="repo.name" width="260" height="340")
 
@@ -14,48 +14,15 @@ a(:href="`https://github.com/MayderC/${repo.name}`" target="_blank").card__link
 
 import { Chart } from 'chart.js';
 
-
-
-
-
 export default {
   name: 'CardGithubProyects',
   props: {repo : { type: Object, default : ()=>{}}},
-  data(){
-    return{
-      colors : [],
-    }
-  },
 
-  mounted(){
-    this.printChart()
-  },
+  mounted(){this.generateChart()},
 
   methods: {
-    getColorFrom(n) {
-      const simbolos = "0123456789ABCDEF"
-      let color = "#"
-      const colors = []
-      for (let i = 0; i < n; i++) {
-        color = "#"
-        for (let j = 0; j < 6; j++) {color = color + simbolos[Math.floor(Math.random() * 16)]}
-        colors.push(color)
-      }
-      return colors
-    },
-
-    printChart(){
-      const values = Object.values(this.repo.data).length
-      const colors = this.getColorFrom(values)
-      this.colors = colors
-      this.generateChart()
-    },
-
     generateChart(){
       const ctx = document.getElementById(this.repo.name).getContext('2d');
-
-
-
 
       const myChart = new Chart(ctx, {
         type: 'doughnut',
@@ -81,24 +48,8 @@ export default {
             borderWidth: 1
           }]
         },
-        options: {
-          scales: {y: {beginAtZero: true}},
-          plugins: {
-            legend: {
-              labels: {
-                    // This more specific font property overrides the global property
-                font: {
-                  size: 20
-                  }
-              }
-            },
-            title: {
-              text: "HOLLAA"
-            }
-          },        
-        }
+        options: {scales: {y: {beginAtZero: true}}}
       })
-        
         return myChart
     }
   }

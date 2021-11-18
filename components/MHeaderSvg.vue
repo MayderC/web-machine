@@ -15,22 +15,23 @@ svg#wave.svg1(xlink="http://www.w3.org/1999/xlink", style="transform: rotate(180
 <style lang="sass" scoped>
 
   .path1
-    fill: #8526DD
+    fill: #1d557a 
     animation: pathUno 6s infinite cubic-bezier(0,0,1,1)
     animation-direction: alternate
 
   .path2
-    fill: #fff
+    fill: #2c7eb6
     animation: pathUno 6s infinite cubic-bezier(0,0,1,1)
     animation-direction: alternate-reverse
 
   @keyframes pathUno 
     from
       fill: #1d557a 
-      //fill: #1f1f1fa4
+
       transform: translate(0,0)
     to
       fill: #2c7eb6
+
       transform: translate(100px, 100px)
 
 
