@@ -43,7 +43,7 @@ main
 
     article.proyects__item
       h3.subtitle-3 Proyectos en Github
-      hand-link(href="https://codepen.io/mayderc/pens/" text="Mi GitHub Link")
+      hand-link(href="https://github.com/MayderC" text="Mi GitHub Link")
       
       
       section.proyects__github    
@@ -53,40 +53,41 @@ main
 
 </template>
 
-
 <script>
-
 import taskimg from '../static/img/task.png'
 import devfinder from '../static/img/devfinder.png'
 import rickMorty from '../static/img/rick.png'
 
-import {getPercent} from '../fetch-request/github'
+import { getPercent } from '../fetch-request/github'
 
 export default {
   name: 'Proyects',
-  data(){
-    return{
-      task : taskimg,
-      dev : devfinder,
-      rick : rickMorty,
-      data :[]
+  data() {
+    return {
+      task: taskimg,
+      dev: devfinder,
+      rick: rickMorty,
+      data: [],
     }
   },
-    mounted(){
-     this.getData()
+  mounted() {
+    this.getData()
   },
   methods: {
-  async getData() {
-    const url = "https://api.github.com/users/MayderC/repos"
-    try {
-      const { promises, namesToPromises } = await getPercent(url)
-      const infoArray = []
+    async getData() {
+      const url = 'https://api.github.com/users/MayderC/repos'
+      try {
+        const { promises, namesToPromises } = await getPercent(url)
+        const infoArray = []
 
-      Promise.all(promises).then(languages => {
-        for (const i in languages) { infoArray.push({ name: namesToPromises[i], data: languages[i] }) }
-        this.data = infoArray})
-    } catch (error) {}
-  },
+        Promise.all(promises).then((languages) => {
+          for (const i in languages) {
+            infoArray.push({ name: namesToPromises[i], data: languages[i] })
+          }
+          this.data = infoArray
+        })
+      } catch (error) {}
+    },
   },
 }
 </script>

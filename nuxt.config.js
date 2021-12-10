@@ -53,9 +53,9 @@ export default {
     host: '0' // default: localhost
   },
 
-  // router: {
-  //   mode: 'hash'
-  // },
+  router: {
+    mode: 'abstract'
+  },
 
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
