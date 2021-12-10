@@ -2,15 +2,30 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'MayderC',
+    title: 'MayderC - Porfolio',
     htmlAttrs: {
       lang: 'es'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: "title", content: "MayderC - Portfolio"},
+      {name: "description", content:"Portafolio de proyectos web. Tecnologias HTML, CSS, JS, VUEJS, NUXT, NODEJS, EXPRESS"},
+
+      //  <!-- Open Graph / Facebook -->
+      {property:"og:type", content: "website"},
+      {property:"og:url", content:"https://metatags.io/"},
+      {property:"og:title", content:"MayderC - Portfolio"},
+      {property:"og:description", content:"Portafolio de proyectos web. Tecnologias HTML, CSS, JS, VUEJS, NUXT, NODEJS, EXPRESS"},
+      {property:"og:image", content:"https://raw.githubusercontent.com/MayderC/web-machine/nuxt/home.png"},
+
+      //  <!-- Twitter -->
+      {property:"twitter:card", content:"summary_large_image"},
+      {property:"twitter:url", content:"https://metatags.io/"},
+      {property:"twitter:title", content:"MayderC - Portfolio"},
+      {property:"twitter:description", content:"Portafolio de proyectos web. Tecnologias HTML, CSS, JS, VUEJS, NUXT, NODEJS, EXPRESS"},
+      {property:"twitter:image", content:"https://raw.githubusercontent.com/MayderC/web-machine/nuxt/home.png"}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -21,7 +36,7 @@ export default {
   },
 
   /**
-   * <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+   * <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet"}
    * <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
