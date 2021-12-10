@@ -57,6 +57,8 @@ export default {
     mode: 'abstract'
   },
 
+  scrollToTop: true,
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
