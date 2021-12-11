@@ -14,19 +14,29 @@ main
           proyect-card(
             :img="task" 
             live="https://tasskapp.netlify.app/#/"
-            github="https://github.com/MayderC/taskapp-frontend")
+            github="https://github.com/MayderC/taskapp-frontend"
+            text="App para guardar tu lista de tareas")
+
+        section.vue__item
+          proyect-card(
+            :img="link"
+            live="https://fierce-lowlands-38911.herokuapp.com/"
+            github="https://github.com/MayderC/linklist-frontend"
+            text="App para compartir los diferentes links de tus redes sociales")
 
         section.vue__item
           proyect-card(
             :img="dev"
             live="https://may-devfinder.netlify.app/"
-            github="https://github.com/MayderC/devfinder")
+            github="https://github.com/MayderC/devfinder"
+            text="App para buscar perfiles de usuarios en github")
 
         section.vue__item
           proyect-card(
             :img="rick"
             live="https://mayderc-rick-and-morty.netlify.app/"
-            github="https://github.com/MayderC/rick-morty-frontend-vue")
+            github="https://github.com/MayderC/rick-morty-frontend-vue"
+            text="App con la información de los personajes de Rick and Morty")
 
   
     article.proyects__item
@@ -57,6 +67,7 @@ main
 import taskimg from '../static/img/task.png'
 import devfinder from '../static/img/devfinder.png'
 import rickMorty from '../static/img/rick.png'
+import linklist from '../static/img/link.png'
 
 import { getPercent } from '../fetch-request/github'
 
@@ -67,6 +78,7 @@ export default {
       task: taskimg,
       dev: devfinder,
       rick: rickMorty,
+      link: linklist,
       data: [],
     }
   },
