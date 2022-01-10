@@ -4,13 +4,13 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _2f26af52 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
-const _3993d719 = () => interopDefault(import('../pages/admin.vue' /* webpackChunkName: "pages/admin" */))
-const _c7c93330 = () => interopDefault(import('../pages/Blog.vue' /* webpackChunkName: "pages/Blog" */))
-const _0055a5c8 = () => interopDefault(import('../pages/gallery.vue' /* webpackChunkName: "pages/gallery" */))
-const _52e09576 = () => interopDefault(import('../pages/ProyectDetail.vue' /* webpackChunkName: "pages/ProyectDetail" */))
-const _693b092f = () => interopDefault(import('../pages/proyects.vue' /* webpackChunkName: "pages/proyects" */))
-const _0824831c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _61e7a4f5 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
+const _99e25892 = () => interopDefault(import('../pages/admin.vue' /* webpackChunkName: "pages/admin" */))
+const _031f5e0a = () => interopDefault(import('../pages/Blog.vue' /* webpackChunkName: "pages/Blog" */))
+const _06837a3a = () => interopDefault(import('../pages/gallery.vue' /* webpackChunkName: "pages/gallery" */))
+const _158b33e3 = () => interopDefault(import('../pages/ProyectDetail.vue' /* webpackChunkName: "pages/ProyectDetail" */))
+const _38565fd1 = () => interopDefault(import('../pages/proyects.vue' /* webpackChunkName: "pages/proyects" */))
+const _fcc1008c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -25,31 +25,31 @@ export const routerOptions = {
 
   routes: [{
     path: "/about",
-    component: _2f26af52,
+    component: _61e7a4f5,
     name: "about"
   }, {
     path: "/admin",
-    component: _3993d719,
+    component: _99e25892,
     name: "admin"
   }, {
     path: "/Blog",
-    component: _c7c93330,
+    component: _031f5e0a,
     name: "Blog"
   }, {
     path: "/gallery",
-    component: _0055a5c8,
+    component: _06837a3a,
     name: "gallery"
   }, {
     path: "/ProyectDetail",
-    component: _52e09576,
+    component: _158b33e3,
     name: "ProyectDetail"
   }, {
     path: "/proyects",
-    component: _693b092f,
+    component: _38565fd1,
     name: "proyects"
   }, {
     path: "/",
-    component: _0824831c,
+    component: _fcc1008c,
     name: "index"
   }],
 

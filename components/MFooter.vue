@@ -4,14 +4,14 @@
   .footer__text.text--top
     p dcybmay@gmail.com
   .footer__container
-    a(href="").footer__item
+    a(href="https://www.youtube.com/channel/UCN6QP97Il86O08qEPE7gXvQ" target="_blank").footer__item
       img(src="../static/img/youtube-icon.svg", alt="")
 
-    a(href="").footer__item
-      img(src="../static/img/github-octocat.svg", alt="")
+    a(href="https://github.com/MayderC" target="_blank").footer__item
+      img(src="../static/img/github-octocat.svg", alt="github mayderc")
 
-    a(href="").footer__item
-      img(src="../static/img/linkedin-icon.svg", alt="")
+    a(href="https://www.linkedin.com/in/david-cortesb/" target="_blank").footer__item
+      img(src="../static/img/linkedin-icon.svg", alt="linkedin mayderc")
   .footer__text.text--bottom
     p Desarrollada por MayderC usando Nuxtjs
 
@@ -46,7 +46,7 @@
     transition: .2s
 
   .footer__item:hover img
-    transform: translateY(-10px)
+    transform: translateY(-6px)
     transition: .2s
 
 
