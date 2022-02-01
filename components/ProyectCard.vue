@@ -52,7 +52,7 @@ export default {
   color: #D9D9D9
   font-weight: bold
   text-align: center
-  margin-top: 5px
+  margin-top: 12px
 
 
 

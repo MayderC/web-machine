@@ -38,18 +38,28 @@ main
             github="https://github.com/MayderC/rick-morty-frontend-vue"
             text="App con la información de los personajes de Rick and Morty")
 
+    article.proyects__item
+      h3.subtitle-3 Proyectos en React Js
+      section.proyects__vue
+        section.react__item
+          proyect-card(
+            :img="countryimg"
+            live="https://blissful-easley-831ea3.netlify.app/"
+            github="https://github.com/MayderC/countries-practice-react"
+            text="App con la información de los diferentes paises del mundo. frontend")
+
   
     article.proyects__item
       h3.subtitle-3 Animaciones CSS  
       hand-link(href="https://codepen.io/mayderc/pens/" text="Mi codepen Link")
 
-      section.proyects__css
-        section.css__item.anim--phone
-          phone-animated
-        section.css__item.anim--Jump
-          circle-jump
-        section.css__item.anim--loading
-          bar-loading
+        section.proyects__css
+          section.css__item.anim--phone
+            phone-animated
+          section.css__item.anim--Jump
+            circle-jump
+          section.css__item.anim--loading
+            bar-loading
 
     article.proyects__item
       h3.subtitle-3 Proyectos en Github
@@ -68,6 +78,7 @@ import taskimg from '../static/img/task.png'
 import devfinder from '../static/img/devfinder.png'
 import rickMorty from '../static/img/rick.png'
 import linklist from '../static/img/link.png'
+import country from '../static/img/country.png'
 
 import { getPercent } from '../fetch-request/github'
 
@@ -79,6 +90,7 @@ export default {
       dev: devfinder,
       rick: rickMorty,
       link: linklist,
+      countryimg : country,
       data: [],
     }
   },
