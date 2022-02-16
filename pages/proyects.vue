@@ -53,13 +53,13 @@ main
       h3.subtitle-3 Animaciones CSS  
       hand-link(href="https://codepen.io/mayderc/pens/" text="Mi codepen Link")
 
-        section.proyects__css
-          section.css__item.anim--phone
-            phone-animated
-          section.css__item.anim--Jump
-            circle-jump
-          section.css__item.anim--loading
-            bar-loading
+      section.proyects__css
+        section.css__item.anim--phone
+          phone-animated
+        section.css__item.anim--Jump
+          circle-jump
+        section.css__item.anim--loading
+          bar-loading
 
     article.proyects__item
       h3.subtitle-3 Proyectos en Github
