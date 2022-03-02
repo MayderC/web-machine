@@ -48,6 +48,14 @@ main
             github="https://github.com/MayderC/countries-practice-react"
             text="App con la información de los diferentes paises del mundo. frontend")
 
+
+        section.react__item
+          proyect-card(
+            :img="chat"
+            live="https://frosty-mayer-9c261d.netlify.app/"
+            github="https://github.com/MayderC/w-chat-frontend"
+            text="App chat en tiempo real version Beta")
+
   
     article.proyects__item
       h3.subtitle-3 Animaciones CSS  
@@ -79,6 +87,7 @@ import devfinder from '../static/img/devfinder.png'
 import rickMorty from '../static/img/rick.png'
 import linklist from '../static/img/link.png'
 import country from '../static/img/country.png'
+import chatpng from '../static/img/chat.png'
 
 import { getPercent } from '../fetch-request/github'
 
@@ -86,6 +95,7 @@ export default {
   name: 'Proyects',
   data() {
     return {
+      chat : chatpng,
       task: taskimg,
       dev: devfinder,
       rick: rickMorty,
