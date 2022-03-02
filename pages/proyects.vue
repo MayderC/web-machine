@@ -2,7 +2,7 @@
 main
   m-navbar
   .nav__ghost
-  m-header(title="Proyects", description="Mi lista de proyectos" )
+
 
   section.proyects
     h2.subtitle Mis proyectos

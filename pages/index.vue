@@ -16,7 +16,6 @@ main
 
   section.extra__section
     h2.subtitle Otros Conocimientos
-    p.sub__text Basicos e intermedios
     section.skills__extras
       article.skill__Nodejs.extra
         img(src="../static/img/nodejs.svg")
