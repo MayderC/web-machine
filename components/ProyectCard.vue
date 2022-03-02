@@ -41,19 +41,23 @@ export default {
 .card__proyect
   width: 600px
   background-color: #191919
-  //border-radius: 5px
+  border-radius: 5px
   overflow: hidden
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5)
 
 .card__proyect img
-  max-width: 100%
+  object-fit: cover
+  height: 306px
+  width: 600px
+
+.card__item
+  height: 306px 
 
 .card__footer .text__footer p
   color: #D9D9D9
   font-weight: bold
   text-align: center
   margin-top: 12px
-
 
 
 .card__footer__links
@@ -67,4 +71,12 @@ export default {
 @media (max-width: $movil-lg)
   .card__proyect
     width: 300px
+
+  .card__proyect img
+    object-fit: cover
+    height: 206px
+    width: 300px
+
+  .card__item
+    height: 206px 
 </style>
