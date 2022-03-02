@@ -5,7 +5,7 @@
       nuxt-link(to="/" :class="isNavOnTop ? 'navbar__title-b' : 'navbar__title-w'").navbar__link-home.link MayderC 
 
     m-navbar-menu(
-      :isNavOnTop='isNavOnTop' 
+      :isNavOnTop='isNavOnTop'
       :class="[isNavOnTop ? 'navOn' : 'navOff', isMenuOpen ? 'showMenuMovil' : 'hideMenuMovil']")
 
     m-button-nav(
@@ -46,7 +46,9 @@ export default {
     },
 
     show(){
+
       this.isMenuOpen = !this.isMenuOpen
+
     }
 
   }
