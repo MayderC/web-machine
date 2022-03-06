@@ -1,10 +1,27 @@
+.main_index
+  display: flex
+  flex-direction: column
+  gap: 30px
+
+@media (min-width: 880px)
+  main.main_index > section
+    scroll-snap-align: start
+  .main_index
+    height: 100vh
+    overflow-y: scroll
+    scroll-snap-type: y mandatory
+
 .nav__ghost
   height: 50px
 
   //background: #1d1d1d
 
+.about
+  display: flex
+  flex-direction: column
+  justify-content: center
+
 .skills__extras
-  margin-top: 50px
   display: flex
   gap: 50px
   background-color: #f5f4fd
@@ -14,13 +31,8 @@
   justify-content: center
 
 .extra__section
-  width: 90%
-  margin-left: auto
-  margin-right: auto
+  padding: 30px
   display: flex
-  align-items: center
-  flex-direction: column
-  margin-top: 90px
 
 .extra
   display: flex
@@ -28,26 +40,16 @@
   align-items: center
   gap: 50px
   height: 50px
-  
-.extra > img 
+
+.extra > img
   max-height: 100%
   transition: .3s
 
-.extra > p 
+.extra > p
   color: #222222
   font-size: 1.5em
   transition: .3s
 
-.contact__section
-  margin-top: 90px
-
-.contacto__item
-  margin-top: 90px
-  margin-bottom: 90px
-
-
 @media (max-width: 458px)
   .about__img
     width: 300px
-
-
