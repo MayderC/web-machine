@@ -20,6 +20,8 @@ main#main_scroll.main_index
       article.skill__Nodejs.extra
         img(src="../static/img/nodejs.svg")
       article.skill__Nodejs.extra
+        img(src="../static/img/react-js.png")
+      article.skill__Nodejs.extra
         img(src="../static/img/express.svg")
       article.skill__Nodejs.extra
         img(src="../static/img/nuxt.svg")
@@ -27,6 +29,7 @@ main#main_scroll.main_index
         img(src="../static/img/mysql-1.svg")
       article.skill__Nodejs.extra
         img(src="../static/img/mongodb.svg")
+
      
   section.contact__section
     h2.subtitle Contacto
