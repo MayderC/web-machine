@@ -1,5 +1,5 @@
 <template lang="pug">
-main.main_index
+main#main_scroll.main_index
   m-navbar.nav__ghost
 
   section.header
