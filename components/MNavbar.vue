@@ -6,7 +6,8 @@
 
     m-navbar-menu(
       :isNavOnTop='isNavOnTop'
-      :class="[isNavOnTop ? 'navOn' : 'navOff', isMenuOpen ? 'showMenuMovil' : 'hideMenuMovil']")
+      :class="[isNavOnTop ? 'navOn' : 'navOff', isMenuOpen ? 'showMenuMovil' : 'hideMenuMovil']"
+      v-on:toggleMenu="show")
 
     m-button-nav(
       :isOpen = "isMenuOpen"  
@@ -27,9 +28,9 @@ export default {
   },
 
   mounted(){
-     if (process.browser) {
-      window.onscroll = this.onScrollNavbarColor
-    }
+    //  if (process.browser) {
+    //   window.onscroll = this.onScrollNavbarColor
+    // }
 
   },
 
