@@ -2,7 +2,7 @@
 
  footer.footer
   .footer__text.text--top
-    p dcybmay@gmail.com
+    
   .footer__container
     a(href="https://www.youtube.com/channel/UCN6QP97Il86O08qEPE7gXvQ" target="_blank").footer__item
       img(src="../static/img/youtube-icon.svg", alt="")

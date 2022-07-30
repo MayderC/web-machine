@@ -59,7 +59,7 @@ main
   
     article.proyects__item
       h3.subtitle-3 Animaciones CSS  
-      hand-link(href="https://codepen.io/mayderc/pens/" text="Mi codepen Link")
+      hand-link(  href="https://codepen.io/mayderc/pens/" text="Mi codepen Link")
 
       section.proyects__css
         section.css__item.anim--phone
@@ -71,9 +71,7 @@ main
 
     article.proyects__item
       h3.subtitle-3 Proyectos en Github
-      hand-link(href="https://github.com/MayderC" text="Mi GitHub Link")
-      
-      
+      hand-link(  href="https://github.com/MayderC" text="Mi GitHub Link").
       section.proyects__github    
         card-github-proyects(v-for="d in data" :key="d.name" :repo="d")
 
@@ -125,3 +123,11 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+
+  .link_github{
+    padding: 30px
+  }
+
+</style>

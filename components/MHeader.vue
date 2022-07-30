@@ -10,23 +10,21 @@
     
     .header__skills
       .skills_text
-        p Conocimientos principales
+        p Tecnologías principales
       .skills__items
         .skill__html.skill
-          img(src="../static/img/html.svg")
-          p HTML
+          img(src="../static/img/nodejs-icon.svg")
+          p Nodejs
         .skill__css.skill
-          img(src="../static/img/css.svg")
-          p CSS
+          img(src="../static/img/react-2.svg")
+          p Reacjs
         .skill__js.skill
           img(src="../static/img/javascript.svg")
           p JavaScript
         .skill__vue.skill
           img(src="../static/img/vue.svg")
           p Vuejs
-        .skill__git.skill
-          img(src="../static/img/git-icon.svg")
-          p Git
+        
     m-header-svg.header__img
 
 </template>
