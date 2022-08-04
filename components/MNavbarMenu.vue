@@ -3,7 +3,8 @@
   ul.navbar__menu
     li( @click="test" v-for="i in items").navbar__list
       div( :class="isNavOnTop ? 'nav-menu-animation-w' : 'nav-menu-animation-b'").nav-menu-animation
-      nuxt-link(:to="i.route"  :class="isNavOnTop ? 'colornavOn' : 'colornavOff'" ).navbar__link {{i.name}}
+      a(:href="i.route" style="color: inherit;" target="_blank" v-if="i.target").navbar__link {{i.name}}
+      nuxt-link(:to="i.route" v-else :class="isNavOnTop ? 'colornavOn' : 'colornavOff'" ).navbar__link {{i.name}}
 
 </template>
 <script>
@@ -16,6 +17,7 @@ export default {
       items: [
         { name: 'Home', route: '/' },
         { name: 'Projects', route: '/proyects' },
+        { name: 'Blog', route: 'https://portfolio-blog-mayderc.herokuapp.com/', target: true}
       ],
     }
   },
