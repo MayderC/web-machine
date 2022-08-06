@@ -2,50 +2,50 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "/home/mayder/Documentos/programacion/web/web-machine/pages/about.vue",
+    "component": "/home/mayder/Documentos/programacion/vue/web-machine/pages/about.vue",
     "chunkName": "pages/about",
-    "_name": "_61e7a4f5"
+    "_name": "_588d77b2"
   },
   {
     "name": "admin",
     "path": "/admin",
-    "component": "/home/mayder/Documentos/programacion/web/web-machine/pages/admin.vue",
+    "component": "/home/mayder/Documentos/programacion/vue/web-machine/pages/admin.vue",
     "chunkName": "pages/admin",
-    "_name": "_99e25892"
+    "_name": "_24e072e9"
   },
   {
     "name": "Blog",
     "path": "/Blog",
-    "component": "/home/mayder/Documentos/programacion/web/web-machine/pages/Blog.vue",
+    "component": "/home/mayder/Documentos/programacion/vue/web-machine/pages/Blog.vue",
     "chunkName": "pages/Blog",
-    "_name": "_031f5e0a"
+    "_name": "_69e41098"
   },
   {
     "name": "gallery",
     "path": "/gallery",
-    "component": "/home/mayder/Documentos/programacion/web/web-machine/pages/gallery.vue",
+    "component": "/home/mayder/Documentos/programacion/vue/web-machine/pages/gallery.vue",
     "chunkName": "pages/gallery",
-    "_name": "_06837a3a"
+    "_name": "_4a6a14ec"
   },
   {
     "name": "ProyectDetail",
     "path": "/ProyectDetail",
-    "component": "/home/mayder/Documentos/programacion/web/web-machine/pages/ProyectDetail.vue",
+    "component": "/home/mayder/Documentos/programacion/vue/web-machine/pages/ProyectDetail.vue",
     "chunkName": "pages/ProyectDetail",
-    "_name": "_158b33e3"
+    "_name": "_c6a8fdd6"
   },
   {
     "name": "proyects",
     "path": "/proyects",
-    "component": "/home/mayder/Documentos/programacion/web/web-machine/pages/proyects.vue",
+    "component": "/home/mayder/Documentos/programacion/vue/web-machine/pages/proyects.vue",
     "chunkName": "pages/proyects",
-    "_name": "_38565fd1"
+    "_name": "_71431b5f"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/mayder/Documentos/programacion/web/web-machine/pages/index.vue",
+    "component": "/home/mayder/Documentos/programacion/vue/web-machine/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_fcc1008c"
+    "_name": "_191dc228"
   }
 ]

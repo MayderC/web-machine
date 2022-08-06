@@ -41,7 +41,28 @@ main#main_scroll.main_index
 
 </template>
 
+<script>
+export default {
 
+  mounted(){
+
+    this.activeBlog().then(() => {
+      console.clear()
+    }).catch(() => {
+      console.clear()
+    })
+
+
+  },
+  
+  methods: {
+    activeBlog() {
+      return fetch('https://portfolio-blog-mayderc.herokuapp.com/Fullstack/linkList')
+    }
+  }
+
+}
+</script>
 
 <style lang="sass">
 @import '../static/sass/main'
@@ -59,3 +80,4 @@ main#main_scroll.main_index
 
 
 </style>
+
