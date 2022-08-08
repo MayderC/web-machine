@@ -3,7 +3,7 @@ main#main_scroll.main_index
   m-navbar.nav__ghost
 
   section.header
-    m-header(title="MayderC", description="Fullstack Developer" )
+    m-header(title="MayderC", description="Web Developer" )
 
 
   section.about
