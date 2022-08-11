@@ -12,7 +12,7 @@ main#main_scroll.main_index
       article.about__img.about__item
         img(src="../static/img/about.svg")
       article.about__description.about__item
-        p.about__text Soy un estudiante de TI "Tecnologías de información" que le gusta el desarrollo web. Estudio en la Universidad y aprendo diferentes tecnologias y lenguajes de programación.
+        p.about__text Soy un estudiante de Bachillerato en Tecnologías de información, que se dedica al desarrollo web frontend y backend.
 
   section.extra__section
     h2.subtitle Otras Tecnologías

@@ -2,6 +2,11 @@
   <section class="card__proyect">
     <div class="card__item">
       <img :src="img" alt="" />
+      <div class="card__item-hover">
+        <ul> 
+          <li v-for="item, index in items" :key="index">{{item}}</li>
+        </ul>
+      </div>
     </div>
     <div class="card__footer">
       <div class="text__footer">
@@ -31,6 +36,7 @@ export default {
     live: { type: String, default: '' },
     github: { type: String, default: '' },
     text: { type: String, default: '' },
+    items: {type: Array, default: ( ) => []}
   },
 }
 </script>
@@ -51,7 +57,45 @@ export default {
   width: 600px
 
 .card__item
+  position: relative
   height: 306px 
+
+
+
+.card__item-hover
+  position: absolute
+  background: #000000c4
+  width: 100%
+  height: 306px
+  top: 0
+  opacity: 0
+  transition: opacity .3s
+  display: flex
+  justify-content: center
+
+.card__item-hover ul
+  color: white
+  width: 60%
+  font-weight: bolder
+  margin: 0 auto
+  padding: 30px 0
+  display: flex
+  flex-wrap: wrap
+  gap: 30px
+  list-style: none
+
+.card__item-hover ul li
+  background: #505050
+  border-radius: 10px
+  height: 40px
+  padding: 10px
+  cursor: default
+
+
+
+.card__item:hover .card__item-hover
+  opacity: 1
+  transition: opacity .3s 
 
 .card__footer .text__footer p
   color: #D9D9D9
@@ -79,4 +123,12 @@ export default {
 
   .card__item
     height: 206px 
+
+  .card__item-hover
+    height: 0
+    display: none
+
+  .card__item-hover:hover
+    height: 206px
+    display: none
 </style>

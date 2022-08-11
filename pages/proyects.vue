@@ -8,53 +8,69 @@ main
     h2.subtitle Mis proyectos
 
     article.proyects__item
-      h3.subtitle-3 Proyectos en VueJs
+      h3.subtitle-3 Fullstack (Frontend y Backend)
       section.proyects__vue
-        section.vue__item
+
+
+        section.react__item
           proyect-card(
-            :img="task" 
-            live="https://tasskapp.netlify.app/#/"
-            github="https://github.com/MayderC/taskapp-frontend"
-            text="App para guardar tu lista de tareas")
+            :items="['HTML - CSS', 'Javascript', 'ReactJs', 'API REST', 'JWT Auth', 'NodeJs', 'Web Sockets', 'ExpressJS', 'PostgresSQL', 'Sequelize ORM']"
+            :img="chat"
+            live="https://frosty-mayer-9c261d.netlify.app/"
+            github="https://github.com/MayderC/w-chat-frontend"
+            text="App chat en tiempo real version Beta")
+
+
 
         section.vue__item
           proyect-card(
+            :items="['HTML - CSS', 'Javascript', 'VueJS', 'API REST', 'JWT Auth', 'NodeJs', 'ExpressJS', 'MongoDB', 'MongooseODM']"
             :img="link"
             live="https://fierce-lowlands-38911.herokuapp.com/"
             github="https://github.com/MayderC/linklist-frontend"
             text="App para compartir los diferentes links de tus redes sociales")
 
-        section.vue__item
-          proyect-card(
-            :img="dev"
-            live="https://may-devfinder.netlify.app/"
-            github="https://github.com/MayderC/devfinder"
-            text="App para buscar perfiles de usuarios en github")
 
         section.vue__item
           proyect-card(
-            :img="rick"
-            live="https://mayderc-rick-and-morty.netlify.app/"
-            github="https://github.com/MayderC/rick-morty-frontend-vue"
-            text="App con la información de los personajes de Rick and Morty")
+            :items="['HTML - CSS', 'Javascript', 'VueJS', 'JWT Auth', 'API REST', 'NodeJs', 'ExpressJS', 'MongoDB', 'MongooseODM']"
+            :img="task" 
+            live="https://tasskapp.netlify.app/#/"
+            github="https://github.com/MayderC/taskapp-frontend"
+            text="App para guardar tu lista de tareas")
+
+
+
+
 
     article.proyects__item
-      h3.subtitle-3 Proyectos en React Js
+      h3.subtitle-3 Frontend Vue and React
       section.proyects__vue
         section.react__item
           proyect-card(
             :img="countryimg"
+            :items="['HTML - CSS', 'Javascript', 'ReactJs']"
             live="https://blissful-easley-831ea3.netlify.app/"
             github="https://github.com/MayderC/countries-practice-react"
             text="App con la información de los diferentes paises del mundo. frontend")
 
-
-        section.react__item
+        section.vue__item
           proyect-card(
-            :img="chat"
-            live="https://frosty-mayer-9c261d.netlify.app/"
-            github="https://github.com/MayderC/w-chat-frontend"
-            text="App chat en tiempo real version Beta")
+            :img="rick"
+            :items="['HTML - CSS', 'Javascript', 'VueJs']"
+            live="https://mayderc-rick-and-morty.netlify.app/"
+            github="https://github.com/MayderC/rick-morty-frontend-vue"
+            text="App con la información de los personajes de Rick and Morty")
+
+        section.vue__item
+          proyect-card(
+            :img="dev"
+            :items="['HTML - CSS', 'Javascript', 'VueJS']"
+            live="https://may-devfinder.netlify.app/"
+            github="https://github.com/MayderC/devfinder"
+            text="App para buscar perfiles de usuarios en github")
+
+
 
   
     article.proyects__item
@@ -130,4 +146,7 @@ export default {
     padding: 30px
   }
 
+  .detailt_item{
+    width: 600px;    
+  }
 </style>

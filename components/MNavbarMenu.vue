@@ -17,7 +17,7 @@ export default {
       items: [
         { name: 'Home', route: '/' },
         { name: 'Projects', route: '/proyects' },
-        { name: 'Blog', route: 'https://portfolio-blog-mayderc.herokuapp.com/', target: true}
+        { name: 'Project details', route: 'https://portfolio-blog-mayderc.herokuapp.com/', target: true}
       ],
     }
   },
