@@ -71,6 +71,13 @@ main
             text="App para buscar perfiles de usuarios en github")
 
 
+        section.vue__item
+          proyect-card(
+            img="https://raw.githubusercontent.com/MayderC/exchange/main/home.png"
+            :items="['HTML - CSS', 'Javascript', 'VueJS']"
+            live="https://mayder-exchange-app.netlify.app/"
+            github="https://github.com/MayderC/devfinder"
+            text="App ")
 
   
     article.proyects__item
@@ -127,7 +134,6 @@ export default {
       try {
         const { promises, namesToPromises } = await getPercent(url)
         const infoArray = []
-
         Promise.all(promises).then((languages) => {
           for (const i in languages) {
             infoArray.push({ name: namesToPromises[i], data: languages[i] })

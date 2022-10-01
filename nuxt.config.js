@@ -60,16 +60,14 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-   
-  ],
+  modules: ['@nuxtjs/axios'],
 
   server: {
     host: '0' // default: localhost
   },
 
   router: {
-    mode: 'abstract'
+    mode: 'hash'
   },
 
   scrollToTop: true,
