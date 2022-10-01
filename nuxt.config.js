@@ -67,7 +67,7 @@ export default {
   },
 
   router: {
-    mode: 'hash'
+    mode: 'abstract'
   },
 
   scrollToTop: true,

@@ -109,7 +109,10 @@ main
       h3.subtitle-3 Proyectos en Github
       hand-link(  href="https://github.com/MayderC" text="Mi GitHub Link").
       section.proyects__github    
-        card-github-proyects(v-for="d in data" :key="d.name" :repo="d")
+        card-github-proyects(v-for="d in visibleData" :key="d.name" :repo="d")
+      div(v-show="visibleData.length <=  countProyects")
+        p(@click="showAllProyects").show-repos show all repositories
+      
 
   m-footer
 
@@ -137,9 +140,11 @@ export default {
       rick: rickMorty,
       link: linklist,
       countryimg : country,
-      data: [],
       uploader: upload,
-      unsplash: unsp
+      unsplash: unsp,
+      data: [],
+      visibleData: [],
+      countProyects : 8
     }
   },
   mounted() {
@@ -156,9 +161,13 @@ export default {
             infoArray.push({ name: namesToPromises[i], data: languages[i] })
           }
           this.data = infoArray
+          this.visibleData = this.data.splice(0, this.countProyects)
         })
       } catch (error) {}
     },
+    showAllProyects(){
+      this.visibleData = JSON.parse(JSON.stringify(this.data))
+    }
   },
 }
 </script>
@@ -171,5 +180,12 @@ export default {
 
   .detailt_item{
     width: 600px;    
+  }
+  .show-repos{
+    color: rgb(146, 202, 255);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    cursor: pointer;
   }
 </style>
