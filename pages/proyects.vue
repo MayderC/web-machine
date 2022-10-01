@@ -39,9 +39,22 @@ main
             github="https://github.com/MayderC/taskapp-frontend"
             text="App para guardar tu lista de tareas")
 
+        section.vue__item
+          proyect-card(
+            :items="['HTML - CSS', 'Typescript', 'VueJS', 'API REST', 'NodeJs', 'ExpressJS', 'MongoDB', 'MongooseODM']"
+            :img="uploader" 
+            live="https://comfy-bombolone-1ac23d.netlify.app/"
+            github="https://github.com/MayderC/image-uploader-fe"
+            text="App subir imagenes y generar un link unico")
 
 
-
+        section.vue__item
+          proyect-card(
+            :items="['HTML - CSS', 'Typescript', 'VueJS', 'API REST', 'NodeJs', 'Nest Js', 'Swagger', 'MongoDB',]"
+            :img="unsplash" 
+            live="https://stirring-frangollo-bfd933.netlify.app/"
+            github="https://github.com/MayderC/my-unsplash-fe"
+            text="My Unsplash Api")
 
     article.proyects__item
       h3.subtitle-3 Frontend Vue and React
@@ -109,6 +122,8 @@ import rickMorty from '../static/img/rick.png'
 import linklist from '../static/img/link.png'
 import country from '../static/img/country.png'
 import chatpng from '../static/img/chat.png'
+import upload from '../static/img/uploader.png'
+import unsp from '../static/img/unsplash.png'
 
 import { getPercent } from '../fetch-request/github'
 
@@ -123,6 +138,8 @@ export default {
       link: linklist,
       countryimg : country,
       data: [],
+      uploader: upload,
+      unsplash: unsp
     }
   },
   mounted() {
