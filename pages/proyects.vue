@@ -55,6 +55,14 @@ main
             live="https://stirring-frangollo-bfd933.netlify.app/"
             github="https://github.com/MayderC/my-unsplash-fe"
             text="My Unsplash Api")
+        
+        section.vue__item
+          proyect-card(
+            :items="['HTML - CSS', 'Typescript', 'VueJS', 'API REST', 'NodeJs', 'Nest Js', 'Swagger', 'MongoDB',]"
+            :img="catwiki" 
+            live="https://phenomenal-sunshine-997127.netlify.app/"
+            github="https://github.com/MayderC/cat-wiki-fe"
+            text="Catwiki información de gatitos y sus razas")
 
     article.proyects__item
       h3.subtitle-3 Frontend Vue and React
@@ -127,6 +135,7 @@ import country from '../static/img/country.png'
 import chatpng from '../static/img/chat.png'
 import upload from '../static/img/uploader.png'
 import unsp from '../static/img/unsplash.png'
+import cat from '../static/img/catwiki.png'
 
 import { getPercent } from '../fetch-request/github'
 
@@ -135,6 +144,7 @@ export default {
   data() {
     return {
       chat : chatpng,
+      catwiki: cat,
       task: taskimg,
       dev: devfinder,
       rick: rickMorty,
