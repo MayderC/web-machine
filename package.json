@@ -1,10 +1,6 @@
 {
   "name": "web-machine-nuxt",
   "version": "1.0.0",
-  "engines": {
-    "node": "14.x",
-    "nom": "6.x"
-  },
   "private": true,
   "scripts": {
     "dev": "nuxt",
