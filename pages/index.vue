@@ -1,83 +1,70 @@
-<template lang="pug">
-main#main_scroll.main_index
-  m-navbar.nav__ghost
+<template>
+  <main class="main_index" id="main_scroll">
+    <m-navbar class="nav__ghost"></m-navbar>
+    <section class="header">
+      <m-header title="MayderC" description="Web Developer"></m-header>
+    </section>
+    <section class="about">
+      <h2 class="subtitle">Acerca de mi</h2>
+      <section class="about__items">
+        <article class="about__img about__item">
+          <img src="~/assets/img/about.svg" />
+        </article>
+        <article class="about__description about__item">
+          <p class="about__text">
+            Soy un estudiante de Bachillerato en Tecnologías de información, que
+            se dedica al desarrollo web frontend y backend.
+          </p>
+        </article>
+      </section>
+    </section>
 
-  section.header
-    m-header(title="MayderC", description="Web Developer" )
-
-
-  section.about
-    h2.subtitle Acerca de mi
-    section.about__items
-      article.about__img.about__item
-        img(src="../static/img/about.svg")
-      article.about__description.about__item
-        p.about__text Soy un estudiante de Bachillerato en Tecnologías de información, que se dedica al desarrollo web frontend y backend.
-
-  section.extra__section
-    h2.subtitle Otras Tecnologías
-    section.skills__extras
-      article.skill__Nodejs.extra
-        img(src="../static/img/dot-net.svg")
-      article.skill__Nodejs.extra
-        img(src="../static/img/c--4.svg")
-      article.skill__Nodejs.extra
-        img(src="../static/img/express.svg")
-      article.skill__Nodejs.extra
-        img(src="../static/img/typescript.svg")
-      article.skill__Nodejs.extra
-        img(src="../static/img/mysql-1.svg")
-      article.skill__Nodejs.extra
-        img(src="../static/img/mongodb.svg")
-     
-  section.contact__section
-    h2.subtitle Contacto
-    section.contacto__item
-      m-contact
-      
-  m-footer
-
-
-
+    <section class="extra__section">
+      <h2 class="subtitle">Otras Tecnologías</h2>
+      <section class="skills__extras">
+        <article class="skill__Nodejs extra">
+          <img src="~/assets/img/dot-net.svg" />
+        </article>
+        <article class="skill__Nodejs extra">
+          <img src="~/assets/img/c--4.svg" />
+        </article>
+        <article class="skill__Nodejs extra">
+          <img src="~/assets/img/express.svg" />
+        </article>
+        <article class="skill__Nodejs extra">
+          <img src="~/assets/img/typescript.svg" />
+        </article>
+        <article class="skill__Nodejs extra">
+          <img src="~/assets/img/mysql-1.svg" />
+        </article>
+        <article class="skill__Nodejs extra">
+          <img src="~/assets/img/mongodb.svg" />
+        </article>
+      </section>
+    </section>
+    <section class="contact__section">
+      <h2 class="subtitle">Contacto</h2>
+      <section class="contacto__item">
+        <m-contact></m-contact>
+      </section>
+    </section>
+  </main>
 </template>
 
-<script>
-export default {
+<style lang="scss">
+@import "~/assets/scss/main.scss";
 
-  mounted(){
-
-    this.activeBlog().then(() => {
-      console.clear()
-    }).catch(() => {
-      console.clear()
-    })
-
-
-  },
-  
-  methods: {
-    activeBlog() {
-      return fetch('https://portfolio-blog-mayderc.herokuapp.com/Fullstack/linkList')
-    }
-  }
-
+.about,
+.extra__section,
+.contact__section,
+section.header {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-</script>
-
-<style lang="sass">
-@import '../static/sass/main'
-
-.about, .extra__section,.contact__section, section.header
-  height: auto
-  //min-height: 100vh
-  display: flex
-  align-items: center
-  justify-content: center
-  flex-direction: column
-
-.contact__section
-  min-height: 60vh
-
-
+.contact__section {
+  min-height: 60vh;
+}
 </style>
-

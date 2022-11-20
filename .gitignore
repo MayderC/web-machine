@@ -1,5 +1,8 @@
 node_modules
-.env
-.nuxt/dist
-.eslintcache
+*.log*
 .nuxt
+.nitro
+.cache
+.output
+.env
+dist
