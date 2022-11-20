@@ -12,8 +12,8 @@
         </article>
         <article class="about__description about__item">
           <p class="about__text">
-            Soy un estudiante de Bachillerato en Tecnologías de información, que
-            se dedica al desarrollo web frontend y backend.
+            Soy desarrollador web Diplomado de 3 años en Tecnologías de
+            información, me dedico al desarrollo frontend y backend.
           </p>
         </article>
       </section>
