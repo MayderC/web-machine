@@ -8,7 +8,7 @@
       <h2 class="subtitle">Acerca de mi</h2>
       <section class="about__items">
         <article class="about__img about__item">
-          <img src="~/assets/img/about.svg" />
+          <img src="../assets/img/about.svg" />
         </article>
         <article class="about__description about__item">
           <p class="about__text">
@@ -23,22 +23,22 @@
       <h2 class="subtitle">Otras Tecnologías</h2>
       <section class="skills__extras">
         <article class="skill__Nodejs extra">
-          <img src="~/assets/img/dot-net.svg" />
+          <img src="../assets/img/dot-net.svg" />
         </article>
         <article class="skill__Nodejs extra">
-          <img src="~/assets/img/c--4.svg" />
+          <img src="../assets/img/c--4.svg" />
         </article>
         <article class="skill__Nodejs extra">
-          <img src="~/assets/img/express.svg" />
+          <img src="../assets/img/express.svg" />
         </article>
         <article class="skill__Nodejs extra">
-          <img src="~/assets/img/typescript.svg" />
+          <img src="../assets/img/typescript.svg" />
         </article>
         <article class="skill__Nodejs extra">
-          <img src="~/assets/img/mysql-1.svg" />
+          <img src="../assets/img/mysql-1.svg" />
         </article>
         <article class="skill__Nodejs extra">
-          <img src="~/assets/img/mongodb.svg" />
+          <img src="../assets/img/mongodb.svg" />
         </article>
       </section>
     </section>
@@ -52,7 +52,7 @@
 </template>
 
 <style lang="scss">
-@import "~/assets/scss/main.scss";
+@import "../assets/scss/main.scss";
 
 .about,
 .extra__section,

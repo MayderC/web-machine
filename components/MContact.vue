@@ -31,7 +31,9 @@
               ></textarea>
             </div>
             <div class="form__footer">
-              <span id="enviar" class="submit" @click="sendData">Enviar</span>
+              <span id="enviar" class="submit" @click="sendData">{{
+                button
+              }}</span>
             </div>
           </div>
         </div>
@@ -41,19 +43,17 @@
 </template>
 
 <script>
-import { sendContactForm } from "../fetch-request";
-
-export default {
-  name: "MContact",
+export default defineComponent({
   data() {
     return {
       email: "",
       msg: "",
       statusForm: "",
+      button: "Enviar",
     };
   },
   methods: {
-    sendData() {
+    async sendData() {
       const body = {
         contact: {
           email: this.email,
@@ -62,16 +62,15 @@ export default {
       };
 
       if (this.checkInputs()) {
-        sendContactForm(body)
-          .then((res) => {
-            if (res.error) {
-              this.printMsg("Error al enviar");
-              return;
-            }
-            this.printMsg("Enviado");
-            this.clearInputs();
-          })
-          .catch();
+        this.button = "Enviando...";
+        await $fetch("https://mayder.herokuapp.com/api/contact", {
+          body: body,
+          method: "POST",
+        });
+        this.button = "Enviado";
+        setTimeout(() => {
+          this.button = "Enviar";
+        }, 2000);
       }
     },
     checkInputs() {
@@ -88,18 +87,10 @@ export default {
       }
     },
     isMSG() {
-      if (this.msg.length > 5) {
-        return true;
-      } else {
-        return false;
-      }
+      return this.msg.length > 5;
     },
     isEmail() {
-      if (!this.email.includes("@") || !this.email.includes(".")) {
-        return false;
-      } else {
-        return true;
-      }
+      return this.email.includes("@") && this.email.includes(".");
     },
     printMsg(text) {
       this.statusForm = text;
@@ -112,10 +103,10 @@ export default {
       this.email = "";
     },
   },
-};
+});
 </script>
 
-<style scoped>
+<style>
 h2,
 p {
   margin: 0;
@@ -153,7 +144,7 @@ p {
 
 .item--img {
   width: 45%;
-  background-image: url(~/assets/img/contact.jpg);
+  background-image: url(../assets/img/contact.jpg);
   background-size: cover;
   background-position: -60px;
   border-bottom-left-radius: 10px;

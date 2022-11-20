@@ -3,7 +3,6 @@ const URL = "https://mayder.herokuapp.com/api/contact";
 
 export const sendContactForm = async (data) => {
   const { contact } = data;
-  console.log("process", process.env.baseUrl);
   const response = await fetch(URL, {
     method: "POST",
     body: JSON.stringify({ contact }),

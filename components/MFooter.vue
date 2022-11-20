@@ -6,14 +6,14 @@
         class="footer__item"
         href="https://www.youtube.com/channel/UCN6QP97Il86O08qEPE7gXvQ"
         target="_blank"
-        ><img src="~/assets/img/youtube-icon.svg" alt="" /></a
+        ><img src="../assets/img/youtube-icon.svg" alt="" /></a
       ><a class="footer__item" href="https://github.com/MayderC" target="_blank"
-        ><img src="~/assets/img/github-octocat.svg" alt="github mayderc" /></a
+        ><img src="../assets/img/github-octocat.svg" alt="github mayderc" /></a
       ><a
         class="footer__item"
         href="https://www.linkedin.com/in/david-cortesb/"
         target="_blank"
-        ><img src="~/assets/img/linkedin-icon.svg" alt="linkedin mayderc"
+        ><img src="../assets/img/linkedin-icon.svg" alt="linkedin mayderc"
       /></a>
     </div>
     <div class="footer__text text--bottom">
