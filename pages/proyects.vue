@@ -213,7 +213,6 @@ import chatpng from "~/assets/img/chat.png";
 import upload from "~/assets/img/uploader.png";
 import unsp from "~/assets/img/unsplash.png";
 import cat from "~/assets/img/catwiki.png";
-
 import { getPercent } from "../fetch-request/github";
 
 export default {
