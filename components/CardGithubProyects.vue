@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import { Chart } from "chart.js";
-
+import pkg from "chart.js";
+const { Chart } = pkg;
 export default {
   name: "CardGithubProyects",
   props: { repo: { type: Object, default: () => {} } },

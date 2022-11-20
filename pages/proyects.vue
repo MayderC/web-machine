@@ -192,12 +192,12 @@
             :key="d.name"
             :repo="d"
           ></card-github-proyects>
-          <div v-show="visibleData.length &lt;=  countProyects">
-            <p class="show-repos" @click="showAllProyects">
-              show all repositories
-            </p>
-          </div>
         </section>
+        <div v-show="visibleData.length &lt;=  countProyects">
+          <p class="show-repos" @click="showAllProyects">
+            show all repositories
+          </p>
+        </div>
       </article>
     </section>
   </main>
