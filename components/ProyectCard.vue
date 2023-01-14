@@ -21,7 +21,7 @@
         <hand-link
           class="card__footer__item"
           :href="live"
-          text="Online"
+          text="info"
         ></hand-link>
       </div>
     </div>
@@ -108,6 +108,10 @@ export default {
   gap: 30px;
   height: 50px;
   align-items: center;
+}
+
+.text__footer {
+  padding: 0 10px;
 }
 
 @media (max-width: $movil-lg) {

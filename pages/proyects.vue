@@ -163,6 +163,27 @@
         </section>
       </article>
       <article class="proyects__item">
+        <h3 class="subtitle-3">Colaboraciones</h3>
+        <section class="proyects__vue">
+          <section class="vue__item">
+            <proyect-card
+              :items="[
+                'VueJS',
+                'Nest Js ',
+                'Typescript',
+                'NodeJs',
+                'API REST',
+                'HTML - CSS',
+              ]"
+              :img="calountry"
+              live="https://github.com/No-Country/C8-39-T-Vue"
+              github="https://github.com/No-Country/C8-39-T-Vue"
+              text="Calountry, colaboración en Nocountry, Encuentra la hora ideal para reuniones en equipos de colaboradores, y Agenda de tareas"
+            ></proyect-card>
+          </section>
+        </section>
+      </article>
+      <article class="proyects__item">
         <h3 class="subtitle-3">Animaciones CSS</h3>
         <hand-link
           href="https://codepen.io/mayderc/pens/"
@@ -213,12 +234,14 @@ import chatpng from "~/assets/img/chat.png";
 import upload from "~/assets/img/uploader.png";
 import unsp from "~/assets/img/unsplash.png";
 import cat from "~/assets/img/catwiki.png";
+import calo from "~/assets/img/calountry.png";
 import { getPercent } from "../fetch-request/github";
 
 export default {
   name: "Proyects",
   data() {
     return {
+      calountry: calo,
       chat: chatpng,
       catwiki: cat,
       task: taskimg,
