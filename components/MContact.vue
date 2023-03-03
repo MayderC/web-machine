@@ -63,7 +63,7 @@ export default defineComponent({
 
       if (this.checkInputs()) {
         this.button = "Enviando...";
-        await $fetch("https://mayder.herokuapp.com/api/contact", {
+        await $fetch("https://web-mayder.vercel.app/api/contact", {
           body: body,
           method: "POST",
         });

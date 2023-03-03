@@ -178,7 +178,22 @@
               :img="calountry"
               live="https://github.com/No-Country/C8-39-T-Vue"
               github="https://github.com/No-Country/C8-39-T-Vue"
-              text="Calountry, colaboración en Nocountry, Encuentra la hora ideal para reuniones en equipos de colaboradores, y Agenda de tareas"
+              text="Calountry, colaboración en No country, Encuentra la hora ideal para reuniones en equipos de colaboradores, y Agenda de tareas"
+            ></proyect-card>
+          </section>
+          <section class="vue__item">
+            <proyect-card
+              :items="[
+                'VueJS',
+                'Nest Js',
+                'NodeJs',
+                'API REST',
+                'HTML - CSS',
+              ]"
+              :img="donafunding"
+              live="https://github.com/No-Country/s6-08-t-vue"
+              github="https://github.com/No-Country/s6-08-t-vue"
+              text="Donafunding, colaboración en No country, Donar e invertir en proyectos"
             ></proyect-card>
           </section>
         </section>
@@ -227,6 +242,7 @@
 <script>
 import taskimg from "~/assets/img/task.png";
 import devfinder from "~/assets/img/devfinder.png";
+import dona from '~/assets/img/crow.png'
 import rickMorty from "~/assets/img/rick.png";
 import linklist from "~/assets/img/link.png";
 import country from "~/assets/img/country.png";
@@ -241,6 +257,7 @@ export default {
   name: "Proyects",
   data() {
     return {
+      donafunding: dona,
       calountry: calo,
       chat: chatpng,
       catwiki: cat,
