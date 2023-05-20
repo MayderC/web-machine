@@ -19,4 +19,14 @@
     display: block;
     padding: 0 20px;
   }
+
+
+  .sub-navOn {
+
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-image: linear-gradient(160deg, #0093E9 0%, #6672f1 100%);
+    color: #f6f8ff;
+    transition: .2s;
+  }
+
 };

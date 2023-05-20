@@ -19,6 +19,10 @@
           <img src="../assets/img/nodejs-icon.svg" />
           <p>Nodejs</p>
         </div>
+        <div class="skill__vue skill">
+          <img src="../assets/img/vue.svg" />
+          <p>Vuejs</p>
+        </div>
         <div class="skill__css skill">
           <img src="../assets/img/react-2.svg" />
           <p>Reacjs</p>
@@ -27,9 +31,9 @@
           <img src="../assets/img/javascript.svg" />
           <p>JavaScript</p>
         </div>
-        <div class="skill__vue skill">
-          <img src="../assets/img/vue.svg" />
-          <p>Vuejs</p>
+        <div class="skill__js skill">
+          <img src="../assets/img/typescript.svg" />
+          <p>TypeScript</p>
         </div>
       </div>
     </div>

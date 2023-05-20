@@ -12,7 +12,7 @@
         </article>
         <article class="about__description about__item">
           <p class="about__text">
-            Soy desarrollador web Diplomado de 3 años en Tecnologías de
+            Soy desarrollador web con Diplomado de 3 años en Tecnologías de
             información, me dedico al desarrollo frontend y backend.
           </p>
         </article>
@@ -32,10 +32,10 @@
           <img src="../assets/img/express.svg" />
         </article>
         <article class="skill__Nodejs extra">
-          <img src="../assets/img/typescript.svg" />
+          <img src="../assets/img/mysql-1.svg" />
         </article>
         <article class="skill__Nodejs extra">
-          <img src="../assets/img/mysql-1.svg" />
+          <img src="../assets/img/postgresql.svg" />
         </article>
         <article class="skill__Nodejs extra">
           <img src="../assets/img/mongodb.svg" />

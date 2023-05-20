@@ -11,7 +11,7 @@
     <m-navbar-menu
       :isNavOnTop="isNavOnTop"
       :class="[
-        isNavOnTop ? 'navOn' : 'navOff',
+        isNavOnTop ? 'sub-navOn' : 'sub-navOn',
         isMenuOpen ? 'showMenuMovil' : 'hideMenuMovil',
       ]"
       v-on:toggleMenu="show"
