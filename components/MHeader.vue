@@ -32,7 +32,7 @@
           <p>JavaScript</p>
         </div>
         <div class="skill__js skill">
-          <img src="../assets/img/typescript.svg" />
+          <img src="../assets/img/typescript.webp" />
           <p>TypeScript</p>
         </div>
       </div>

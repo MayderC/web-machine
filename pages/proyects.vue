@@ -240,16 +240,16 @@
 </template>
 
 <script>
-import taskimg from "~/assets/img/task.png";
+import taskimg from "~/assets/img/task.webp";
 import devfinder from "~/assets/img/devfinder.png";
-import dona from "~/assets/img/crow.png";
-import rickMorty from "~/assets/img/rick.png";
+import dona from "~/assets/img/crow.webp";
+import rickMorty from "~/assets/img/rick.webp";
 import linklist from "~/assets/img/link.png";
-import country from "~/assets/img/country.png";
+import country from "~/assets/img/country.webp";
 import chatpng from "~/assets/img/chat.png";
 import upload from "~/assets/img/uploader.png";
-import unsp from "~/assets/img/unsplash.png";
-import cat from "~/assets/img/catwiki.png";
+import unsp from "~/assets/img/unsplash.webp";
+import cat from "~/assets/img/catwiki.webp";
 import calo from "~/assets/img/calountry.png";
 import { getPercent } from "../fetch-request/github";
 
