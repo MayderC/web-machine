@@ -2,7 +2,7 @@
   <div class="boton__menu" @click="toggleOpen">
     <div
       id="menu_movil"
-      :class="['menu', isOpen ? 'opened' : '']"
+      :class="['menu', isOpen ? '' : '']"
       aria-label="Main Menu"
     >
       <svg width="50" height="50" viewBox="0 0 100 100">
@@ -92,5 +92,5 @@ export default {
     stroke-dashoffset: -134;
     stroke-width: 6;
   }
-} ;
+}
 </style>

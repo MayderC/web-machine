@@ -196,6 +196,17 @@
               text="Donafunding, colaboración en No country, Donar e invertir en proyectos"
             ></proyect-card-transparent>
           </section>
+
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="Devsarrolla IT"
+              :items="['VueJS', 'Nest Js', 'NodeJs', 'API REST', 'HTML - CSS']"
+              :img="devsarrolla"
+              live="https://github.com/No-Country/s7-19-t-nodevue"
+              github="https://github.com/No-Country/s7-19-t-nodevue"
+              text="App para encontrar proyectos de desarrollo colaborativos"
+            ></proyect-card-transparent>
+          </section>
         </section>
       </article>
       <article class="proyects__item">
@@ -251,12 +262,14 @@ import upload from "~/assets/img/uploader.png";
 import unsp from "~/assets/img/unsplash.webp";
 import cat from "~/assets/img/catwiki.webp";
 import calo from "~/assets/img/calountry.png";
+import devti from "~/assets/img/devsarrolla.webp";
 import { getPercent } from "../fetch-request/github";
 
 export default {
   name: "Proyects",
   data() {
     return {
+      devsarrolla: devti,
       donafunding: dona,
       calountry: calo,
       chat: chatpng,
