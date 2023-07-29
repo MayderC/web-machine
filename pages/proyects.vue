@@ -207,6 +207,17 @@
               text="App para encontrar proyectos de desarrollo colaborativos"
             ></proyect-card-transparent>
           </section>
+
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="MoveNow"
+              :items="['VueJS', 'Typescript', 'Java', 'API REST', 'HTML - CSS']"
+              :img="movenow"
+              live="https://github.com/No-Country/s6-08-t-vue"
+              github="https://github.com/No-Country/s6-08-t-vue"
+              text="Movenow, colaboración en No country, Mudanzas y envios"
+            ></proyect-card-transparent>
+          </section>
         </section>
       </article>
       <article class="proyects__item">
@@ -264,6 +275,7 @@ import cat from "~/assets/img/catwiki.webp";
 import calo from "~/assets/img/calountry.png";
 import devti from "~/assets/img/devsarrolla.webp";
 import { getPercent } from "../fetch-request/github";
+import move from "~/assets/img/movenow.webp";
 
 export default {
   name: "Proyects",
@@ -281,6 +293,7 @@ export default {
       countryimg: country,
       uploader: upload,
       unsplash: unsp,
+      movenow: move,
       data: [],
       visibleData: [],
       countProyects: 8,
