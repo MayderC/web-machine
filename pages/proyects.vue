@@ -213,9 +213,20 @@
               name="MoveNow"
               :items="['VueJS', 'Typescript', 'Java', 'API REST', 'HTML - CSS']"
               :img="movenow"
-              live="https://github.com/No-Country/s6-08-t-vue"
-              github="https://github.com/No-Country/s6-08-t-vue"
+              live="https://movenow-three.vercel.app/"
+              github="https://github.com/No-Country/s9-08-t-java-vue"
               text="Movenow, colaboración en No country, Mudanzas y envios"
+            ></proyect-card-transparent>
+          </section>
+
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="EarthPoints"
+              :items="['React', 'Typescript', 'Nestjs', 'REST & GraphQL']"
+              img="https://camo.githubusercontent.com/f910597789b20af425cdc61bfbaad50a20c1f8470e1e6b214d1b64d9114fb828/68747470733a2f2f692e696d6775722e636f6d2f5630795774396d2e706e67"
+              live="https://earthpoints.vercel.app/"
+              github="https://github.com/No-Country/s11-20-m-typescript-react"
+              text="Incentiva tus hábitos a través de la acumulación de puntos"
             ></proyect-card-transparent>
           </section>
         </section>
