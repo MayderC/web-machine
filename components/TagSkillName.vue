@@ -13,15 +13,16 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  background-color: #799aee;
-  padding: 0.1rem 1rem;
+  background-color: #606060;
+  padding: 0.3rem 1rem;
   border-radius: 14px;
   font-weight: bold;
   cursor: default;
-  max-height: 23.19px;
+  font-size: 15px;
 }
 
 .wrapper p {
-  color: #1b3371;
+  color: #e6eefc;
+  text-transform: lowercase;
 }
 </style>

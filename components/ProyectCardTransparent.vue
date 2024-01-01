@@ -17,8 +17,8 @@
       </div>
       <footer class="proyect__info">
         <div class="proyect__links">
-          <a href=""><img src="../assets/img/icon-info.svg" alt="" /></a>
-          <a :href="live"><img src="../assets/img/icon-link.svg" alt="" /></a>
+          <a href="" target="_blank"><img src="../assets/img/icon-info.svg" alt="" /></a>
+          <a :href="live" target="_blank"><img src="../assets/img/icon-link.svg" alt="" /></a>
           <a :href="github" target="_blank"
             ><img src="../assets/img/icon-github.svg" alt=""
           /></a>
@@ -51,9 +51,10 @@ export default {
   backdrop-filter: blur(2px);
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 13px;
-  width: 357px;
+  width: 330px;
   height: 486px;
-  padding: 13px;
+  padding: 16px;
+  position: relative;
 }
 
 .card__item--img {
@@ -63,7 +64,7 @@ export default {
 
 .card__item--img img {
   object-fit: cover;
-  width: 331px;
+  width: 100%;
   height: 212px;
 }
 .card__item--body {
@@ -76,29 +77,38 @@ export default {
   color: #fff;
 }
 .proyect__description {
-  height: 90px;
+  height: auto;
 }
 .proyect__description p {
   font-size: 15px;
   color: #cfcfcf;
+  margin-bottom: 16px;
 }
 .proyect__skills {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  height: 56px;
 }
+
+
+footer.proyect__info{
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 99;
+}
+
 footer.proyect__info .proyect__links {
   height: 46px;
   cursor: pointer;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 15px;
 }
 .proyect__links img {
-  height: 30px;
-  width: 30px;
+  height: 23px;
+  width: 23px;
 }
 
 @media (max-width: 458px) {
@@ -108,6 +118,12 @@ footer.proyect__info .proyect__links {
   }
   .proyect__skills {
     height: auto;
+  }
+
+  footer.proyect__info{
+    position: relative;
+    top: 0px;
+    right: 16px;
   }
 }
 </style>

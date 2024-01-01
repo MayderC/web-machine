@@ -8,9 +8,14 @@
   overflow: hidden;
   flex-direction: column;
 }
+
+.header__item{
+  z-index: 1;;
+}
+
 .header__img_astro {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   width: 150px;
   left: 55%;
   animation-name: astro;
@@ -99,6 +104,7 @@
   width: 50%;
   align-self: self-start;
   box-sizing: border-box;
+  z-index: 5;
 }
 .skills_text {
   color: #ffffff;

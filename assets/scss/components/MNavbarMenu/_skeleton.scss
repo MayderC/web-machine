@@ -1,6 +1,13 @@
+.navbar{
+  position: fixed;
+  z-index: 100;
+}
+
 .navbar__menu {
   height: $nav-height;
+  position: relative;
   display: flex;
+  z-index: 5;
 }
 .navbar__list {
   list-style: none;

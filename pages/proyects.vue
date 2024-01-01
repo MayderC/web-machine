@@ -182,7 +182,7 @@
               :img="calountry"
               live="https://github.com/No-Country/C8-39-T-Vue"
               github="https://github.com/No-Country/C8-39-T-Vue"
-              text="Calountry, colaboración en No country, Encuentra la hora ideal para reuniones en equipos de colaboradores, y Agenda de tareas"
+              text="Encuentra la hora ideal para reuniones en equipos, y Agenda de tareas"
             ></proyect-card-transparent>
           </section>
 
@@ -223,7 +223,7 @@
             <proyect-card-transparent
               name="EarthPoints"
               :items="['React', 'Typescript', 'Nestjs', 'REST & GraphQL']"
-              img="https://camo.githubusercontent.com/f910597789b20af425cdc61bfbaad50a20c1f8470e1e6b214d1b64d9114fb828/68747470733a2f2f692e696d6775722e636f6d2f5630795774396d2e706e67"
+              img="https://camo.githubusercontent.com/a464abe0531fc8ecbb07b26136c6d20b6d0a7043d7395201ade388fd88f50de3/68747470733a2f2f692e696d6775722e636f6d2f5630795774396d2e706e67"
               live="https://earthpoints.vercel.app/"
               github="https://github.com/No-Country/s11-20-m-typescript-react"
               text="Incentiva tus hábitos a través de la acumulación de puntos"
