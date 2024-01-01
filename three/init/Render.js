@@ -40,7 +40,7 @@ export class Render extends WebGLRenderer {
   }
 
   onWindowResize() {
-    document.addEventListener("resize", () => {
+    window.addEventListener("resize", () => {
       this.setSize(window.innerWidth, window.innerHeight);
     });
   }
