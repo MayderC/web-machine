@@ -9,7 +9,8 @@ export class Camera extends PerspectiveCamera {
 
   onWindowResize() {
     window.addEventListener("resize", () => {
-      window.location.reload();
+      this.aspect = window.innerWidth / window.innerHeight;
+      this.updateProjectionMatrix();
     });
   }
 }

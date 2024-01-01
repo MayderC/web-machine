@@ -13,9 +13,9 @@ export class Render extends WebGLRenderer {
 
     this.functionsToExecute = new Map();
 
+    this.onWindowResize();
     this.init();
     this.animate();
-    this.onWindowResize();
   }
 
   init() {
@@ -41,7 +41,7 @@ export class Render extends WebGLRenderer {
 
   onWindowResize() {
     document.addEventListener("resize", () => {
-      window.location.reload();
+      this.setSize(window.innerWidth, window.innerHeight);
     });
   }
 }
