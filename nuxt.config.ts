@@ -62,4 +62,13 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  modules: ["@nuxt/image", "@pinia/nuxt"],
+
+  image: {
+    provider: "cloudinary",
+    cloudinary: {
+      baseURL: "https://res.cloudinary.com/maydercodesimages/image/upload",
+    },
+  },
 });

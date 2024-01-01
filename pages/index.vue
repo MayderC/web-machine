@@ -9,12 +9,12 @@
       <h2 class="subtitle">Acerca de mi</h2>
       <section class="about__items">
         <article class="about__img about__item">
-          <img src="../assets/img/about.svg" />
+          <nuxt-img class="img" provider="cloudinary" src="/v1704122883/Portfolio/img/plszt3knfrjr9kvzdicn.svg" />
         </article>
         <article class="about__description about__item">
           <p class="about__text">
-            Mi nombre es Mayder soy desarrollador,  poseo Diplomado en Tecnologías de
-            información, me dedico al desarrollo frontend y backend, principalmente con Typescript.
+            Mi nombre es Mayder, poseo Diplomado en Tecnologías de
+            información, tengo conocimiento en desarrollo frontend y backend, principalmente con Typescript.
           </p>
         </article>
       </section>
@@ -24,11 +24,9 @@
       <h2 class="subtitle">Otras Tecnologías</h2>
       <section class="skills__extras">
         <article class="skill__Nodejs extra">
-          <img src="../assets/img/nestjs.webp" />
+          <img src="../assets/img/spring.webp" />
         </article>
-        <article class="skill__Nodejs extra">
-          <img src="../assets/img/express.svg" />
-        </article>
+
         <article class="skill__Nodejs extra">
           <img src="../assets/img/mysql-1.svg" />
         </article>
@@ -61,13 +59,10 @@ import { PlanetModel } from "~/three/objects/PlanetModel";
 
 
 onMounted(() => {
-  console.log("mounted");
 
   const scene = new Scene();
   const camera = new Camera();
   const ambientLight = new AmbientLight(0xffffff, );
-  
-  
   
   scene.add(ambientLight);
 
@@ -78,14 +73,14 @@ onMounted(() => {
   // controls.enableDamping = true;
 
   new PlanetModel().loadModel().then((model) => {
-    console.log(model);
+
     scene.position.set(0, -1, 0);
     scene.add(model)
+
     render.addFunctionToExecute(() => {
       model.children[0].children[0].children[0].children[0].rotation.y += 0.005;
       model.children[0].children[0].children[0].children[0].rotation.x += 0.003;
     }, 'rotation')
-
   })
 
 
