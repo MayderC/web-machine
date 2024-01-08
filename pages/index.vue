@@ -130,16 +130,8 @@ onMounted(async() => {
   render.addFunctionToExecute(() => {
     mixer.update(clock.getDelta())
     handleAvatarAnimation(avatar, scene, scroll.value)
+
   }, 'avatar')
-
-
-
-  
-
-
-
-
-
 
 });
 
