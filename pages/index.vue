@@ -55,6 +55,7 @@ import { Camera } from "../three/init/Camera";
 import { Render } from "../three/init/Render";
 import { PlanetModel } from "~/three/objects/PlanetModel";
 import { handleAvatarAnimation } from '../three/objects/avatar.animation'
+import {handlePlanetAnimation} from '../three/objects/planet.animation'
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
 
 import gsap from 'gsap'
@@ -69,7 +70,7 @@ const scroll = ref(0)
 
 const addScrollAnimation = () => {
   gsap.registerPlugin(ScrollTrigger)
-  gsap.to(null, {
+  gsap.to({}, {
     scrollTrigger: {
       start: "top top",
       end: "bottom top",
@@ -77,7 +78,6 @@ const addScrollAnimation = () => {
       pin: true,
       onUpdate: (self) => {
         scroll.value = self.progress * 100
-        console.log(scroll.value)
       }
     },
   })
@@ -122,6 +122,7 @@ onMounted(async() => {
   scene.add(model)
 
   render.addFunctionToExecute(() => {
+    handlePlanetAnimation(model, scroll.value)
     model.children[0].children[0].children[0].children[0].rotation.y += 0.005;
     model.children[0].children[0].children[0].children[0].rotation.x += 0.003;
     model.position.y = scroll.value * 0.1

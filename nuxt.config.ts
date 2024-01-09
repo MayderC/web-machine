@@ -47,28 +47,36 @@ export default defineNuxtConfig({
             "https://raw.githubusercontent.com/MayderC/web-machine/nuxt/home.png",
         },
       ],
-      link: [
-        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        {
-          rel: "preconnect",
-          href: "https://fonts.googleapis.com",
-          crossorigin: "",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap",
-        },
-      ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
 
-  modules: ["@nuxt/image", "@pinia/nuxt"],
+  modules: [
+    "@nuxt/image",
+    "@pinia/nuxt",
+    "@nuxtjs/google-fonts",
+    "@nuxtjs/i18n",
+  ],
 
   image: {
     provider: "cloudinary",
     cloudinary: {
       baseURL: "https://res.cloudinary.com/maydercodesimages/image/upload",
     },
+  },
+
+  googleFonts: {
+    families: {
+      Quicksand: true,
+    },
+  },
+
+  devServer: {
+    host: "0.0.0.0",
+    port: 3000,
+  },
+
+  i18n: {
+    vueI18n: "./i18n.config.ts", // if you are using custom path, default
   },
 });

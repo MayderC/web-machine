@@ -8,7 +8,7 @@
       <img class="astro" src="../assets/img/as.png" />
     </div>
     <div class="header__img_p">
-      <img class="fly" src="../assets/img/fly.png" />
+      <img class="fly" src="../assets/img/fly.webp" />
     </div>
     <div class="header__skills">
       <div class="skills_text">
