@@ -9,7 +9,10 @@
       <h2 class="subtitle">Acerca de mi</h2>
       <section class="about__items">
         <article class="about__img about__item">
-          
+          <nuxt-img 
+            provider="cloudinary"
+            src="/v1704122883/Portfolio/img/plszt3knfrjr9kvzdicn.svg"
+          ></nuxt-img>
         </article>
         <article class="about__description about__item">
           <p class="about__text">
@@ -54,85 +57,51 @@ import { Scene, AmbientLight, Clock, AnimationMixer, DirectionalLight } from 'th
 import { Camera } from "../three/init/Camera";
 import { Render } from "../three/init/Render";
 import { PlanetModel } from "~/three/objects/PlanetModel";
-import { handleAvatarAnimation } from '../three/objects/avatar.animation'
-import {handlePlanetAnimation} from '../three/objects/planet.animation'
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
-
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import { Loader } from "~/three/tools/Loader";
 
 
 const scroll = ref(0)
 
 
-
-
-const addScrollAnimation = () => {
-  gsap.registerPlugin(ScrollTrigger)
-  gsap.to({}, {
-    scrollTrigger: {
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-      pin: true,
-      onUpdate: (self) => {
-        scroll.value = self.progress * 100
-      }
-    },
+const scrollAnimation = () => {
+  window.addEventListener('scroll', () => {
+    
+    const scrollPercent = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)
+    
+    scroll.value = Math.round(scrollPercent * 100)
+    console.log(scroll.value)
   })
 }
 
 
+
+
 onMounted(async() => {
 
-  const dirLight = new DirectionalLight('#0093E9', 1);
-  const clock = new Clock();
   const scene = new Scene();
   const camera = new Camera();
   const ambientLight = new AmbientLight(0xffffff, 2);
-  
   scene.add(ambientLight);
 
-  const render = new Render({scene, camera, canvas: '#three'});
+  new Render({scene, camera, canvas: '#three'});
 
-
-  addScrollAnimation()
+  scrollAnimation()
 
   const model = await new PlanetModel().loadModel()
 
-  const helloAnimation = await new FBXLoader().loadAsync('/3d/animations/Typing.fbx')
+  const updateModel = () => {
+    model.children[0].children[0].children[0].children[0].rotation.y +=  0.002;
+    model.children[0].children[0].children[0].children[0].rotation.x +=  0.002;
+    camera.position.z = Math.sin( (100 - scroll.value) * 0.01) * 10;
+    camera.lookAt(model.position);
+    requestAnimationFrame(updateModel)
+  }
 
 
-  const avatar = await new Loader().loadModel('/glb/avatar.glb')
+  updateModel()
 
-
-  dirLight.position.set(0, 0, 10)
-  dirLight.lookAt(avatar.position)
-  scene.add(dirLight)
-  avatar.userData.animations = helloAnimation.animations[0]
-  avatar.rotation.y = 1
-  scene.add(avatar)
-
-  const mixer = new AnimationMixer(avatar)
-  const action = mixer.clipAction(avatar.userData.animations)
-  action.play()
 
   scene.position.set(0, -1, 0);
   scene.add(model)
-
-  render.addFunctionToExecute(() => {
-    handlePlanetAnimation(model, scroll.value)
-    model.children[0].children[0].children[0].children[0].rotation.y += 0.005;
-    model.children[0].children[0].children[0].children[0].rotation.x += 0.003;
-    model.position.y = scroll.value * 0.1
-  }, 'planet')
-
-  render.addFunctionToExecute(() => {
-    mixer.update(clock.getDelta())
-    handleAvatarAnimation(avatar, scene, scroll.value)
-
-  }, 'avatar')
 
 });
 

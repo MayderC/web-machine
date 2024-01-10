@@ -11,8 +11,6 @@ export class Render extends WebGLRenderer {
     this.camera = props.camera;
     this.scene = props.scene;
 
-    this.functionsToExecute = new Map();
-
     this.onWindowResize();
     this.init();
     this.animate();
@@ -23,19 +21,9 @@ export class Render extends WebGLRenderer {
     this.setSize(window.innerWidth, window.innerHeight);
   }
 
-  addFunctionToExecute(func, name) {
-    this.functionsToExecute.set(name, func);
-  }
-
-  executeFunctions() {
-    this.functionsToExecute.forEach((f) => {
-      f();
-    });
-  }
 
   animate() {
     requestAnimationFrame(this.animate.bind(this));
-    this.executeFunctions();
     this.render(this.scene, this.camera);
   }
 
