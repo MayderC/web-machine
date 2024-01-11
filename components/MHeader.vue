@@ -1,11 +1,11 @@
 <template>
   <header class="header">
     <div class="header__item">
-      <h1 class="header__title">{{ title }}</h1>
-      <p class="header__text">{{ description }}</p>
+      <h1 class="header__title">MayderC</h1>
+      <p class="header__text">Software Developer</p>
     </div>
     <div class="header__img_astro">
-      <img class="astro" src="../assets/img/as.png" />
+      <img class="astro" src="../assets/img/as-min.png" />
     </div>
     <div class="header__img_p">
       <img class="fly" src="../assets/img/fly.webp" />
