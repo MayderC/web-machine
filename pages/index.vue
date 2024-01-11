@@ -64,11 +64,8 @@ const scroll = ref(0)
 
 const scrollAnimation = () => {
   window.addEventListener('scroll', () => {
-    
     const scrollPercent = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)
-    
     scroll.value = Math.round(scrollPercent * 100)
-    console.log(scroll.value)
   })
 }
 
@@ -91,7 +88,7 @@ onMounted(async() => {
   const updateModel = () => {
     model.children[0].children[0].children[0].children[0].rotation.y +=  0.002;
     model.children[0].children[0].children[0].children[0].rotation.x +=  0.002;
-    camera.position.z = Math.sin( (100 - scroll.value) * 0.01) * 10;
+    camera.position.z = Math.sin( (100 - scroll.value/2) * 0.01) * 10;
     camera.lookAt(model.position);
     requestAnimationFrame(updateModel)
   }
