@@ -53,10 +53,12 @@
 <script setup lang="ts">
 
 import { onMounted, ref } from "vue";
-import { Scene, AmbientLight, Clock, AnimationMixer, DirectionalLight } from 'three'
+import { Scene, AmbientLight, Object3D, Raycaster, Vector2} from 'three'
 import { Camera } from "../three/init/Camera";
 import { Render } from "../three/init/Render";
 import { PlanetModel } from "~/three/objects/PlanetModel";
+
+
 
 
 const scroll = ref(0)
@@ -70,7 +72,50 @@ const scrollAnimation = () => {
 }
 
 
+const addRaycasterRotation = (camera: Camera, render: Render, model: Object3D, scene: Scene) => {
+  const raycaster = new Raycaster( )
+  const mouse = new Vector2();
+  
+  
+  const object = model.children[0].children[0].children[0].children[0].children[0]
 
+  let clickedFlag = false
+  let clickedObject: Object3D | null = null;
+  const mouseDownPosition = { x: 0, y: 0 };
+
+  document.addEventListener('mousedown', (event) => {
+    clickedFlag = true
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(scene.children);
+
+    if (intersects.length > 0 && clickedFlag) {
+      clickedObject = intersects[0].object;
+    }
+
+    mouseDownPosition.x = event.clientX;
+    mouseDownPosition.y = event.clientY;
+  });
+
+  document.addEventListener('mouseup', () => {
+    clickedObject = null;
+    clickedFlag = false;
+});
+
+document.addEventListener('mousemove', (event) => {
+  if (clickedFlag && clickedObject === object) {
+    const deltaX = event.clientX - mouseDownPosition.x;
+    const deltaY = event.clientY - mouseDownPosition.y;
+    object.rotation.x += deltaY * 0.01; 
+    object.rotation.y += deltaX * 0.01;
+    mouseDownPosition.x = event.clientX;
+    mouseDownPosition.y = event.clientY;
+  }
+});
+
+}
 
 onMounted(async() => {
 
@@ -79,7 +124,7 @@ onMounted(async() => {
   const ambientLight = new AmbientLight(0xffffff, 2);
   scene.add(ambientLight);
 
-  new Render({scene, camera, canvas: '#three'});
+  const render = new Render({scene, camera, canvas: '#three'});
 
   scrollAnimation()
 
@@ -89,10 +134,9 @@ onMounted(async() => {
     model.children[0].children[0].children[0].children[0].rotation.y +=  0.002;
     model.children[0].children[0].children[0].children[0].rotation.x +=  0.002;
     camera.position.z = Math.sin( (100 - scroll.value/2) * 0.01) * 10;
-    camera.lookAt(model.position);
+
     requestAnimationFrame(updateModel)
   }
-
 
   updateModel()
 
@@ -100,6 +144,7 @@ onMounted(async() => {
   scene.position.set(0, -1, 0);
   scene.add(model)
 
+  addRaycasterRotation(camera, render, model, scene)
 });
 
 
@@ -109,6 +154,10 @@ onMounted(async() => {
 
 <style lang="scss">
 @import "../assets/scss/main.scss";
+
+.main_index{
+  user-select: none;
+}
 
 .about,
 .extra__section,
@@ -138,4 +187,10 @@ section.header {
 .about__img{
   height: 300px;
 }
+
+
+.about__text{
+  text-shadow: 3px 3px 5px rgb(0, 0, 0);
+}
+
 </style>
