@@ -144,7 +144,7 @@ p {
 
 .item--img {
   width: 45%;
-  background-image: url(../assets/img/contact.jpg);
+  background-image: url(../assets/img/contact.webp);
   background-size: cover;
   background-position: -60px;
   border-bottom-left-radius: 10px;

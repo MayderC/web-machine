@@ -40,6 +40,11 @@
 </template>
 
 <style lang="scss" scoped>
+.svg1 {
+  position: absolute;
+  z-index: -3;
+}
+
 .path1 {
   fill: #1d557a;
   animation: pathUno 6s infinite cubic-bezier(0, 0, 1, 1);
@@ -61,5 +66,5 @@
 
     transform: translate(100px, 100px);
   }
-} ;
+}
 </style>

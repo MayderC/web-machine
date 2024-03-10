@@ -9,8 +9,8 @@
   flex-direction: column;
 }
 
-.header__item{
-  z-index: 1;;
+.header__item {
+  z-index: 1;
 }
 
 .header__img_astro {
@@ -24,7 +24,7 @@
   animation-direction: alternate-reverse;
 }
 .header__img_astro .astro {
-  transition: .5s;
+  transition: 0.5s;
 }
 @keyframes astro {
   from {
@@ -37,7 +37,7 @@
 
 .header__img_astro:hover .astro {
   transform: rotate(-180deg);
-  transition: .5s;
+  transition: 0.5s;
 }
 .astro {
   max-width: 100%;
@@ -50,6 +50,7 @@
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
+  z-index: -1;
 }
 @keyframes fly {
   0% {
@@ -59,7 +60,7 @@
     transform: scale(1.1) translate(-150px, -10px) rotate(0deg);
   }
   25% {
-    transform: scale(1) translate(-200px, 30px)  rotate(15deg);
+    transform: scale(1) translate(-200px, 30px) rotate(15deg);
   }
   50% {
     transform: scale(0.8) translate(-250px, -200px) rotate(-15deg);
@@ -71,8 +72,6 @@
     transform: scale(0.8) translate(-250px, 170px) rotate(-165deg);
   }
 }
-
-
 
 .fly {
   max-width: 100%;
@@ -127,7 +126,7 @@
 }
 .skill > img {
   height: 30px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .skill > p {
@@ -139,7 +138,7 @@
 
 .skill:hover img {
   transform: translateY(-15px);
-  transition: .3s;
+  transition: 0.3s;
 }
 @media (min-width: $movil-lg) {
   .header__img {
@@ -150,7 +149,6 @@
   }
 }
 
-
 @media (max-width: $movil-lg) {
   .header__img {
     height: 50vh;
@@ -159,4 +157,4 @@
   .header__skills {
     width: 100%;
   }
-};
+}

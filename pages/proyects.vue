@@ -168,6 +168,18 @@
         <h3 class="subtitle-3">Colaboraciones</h3>
         <section class="proyects__vue">
           <blur-effect></blur-effect>
+
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="MoveNow"
+              :items="['VueJS', 'Typescript', 'Java', 'API REST', 'HTML - CSS']"
+              :img="movenow"
+              live="https://movenow-three.vercel.app/"
+              github="https://github.com/No-Country/s9-08-t-java-vue"
+              text="Movenow, colaboración en No country, Mudanzas y envios"
+            ></proyect-card-transparent>
+          </section>
+
           <section class="vue__item">
             <proyect-card-transparent
               name="Calountry"
@@ -210,23 +222,32 @@
 
           <section class="vue__item">
             <proyect-card-transparent
-              name="MoveNow"
-              :items="['VueJS', 'Typescript', 'Java', 'API REST', 'HTML - CSS']"
-              :img="movenow"
-              live="https://movenow-three.vercel.app/"
-              github="https://github.com/No-Country/s9-08-t-java-vue"
-              text="Movenow, colaboración en No country, Mudanzas y envios"
-            ></proyect-card-transparent>
-          </section>
-
-          <section class="vue__item">
-            <proyect-card-transparent
               name="EarthPoints"
               :items="['React', 'Typescript', 'Nestjs', 'REST & GraphQL']"
               img="https://camo.githubusercontent.com/a464abe0531fc8ecbb07b26136c6d20b6d0a7043d7395201ade388fd88f50de3/68747470733a2f2f692e696d6775722e636f6d2f5630795774396d2e706e67"
               live="https://earthpoints.vercel.app/"
               github="https://github.com/No-Country/s11-20-m-typescript-react"
               text="Incentiva tus hábitos a través de la acumulación de puntos"
+            ></proyect-card-transparent>
+          </section>
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="MentorSphere"
+              :items="['React', 'Typescript', 'Nestjs', 'REST']"
+              :img="mentor"
+              live="https://mentorsphere.vercel.app/"
+              github="https://github.com/No-Country/s12-21-tn-nest-react"
+              text="Plataforma que conecta a mentores y estudiantes para fomentar el aprendizaje y el crecimiento personal"
+            ></proyect-card-transparent>
+          </section>
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="RoundPeople"
+              :items="['React', 'Javascript', 'NodeJs', 'REST API']"
+              :img="round"
+              live="https://roundpeople.netlify.app/"
+              github="https://github.com/No-Country/s13-01-m-node-react"
+              text="Una plataforma que te ayuda a derribar las limitaciones y alcanzar tus metas musicales."
             ></proyect-card-transparent>
           </section>
         </section>
@@ -285,13 +306,17 @@ import unsp from "~/assets/img/unsplash.webp";
 import cat from "~/assets/img/catwiki.webp";
 import calo from "~/assets/img/calountry.png";
 import devti from "~/assets/img/devsarrolla.webp";
-import { getPercent } from "../fetch-request/github";
 import move from "~/assets/img/movenow.webp";
+import mentorS from "~/assets/img/mentor.webp";
+import roundP from "~/assets/img/round.webp";
+import { getPercent } from "../fetch-request/github";
 
 export default {
   name: "Proyects",
   data() {
     return {
+      mentor: mentorS,
+      round: roundP,
       devsarrolla: devti,
       donafunding: dona,
       calountry: calo,
