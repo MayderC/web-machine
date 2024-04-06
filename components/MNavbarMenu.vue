@@ -33,9 +33,9 @@ export default {
     return {
       items: [
         { name: "Home", route: "/" },
-        { name: "Projects", route: "/proyects" },
+        { name: "Projects", route: "/projects" },
         {
-          name: "CV",
+          name: "Docs",
           route: "https://portfolio-blog-topaz.vercel.app/",
           target: true,
         },
