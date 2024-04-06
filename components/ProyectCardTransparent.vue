@@ -17,10 +17,14 @@
       </div>
       <footer class="proyect__info">
         <div class="proyect__links">
-          <a href="" target="_blank"><img src="../assets/img/icon-info.svg" alt="" /></a>
-          <a :href="live" target="_blank"><img src="../assets/img/icon-link.svg" alt="" /></a>
+          <a :href="live" target="_blank"
+            ><img src="../assets/img/icon-link.svg" alt=""
+          /></a>
           <a :href="github" target="_blank"
             ><img src="../assets/img/icon-github.svg" alt=""
+          /></a>
+          <a v-if="info" href="" target="_blank"
+            ><img src="../assets/img/icon-info.svg" alt=""
           /></a>
         </div>
       </footer>
@@ -37,6 +41,7 @@ export default {
     live: { type: String, default: "" },
     github: { type: String, default: "" },
     text: { type: String, default: "" },
+    info: { type: String, defailt: "" },
     items: { type: Array, default: () => [] },
   },
 };
@@ -90,8 +95,7 @@ export default {
   gap: 10px;
 }
 
-
-footer.proyect__info{
+footer.proyect__info {
   position: absolute;
   bottom: 16px;
   right: 16px;
@@ -120,7 +124,7 @@ footer.proyect__info .proyect__links {
     height: auto;
   }
 
-  footer.proyect__info{
+  footer.proyect__info {
     position: relative;
     top: 0px;
     right: 16px;

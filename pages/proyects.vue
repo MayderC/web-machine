@@ -118,6 +118,65 @@
           </section>
         </section>
       </article>
+
+      <article class="proyects__item">
+        <h3 class="subtitle-3">3D Frontend Experience</h3>
+        <section class="proyects__vue">
+          <blur-effect></blur-effect>
+
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="Solar System"
+              :items="[
+                'VueJS',
+                'Typescript',
+                'ThreeJS',
+                'Blender',
+                'GSAP',
+                'HTML - CSS',
+              ]"
+              :img="solarSystem"
+              live="https://solar-system-3d-vue-mayderc.netlify.app/"
+              github="https://github.com/MayderC/solar-system-3D-vue"
+              text="Resumen del sistema solar en 3D"
+            ></proyect-card-transparent>
+          </section>
+
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="3D Haunted House"
+              :items="['Vite', 'Javascript', 'ThreeJS', 'HTML - CSS']"
+              :img="houseH"
+              live="https://haunted-house-3d-maydec.netlify.app/"
+              github="https://github.com/MayderC/haunted-house-three"
+              text="Casa embrujada en 3D"
+            ></proyect-card-transparent>
+          </section>
+
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="Snake game 3D"
+              :items="['Nextjs', 'Typescript', 'ThreeJS', 'HTML - CSS']"
+              :img="snakeG"
+              live="https://snake-3d-indol.vercel.app/"
+              github="https://github.com/MayderC/snake-3d"
+              text="Juego de la serpiente en 3D"
+            ></proyect-card-transparent>
+          </section>
+
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="Rick and Morty"
+              :img="rick"
+              :items="['HTML - CSS', 'Javascript', 'VueJs']"
+              live="https://mayderc-rick-and-morty.netlify.app/"
+              github="https://github.com/MayderC/rick-morty-frontend-vue"
+              text="Modelo de Rick en 3D bailando la macarena"
+            ></proyect-card-transparent>
+          </section>
+        </section>
+      </article>
+
       <article class="proyects__item">
         <h3 class="subtitle-3">Frontend Vue and React</h3>
         <section class="proyects__vue">
@@ -132,16 +191,7 @@
               text="App con la información de los diferentes paises del mundo. frontend"
             ></proyect-card-transparent>
           </section>
-          <section class="vue__item">
-            <proyect-card-transparent
-              name="Rick and Morty"
-              :img="rick"
-              :items="['HTML - CSS', 'Javascript', 'VueJs']"
-              live="https://mayderc-rick-and-morty.netlify.app/"
-              github="https://github.com/MayderC/rick-morty-frontend-vue"
-              text="App con la información de los personajes de Rick and Morty"
-            ></proyect-card-transparent>
-          </section>
+
           <section class="vue__item">
             <proyect-card-transparent
               name="Devfinder"
@@ -164,6 +214,7 @@
           </section>
         </section>
       </article>
+
       <article class="proyects__item">
         <h3 class="subtitle-3">Colaboraciones</h3>
         <section class="proyects__vue">
@@ -309,12 +360,18 @@ import devti from "~/assets/img/devsarrolla.webp";
 import move from "~/assets/img/movenow.webp";
 import mentorS from "~/assets/img/mentor.webp";
 import roundP from "~/assets/img/round.webp";
+import solar from "~/assets/img/solar.png";
+import snake from "~/assets/img/snake.webp";
+import house from "~/assets/img/house.webp";
+
 import { getPercent } from "../fetch-request/github";
 
 export default {
   name: "Proyects",
   data() {
     return {
+      houseH: house,
+      snakeG: snake,
       mentor: mentorS,
       round: roundP,
       devsarrolla: devti,
@@ -330,6 +387,7 @@ export default {
       uploader: upload,
       unsplash: unsp,
       movenow: move,
+      solarSystem: solar,
       data: [],
       visibleData: [],
       countProyects: 8,
