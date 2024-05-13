@@ -116,6 +116,23 @@
               text="Catwiki información de gatitos y sus razas"
             ></proyect-card-transparent>
           </section>
+
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="Math Game 2D"
+              :items="[
+                'Typescript',
+                'Websockets',
+                'NodeJs',
+                'NestJs',
+              ]"
+              :img="ioGame"
+              live="https://operation-research-utn-2024.netlify.app/"
+              github="https://github.com/MayderC/io-game-proyect-fe"
+              text="Juego de matemáticas en tiempo real multijugador, sumas y restas"
+            ></proyect-card-transparent>
+          </section>
+
         </section>
       </article>
 
@@ -174,8 +191,21 @@
               text="Modelo de Rick en 3D bailando la macarena"
             ></proyect-card-transparent>
           </section>
+
+          <section class="vue__item">
+            <proyect-card-transparent
+              name="Rock paper scissors 3D game"
+              :items="['Nextjs', 'Typescript', 'ThreeJS', 'Blender', 'HTML - CSS']"
+              :img="rpsGame"
+              live="https://3d-three-paper-rock-scissors.vercel.app/"
+              github="https://github.com/MayderC/3d-three-paper-rock-scissors"
+              text="Juego de piedra papel o tijera en 3D"
+            ></proyect-card-transparent>
+          </section>
+
         </section>
       </article>
+
 
       <article class="proyects__item">
         <h3 class="subtitle-3">Frontend Vue and React</h3>
@@ -216,7 +246,7 @@
       </article>
 
       <article class="proyects__item">
-        <h3 class="subtitle-3">Colaboraciones</h3>
+        <h3 class="subtitle-3">Colaboraciones Fullstack</h3>
         <section class="proyects__vue">
           <blur-effect></blur-effect>
 
@@ -363,6 +393,8 @@ import roundP from "~/assets/img/round.webp";
 import solar from "~/assets/img/solar.png";
 import snake from "~/assets/img/snake.webp";
 import house from "~/assets/img/house.webp";
+import rps from "~/assets/img/rpsgame.webp";
+import iogame from "~/assets/img/iogame.png";
 
 import { getPercent } from "../fetch-request/github";
 
@@ -370,6 +402,8 @@ export default {
   name: "Proyects",
   data() {
     return {
+      ioGame: iogame,
+      rpsGame: rps,
       houseH: house,
       snakeG: snake,
       mentor: mentorS,
