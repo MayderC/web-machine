@@ -8,6 +8,7 @@
         <h3 class="subtitle-3">Fullstack (Frontend y Backend)</h3>
         <section class="proyects__vue">
           <blur-effect></blur-effect>
+          
           <section class="react__item">
             <proyect-card-transparent
               name="My Chat"
@@ -24,6 +25,23 @@
               live="https://frosty-mayer-9c261d.netlify.app/"
               github="https://github.com/MayderC/w-chat-frontend"
               text="App chat en tiempo real version Beta"
+            ></proyect-card-transparent>
+          </section>
+          <section class="react__item">
+            <proyect-card-transparent
+              name="Mind IA"
+              :items="[
+                'Typescript',
+                'NextJs - React',
+                'TailwindCSS',
+                'MongoDB',
+                'IA Vercel SDK',
+                'Llama 3.1',
+              ]"
+              img='https://github.com/MayderC/mind-map-ia/blob/main/home.png?raw=true'
+              live="https://mind-map-ia-production.up.railway.app"
+              github="https://github.com/MayderC/mind-map-ia"
+              text="Aplicación de IA para realizar resumenes de texto y mapas mentales automaticos"
             ></proyect-card-transparent>
           </section>
           <section class="vue__item">
