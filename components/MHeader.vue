@@ -1,19 +1,11 @@
 <template>
   <header class="header">
-    <div class="header__item">
-      <h1 class="header__title">MayderC</h1>
-      <p class="header__text">Software Developer</p>
-    </div>
-    <div class="header__img_astro">
-      <img class="astro" src="../assets/img/as-min.png" />
-    </div>
-    <div class="header__img_p">
-      <img class="fly" src="../assets/img/fly.webp" />
-    </div>
-    <div class="header__skills">
-      <div class="skills_text">
-        <p>Tecnologías principales</p>
+    <div class="header__item--left">
+      <div>
+        <h1 class="header__title">MayderC</h1>
+        <p class="header__text">Software Developer</p>
       </div>
+
       <div class="skills__items">
         <div class="skill__html skill">
           <img src="../assets/img/nodejs-icon.svg" />
@@ -37,8 +29,18 @@
           <p>TypeScript</p>
         </div>
       </div>
+
     </div>
-    <m-header-svg class="header__img"></m-header-svg>
+
+
+    <!-- Imagenes -->
+    <img class="header__img" src="../assets/img/headeria.webp" alt="">
+    <div class="header__img_astro">
+      <img class="astro" src="../assets/img/as-min.png" />
+    </div>
+    <div class="header__img_p">
+      <img class="fly" src="../assets/img/fly.webp" />
+    </div>
   </header>
 </template>
 

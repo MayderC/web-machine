@@ -1,10 +1,10 @@
 <template>
-  <main class="main_index" id="main_scroll">
+  <main class="main_index" id="home">
     <m-navbar class="nav__ghost"></m-navbar>
     <section class="header">
       <m-header title="MayderC" description="Software developer"></m-header>
     </section>
-    <section class="about">
+    <section id="about" class="about">
       <h2 class="subtitle">Acerca de mi</h2>
       <section class="about__items">
         <article class="about__img about__item">
@@ -15,7 +15,7 @@
         </article>
         <article class="about__description about__item">
           <p class="about__text">
-            Mi nombre es Mayder, poseo Diplomado en Tecnologías de información,
+            Mi nombre es Mayder, soy Ingeniero en Tecnologias de Informacion
             tengo conocimiento en desarrollo frontend y backend, principalmente
             con Typescript.
           </p>
@@ -41,6 +41,9 @@
         </article>
       </section>
     </section>
+
+    <projects></projects>
+
     <section class="contact__section">
       <h2 class="subtitle">Contacto</h2>
       <section class="contacto__item">
@@ -55,6 +58,10 @@
 
 .main_index {
   user-select: none;
+}
+
+.about{
+  padding-top: 50px;
 }
 
 .about,

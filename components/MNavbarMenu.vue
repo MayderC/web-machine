@@ -3,7 +3,7 @@
     <li class="navbar__list" @click="test" v-for="i in items">
       <div
         class="nav-menu-animation"
-        :class="isNavOnTop ? 'nav-menu-animation-w' : 'nav-menu-animation-b'"
+        :class="isNavOnTop ? 'nav-menu-animation-w' : 'nav-menu-animation-w'"
       ></div>
       <a
         class="navbar__link"
@@ -32,8 +32,9 @@ export default {
   data() {
     return {
       items: [
-        { name: "Home", route: "/" },
-        { name: "Projects", route: "/projects" },
+        { name: "Home", route: "#home" },
+        { name: "About", route: "#about" },
+        { name: "Projects", route: "#projects" },
         {
           name: "Docs",
           route: "https://portfolio-blog-topaz.vercel.app/",
@@ -44,7 +45,6 @@ export default {
   },
   methods: {
     test() {
-      window.scrollTo(0, 0);
       this.$emit("toggleMenu");
     },
   },

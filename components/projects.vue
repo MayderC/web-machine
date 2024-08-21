@@ -1,11 +1,10 @@
 <template>
-  <main>
-    <m-navbar></m-navbar>
+  <main id="projects">
     <div class="nav__ghost"></div>
     <section class="proyects">
-      <h2 class="subtitle">Mis proyectos</h2>
+      <h2  class="subtitle">Mis proyectos</h2>
       <article class="proyects__item">
-        <h3 class="subtitle-3">Fullstack (Frontend y Backend)</h3>
+        <h3  class="subtitle-3">Fullstack (Frontend y Backend)</h3>
         <section class="proyects__vue">
           <blur-effect></blur-effect>
           
@@ -226,7 +225,7 @@
 
 
       <article class="proyects__item">
-        <h3 class="subtitle-3">Frontend Vue and React</h3>
+        <h3 class="subtitle-3">Basicos Vue and React</h3>
         <section class="proyects__vue">
           <blur-effect></blur-effect>
           <section class="react__item">

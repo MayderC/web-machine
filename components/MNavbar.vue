@@ -34,24 +34,26 @@ export default {
       isNavOnTop: true,
       isMenuOpen: false,
       colorButton: "#fff",
+      lastScroll: window.scrollY
     };
   },
 
   mounted() {
-    //  if (process.browser) {
-    //   window.onscroll = this.onScrollNavbarColor
-    // }
+    console.log(window.scrollY)
+     if (process.browser) {
+      window.onscroll = this.onScrollNavbarColor
+    }
   },
 
   methods: {
     onScrollNavbarColor() {
-      if (window.scrollY > 95) {
-        this.isNavOnTop = false;
-        this.colorButton = "#222222";
+      const currentScroll = window.scrollY
+      if (currentScroll > this.lastScroll) {
+        this.isNavOnTop = false
       } else {
-        this.isNavOnTop = true;
-        this.colorButton = "#fff";
+        this.isNavOnTop = true
       }
+      this.lastScroll = currentScroll
     },
 
     show() {

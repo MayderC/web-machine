@@ -28,7 +28,8 @@ export default {
   methods: {
     generateChart() {
       const ctx = document.getElementById(this.repo.name).getContext("2d");
-
+      //change the color of the labels
+      Chart.defaults.color = "white";
       const myChart = new Chart(ctx, {
         type: "doughnut",
         data: {
@@ -73,7 +74,7 @@ export default {
   background-image: linear-gradient(to top, #5f72bd 0%, #23eae1 100%);
   background-image: linear-gradient(to top, #1d557a 0%, #2c7eb6 100%);
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
-  background: #ffffff;
+  background: #302f2f;
   padding: 10px;
   border-radius: 5px;
   transition: 0.2s;
@@ -81,7 +82,7 @@ export default {
 
 .card__repo p,
 h4 {
-  color: rgb(36, 36, 36);
+  color: rgb(235, 230, 230);
   text-align: center;
 }
 
