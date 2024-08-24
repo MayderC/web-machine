@@ -34,12 +34,12 @@ export default {
       isNavOnTop: true,
       isMenuOpen: false,
       colorButton: "#fff",
-      lastScroll: window.scrollY
+      lastScroll: window?.scrollY
     };
   },
 
   mounted() {
-    console.log(window.scrollY)
+    console.log(window?.scrollY)
      if (process.browser) {
       window.onscroll = this.onScrollNavbarColor
     }
@@ -47,7 +47,7 @@ export default {
 
   methods: {
     onScrollNavbarColor() {
-      const currentScroll = window.scrollY
+      const currentScroll = window? window.scrollY: 0
       if (currentScroll > this.lastScroll) {
         this.isNavOnTop = false
       } else {
