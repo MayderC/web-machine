@@ -34,7 +34,7 @@ export default {
       isNavOnTop: true,
       isMenuOpen: false,
       colorButton: "#fff",
-      lastScroll: window?.scrollY
+      lastScroll: window ? window.scrollY : 0,
     };
   },
 
