@@ -34,7 +34,6 @@
 
 
     <!-- Imagenes -->
-    <img class="header__img" src="../assets/img/headeria.webp" alt="">
     <div class="header__img_astro">
       <img class="astro" src="../assets/img/as-min.png" />
     </div>

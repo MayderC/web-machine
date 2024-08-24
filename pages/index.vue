@@ -15,9 +15,7 @@
         </article>
         <article class="about__description about__item">
           <p class="about__text">
-            Mi nombre es Mayder, soy Ingeniero en Tecnologias de Informacion
-            tengo conocimiento en desarrollo frontend y backend, principalmente
-            con Typescript.
+            Mi nombre es Mayder y tengo el grado de Bachillerato en Ingeniería en Tecnologías de la Información. Tengo conocimientos en desarrollo frontend y backend, principalmente con TypeScript.
           </p>
         </article>
       </section>
