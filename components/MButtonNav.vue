@@ -2,7 +2,7 @@
   <div class="boton__menu" @click="toggleOpen">
     <div
       id="menu_movil"
-      :class="['menu', isOpen ? '' : '']"
+      :class="['menu', isOpen ? 'opened' : '']"
       aria-label="Main Menu"
     >
       <svg width="50" height="50" viewBox="0 0 100 100">
