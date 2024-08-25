@@ -1,11 +1,10 @@
-import { Camera, Object3D, Raycaster, Scene, Vector2 } from "three";
-import type { Render } from "../init/Render";
+import {  Object3D, Raycaster, Vector2 } from "three";
 
 export const addRaycasterRotation = (
-  camera: Camera,
-  render: Render,
-  model: Object3D,
-  scene: Scene
+  camera,
+  render,
+  model,
+  scene
 ) => {
   const raycaster = new Raycaster();
   const mouse = new Vector2();
@@ -14,7 +13,7 @@ export const addRaycasterRotation = (
     model.children[0].children[0].children[0].children[0].children[0];
 
   let clickedFlag = false;
-  let clickedObject: Object3D | null = null;
+  let clickedObject = null;
   const mouseDownPosition = { x: 0, y: 0 };
 
   document.addEventListener("mousedown", (event) => {

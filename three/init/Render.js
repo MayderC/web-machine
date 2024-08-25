@@ -1,4 +1,6 @@
 import { WebGLRenderer } from "three";
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
 
 export class Render extends WebGLRenderer {
   constructor(props) {
@@ -10,6 +12,9 @@ export class Render extends WebGLRenderer {
 
     this.camera = props.camera;
     this.scene = props.scene;
+
+    this.controls = new OrbitControls( this.camera, this.domElement );
+
 
     this.onWindowResize();
     this.init();
@@ -24,6 +29,7 @@ export class Render extends WebGLRenderer {
 
   animate() {
     requestAnimationFrame(this.animate.bind(this));
+    this.controls.update();
     this.render(this.scene, this.camera);
   }
 

@@ -37,7 +37,7 @@ animatePlane() {
     }
 
     //rotation on the y axis
-    this.plane.rotation.z += 0.001;
+    //this.plane.rotation.z += 0.001;
 
     positionAttribute.needsUpdate = true; // Actualiza la geometría
   };

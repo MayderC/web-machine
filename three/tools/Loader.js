@@ -1,5 +1,7 @@
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+import { SVGLoader } from 'three/addons/loaders/SVGLoader.js';
+
 
 export class Loader extends GLTFLoader {
   constructor() {
@@ -19,3 +21,22 @@ export class Loader extends GLTFLoader {
     return model.scene;
   }
 }
+
+//svg loader
+export class LoaderIcons extends SVGLoader {
+  constructor() {
+    super();
+  }
+
+  async loadSVG(url) {
+    const svg = await this.load(url);
+    return svg;
+  }
+}
+
+
+export const getSvgModel = async(path) => {
+  const loder = new SVGLoader();
+  return await loder.loadAsync(path);
+}
+

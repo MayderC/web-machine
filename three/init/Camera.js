@@ -6,9 +6,13 @@ export class Camera extends PerspectiveCamera {
   tolerance = 2;
 
   constructor() {
-    super(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+    super(50, window.innerWidth / window.innerHeight, 0.1, 50);
     this.position.z = 5;
     this.onWindowResize();
+  }
+
+  optimizeCamera(){
+
   }
 
   onWindowResize() {

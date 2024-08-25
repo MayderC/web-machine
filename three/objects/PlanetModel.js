@@ -25,7 +25,6 @@ export class PlanetModel {
       const time = clock.getElapsedTime();
       // move on the x axis, with sin function
       this.group.position.y = Math.sin(time) * 0.3;
-      console.log(this.group.position.x)
       requestAnimationFrame(animateGroup);
     }
 
