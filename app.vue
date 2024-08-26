@@ -23,16 +23,17 @@ import { loadReactIcon } from "./three/objects/icons/reactIcon";
 const scroll = ref(0);
 
 
-const registerWebworker = (scene: any, camera: any, render: any) => {
+const registerWebworker = async (scene: any, camera: any, render: any) => {
   const worker = new Worker(new URL("./webworker.js", import.meta.url), {type: "module"});
 
-  worker.addEventListener("message", (event) => {
+  worker.addEventListener("message", async (event) => {
     const { data } = event;
 
     const { positionArray, normalArray, uvArray, materialData, indexArray } = data;
 
-    const model = createMeshFromBuffer(positionArray, normalArray, uvArray, indexArray, materialData);
-
+    const model = await createMeshFromBuffer(positionArray, normalArray, uvArray, indexArray, materialData);
+    if (!model) return;
+  
     model.position.set(0, 1, 0);
 
     scene.add(model);
@@ -54,7 +55,39 @@ const registerWebworker = (scene: any, camera: any, render: any) => {
 }
 
 
-const createMeshFromBuffer = (vertexData: any, normalData: any, uvData: any, indexArray: any, materialData: any) => {
+const loadTexture = (url:string) => {
+  return new Promise((resolve, reject) => {
+    const loader = new THREE.TextureLoader();
+    loader.load(
+      url,
+      (texture) => {
+        texture.mapping = THREE.UVMapping;
+        texture.wrapS = THREE.RepeatWrapping;
+        texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(1, 1);
+        texture.offset.set(0, 0);
+        texture.center.set(0, 0);
+        texture.rotation = 0;
+        texture.minFilter = THREE.LinearMipMapLinearFilter;
+        texture.magFilter = THREE.LinearFilter;
+        texture.anisotropy = 1;
+        texture.flipY = false;
+        texture.generateMipmaps = true;
+        texture.premultiplyAlpha = false;
+        texture.unpackAlignment = 4;
+        texture.encoding = THREE.sRGBEncoding;
+        resolve(texture);
+      },
+      undefined,
+      (error) => {
+        reject(error);
+      }
+    );
+  });
+};
+
+
+const createMeshFromBuffer = async(vertexData: any, normalData: any, uvData: any, indexArray: any, materialData: any) => {
   const floatArray = new Float32Array(vertexData);
   const normalArray = new Float32Array(normalData);
   const uvArray = new Float32Array(uvData)
@@ -65,42 +98,28 @@ const createMeshFromBuffer = (vertexData: any, normalData: any, uvData: any, ind
   geometry.setAttribute('uv', new THREE.BufferAttribute(uvArray, 2));
   geometry.setIndex(new THREE.BufferAttribute(indexArray, 1));
 
-  const texture = new THREE.TextureLoader().load('/textures/Planet_baseColor.png', (texture) => {
-  texture.mapping = THREE.UVMapping;
-  texture.wrapS = THREE.RepeatWrapping;
-  texture.wrapT = THREE.RepeatWrapping;
-  texture.repeat.set(1, 1);
-  texture.offset.set(0, 0);
-  texture.center.set(0, 0);
-  texture.rotation = 0;
-  texture.minFilter = THREE.LinearMipMapLinearFilter;
-  texture.magFilter = THREE.LinearFilter;
-  texture.anisotropy = 1;
-  texture.flipY = false;
-  texture.generateMipmaps = true;
-  texture.premultiplyAlpha = false;
-  texture.unpackAlignment = 4;
-  texture.encoding = THREE.sRGBEncoding;
-});
+  try {
+    const texture = await loadTexture('/textures/Planet_baseColor.png');
 
-  const material = new THREE.MeshStandardMaterial({
-    ...materialData,
-    map: texture,
-    side: THREE.DoubleSide,
-  });
+    const material = new THREE.MeshStandardMaterial({
+      ...materialData,
+      map: texture,
+      side: THREE.FrontSide,
+    });
 
+    const mesh = new THREE.Mesh(geometry, material);
 
+    console.log('mesh', mesh);
 
-  const mesh = new THREE.Mesh(geometry, material);
+    mesh.userData = { name: 'Object_Planet_0' };
+    mesh.name = 'Object_Planet_0';
 
-
-  console.log('mesh', mesh);
-
-  mesh.userData = {name: 'Object_Planet_0'};
-  mesh.name = 'Object_Planet_0';
-
-  mesh.position.set(0, 0, 0);
-  return mesh;
+    mesh.position.set(0, 0, 0);
+    return mesh;
+  } catch (error) {
+    console.error('Error loading texture:', error);
+    return null;
+  }
 };
 
 const scrollAnimation = () => {
