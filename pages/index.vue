@@ -4,13 +4,15 @@
     <section class="header">
       <m-header title="MayderC" description="Software developer"></m-header>
     </section>
+    <section class="header-ghost"></section>
     <section id="about" class="about">
       <h2 class="subtitle">Acerca de mi</h2>
       <section class="about__items">
         <article class="about__img about__item">
           <nuxt-img
+            loading="lazy"
             provider="cloudinary"
-            src="/v1704122883/Portfolio/img/plszt3knfrjr9kvzdicn.svg"
+            src="/Portfolio/img/plszt3knfrjr9kvzdicn"
           ></nuxt-img>
         </article>
         <article class="about__description about__item">

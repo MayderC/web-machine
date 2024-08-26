@@ -39,7 +39,6 @@ export default {
   },
 
   mounted() {
-    console.log(window?.scrollY)
      if (process.browser) {
       window.onscroll = this.onScrollNavbarColor
     }

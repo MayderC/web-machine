@@ -61,7 +61,7 @@ export default defineNuxtConfig({
   image: {
     provider: "cloudinary",
     cloudinary: {
-      baseURL: "https://res.cloudinary.com/maydercodesimages/image/upload",
+      baseURL: "https://res.cloudinary.com/maydercodesimages/image/upload/f_auto,q_auto/v1/",
     },
   },
 
@@ -79,4 +79,7 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: "./i18n.config.ts", // if you are using custom path, default
   },
+
+
+
 });

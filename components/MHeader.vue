@@ -8,24 +8,24 @@
 
       <div class="skills__items">
         <div class="skill__html skill">
-          <img src="../assets/img/nodejs-icon.svg" />
+          <nuxt-img width="30" height="30" class="astro" load="lazy" src="/Portfolio/img/etlv8yh63ngdwzvgq39i" />
           <p>Nodejs</p>
         </div>
         <div class="skill__js skill">
-          <img src="../assets/img/nestjs.svg" />
+          <nuxt-img width="30" height="30" class="astro" load="lazy" src="/Portfolio/img/okhmdg2osnuvtd8p8mqh"/>
           <p>NestJs</p>
         </div>
         <div class="skill__vue skill">
-          <img src="../assets/img/vue.svg" />
+          <nuxt-img width="30" height="30" class="astro"  load="lazy" src="/Portfolio/img/idyeqmohvouuzroizixw" />
           <p>Vuejs</p>
         </div>
         <div class="skill__css skill">
-          <img src="../assets/img/react-2.svg" />
+          <nuxt-img width="30" height="30" class="astro" load="lazy" src="/Portfolio/img/obefg1bjzxuxcjatfbcm" />
           <p>Reacjs</p>
         </div>
 
         <div class="skill__js skill">
-          <img src="../assets/img/typescript.webp" />
+          <nuxt-img width="30" height="30" class="astro" load="lazy" src="/Portfolio/img/eqeepdn59xkcnftnsmwt" />
           <p>TypeScript</p>
         </div>
       </div>
@@ -35,7 +35,8 @@
 
     <!-- Imagenes -->
     <div class="header__img_astro">
-      <img class="astro" src="../assets/img/as-min.png" />
+      <nuxt-img class="astro" load="lazy" src="/Portfolio/img/hy5lxqzc5dranip0ljk4">
+      </nuxt-img>
     </div>
     <div class="header__img_p">
       <img class="fly" src="../assets/img/fly.webp" />
@@ -44,6 +45,8 @@
 </template>
 
 <script>
+
+
 export default {
   name: "MHeader",
   props: {

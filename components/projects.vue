@@ -350,6 +350,7 @@
           </section>
         </section>
       </article>
+
       <article class="proyects__item">
         <h3 class="subtitle-3">Animaciones CSS</h3>
         <hand-link
@@ -368,25 +369,25 @@
           </section>
         </section>
       </article>
-      <article class="proyects__item">
-        <h3 class="subtitle-3">Proyectos en Github</h3>
-        <hand-link
-          href="https://github.com/MayderC"
-          text="Mi GitHub Link"
-        ></hand-link>
-        <section class="proyects__github">
-          <card-github-proyects
-            v-for="d in visibleData"
-            :key="d.name"
-            :repo="d"
-          ></card-github-proyects>
-        </section>
-        <div v-show="visibleData.length &lt;=  countProyects">
-          <p class="show-repos" @click="showAllProyects">
-            show all repositories
-          </p>
-        </div>
-      </article>
+        <article ref="githubProjects" class="proyects__item">
+          <h3 class="subtitle-3">Proyectos en Github</h3>
+          <hand-link
+            href="https://github.com/MayderC"
+            text="Mi GitHub Link"
+          ></hand-link>
+          <section class="proyects__github">
+            <card-github-proyects
+              v-for="d in visibleData"
+              :key="d.name"
+              :repo="d"
+            ></card-github-proyects>
+          </section>
+          <div v-show="visibleData.length &lt;=  countProyects">
+            <p class="show-repos" @click="showAllProyects">
+              show all repositories
+            </p>
+          </div>
+        </article>
     </section>
   </main>
 </template>
@@ -445,7 +446,7 @@ export default {
     };
   },
   mounted() {
-    this.getData();
+    this.setupObserver()
   },
   methods: {
     async getData() {
@@ -465,6 +466,23 @@ export default {
     showAllProyects() {
       this.visibleData = JSON.parse(JSON.stringify(this.data));
     },
+    onIntersect(entries){
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          this.getData()
+          console.log('Intersecting ', entry)
+        }
+      })
+    },
+    setupObserver(){
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+      }
+      const observer = new IntersectionObserver(this.onIntersect, options)
+      observer.observe(this.$refs.githubProjects)
+    }
   },
 };
 </script>

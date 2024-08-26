@@ -40,13 +40,13 @@ onMounted(async () => {
   const render = new Render({ scene, camera, canvas: "#three" });
   const ambientLight = new AmbientLight(0xffffff, 2);
   const plane = new BackgroundWaves();
-  const background = new BackgroundShader();
+  //const background = new BackgroundShader();
   
   loadVueIcon(scene);
   //loadReactIcon(scene);
   
   scene.add(ambientLight);
-  background.animatePlane()
+  //background.animatePlane()
   plane.animatePlane();
 
   // const axesHelper = new THREE.AxesHelper( 5 );
@@ -66,7 +66,7 @@ onMounted(async () => {
 
   scene.position.set(0, -1, 0);
   scene.add(plane.getPlane())
-  scene.add(background.getPlane())  
+  //scene.add(background.getPlane())  
   scene.add(group);
   
   addRaycasterRotation(camera, render, model, scene);
