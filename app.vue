@@ -146,7 +146,7 @@ onMounted(async () => {
   
   scene.add(ambientLight);
   //background.animatePlane()
-  plane.animatePlane();
+  //plane.animatePlane();
 
   registerWebworker(scene, camera, render);
 
@@ -166,7 +166,7 @@ onMounted(async () => {
   //addRaycasterRotation(camera, render, model, scene);
 
   scene.position.set(0, -1, 0);
-  scene.add(plane.getPlane())
+  //scene.add(plane.getPlane())
 
   //scene.add(background.getPlane())  
   //scene.add(group);
