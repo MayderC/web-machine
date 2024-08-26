@@ -23,6 +23,86 @@ import { loadReactIcon } from "./three/objects/icons/reactIcon";
 const scroll = ref(0);
 
 
+const registerWebworker = (scene: any, camera: any, render: any) => {
+  const worker = new Worker(new URL("./webworker.js", import.meta.url), {type: "module"});
+
+  worker.addEventListener("message", (event) => {
+    const { data } = event;
+
+    const { positionArray, normalArray, uvArray, materialData, indexArray } = data;
+
+    const model = createMeshFromBuffer(positionArray, normalArray, uvArray, indexArray, materialData);
+
+    model.position.set(0, 1, 0);
+
+    scene.add(model);
+
+    scrollAnimation();
+      const updateModel = () => {
+        //console.log('model', model);
+        model.rotation.y += 0.002;
+        model.rotation.x += 0.002;
+        camera.position.z = Math.sin((100 - scroll.value / 2) * 0.01) * 10;
+        requestAnimationFrame(updateModel);
+      };
+
+    updateModel();
+    //addRaycasterRotation(camera, render, model, scene);
+  });
+
+  worker.postMessage('start');
+}
+
+
+const createMeshFromBuffer = (vertexData: any, normalData: any, uvData: any, indexArray: any, materialData: any) => {
+  const floatArray = new Float32Array(vertexData);
+  const normalArray = new Float32Array(normalData);
+  const uvArray = new Float32Array(uvData)
+
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.BufferAttribute(floatArray, 3));
+  geometry.setAttribute('normal', new THREE.BufferAttribute(normalArray, 3));
+  geometry.setAttribute('uv', new THREE.BufferAttribute(uvArray, 2));
+  geometry.setIndex(new THREE.BufferAttribute(indexArray, 1));
+
+  const texture = new THREE.TextureLoader().load('/textures/Planet_baseColor.png', (texture) => {
+  texture.mapping = THREE.UVMapping;
+  texture.wrapS = THREE.RepeatWrapping;
+  texture.wrapT = THREE.RepeatWrapping;
+  texture.repeat.set(1, 1);
+  texture.offset.set(0, 0);
+  texture.center.set(0, 0);
+  texture.rotation = 0;
+  texture.minFilter = THREE.LinearMipMapLinearFilter;
+  texture.magFilter = THREE.LinearFilter;
+  texture.anisotropy = 1;
+  texture.flipY = false;
+  texture.generateMipmaps = true;
+  texture.premultiplyAlpha = false;
+  texture.unpackAlignment = 4;
+  texture.encoding = THREE.sRGBEncoding;
+});
+
+  const material = new THREE.MeshStandardMaterial({
+    ...materialData,
+    map: texture,
+    side: THREE.DoubleSide,
+  });
+
+
+
+  const mesh = new THREE.Mesh(geometry, material);
+
+
+  console.log('mesh', mesh);
+
+  mesh.userData = {name: 'Object_Planet_0'};
+  mesh.name = 'Object_Planet_0';
+
+  mesh.position.set(0, 0, 0);
+  return mesh;
+};
+
 const scrollAnimation = () => {
   window.addEventListener("scroll", () => {
     const scrollPercent =
@@ -49,27 +129,29 @@ onMounted(async () => {
   //background.animatePlane()
   plane.animatePlane();
 
+  registerWebworker(scene, camera, render);
+
   // const axesHelper = new THREE.AxesHelper( 5 );
   // scene.add( axesHelper );
   
 
-  scrollAnimation();
-  const {model, group} = await new PlanetModel().loadModel();
-  const updateModel = () => {
-    model.children[0].children[0].children[0].children[0].rotation.y //+= 0.002;
-    model.children[0].children[0].children[0].children[0].rotation.x //+= 0.002;
-    camera.position.z = Math.sin((100 - scroll.value / 2) * 0.01) * 10;
-    requestAnimationFrame(updateModel);
-  };
+  // scrollAnimation();
+  // const updateModel = () => {
+  //   model.rotation.y //+= 0.002;
+  //   model.rotation.x //+= 0.002;
+  //   camera.position.z = Math.sin((100 - scroll.value / 2) * 0.01) * 10;
+  //   requestAnimationFrame(updateModel);
+  // };
 
-  updateModel();
+  //updateModel();
+  //addRaycasterRotation(camera, render, model, scene);
 
   scene.position.set(0, -1, 0);
   scene.add(plane.getPlane())
+
   //scene.add(background.getPlane())  
-  scene.add(group);
+  //scene.add(group);
   
-  addRaycasterRotation(camera, render, model, scene);
 });
 </script>
 
