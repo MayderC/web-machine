@@ -4,8 +4,8 @@ class BackgroundWaves {
   constructor() {
 
     this.vertexHeight = 40,
-		this.planeDefinition = 25,
-		this.planeSize = 50,
+		this.planeDefinition = 10,
+		this.planeSize = 20,
     this.planeGeometry = new THREE.PlaneGeometry(this.planeSize, this.planeSize, this.planeDefinition, this.planeDefinition);
     const wireframeMaterial = new THREE.MeshBasicMaterial({ color: '#c30e9f', wireframe: true });
     this.plane = new THREE.Mesh(this.planeGeometry, wireframeMaterial)
