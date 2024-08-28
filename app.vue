@@ -37,7 +37,7 @@ const registerWebworker = async (scene: any, camera: any, render: any) => {
     model.position.set(0, 1, 0);
     const plane = new BackgroundWaves();
     plane.animatePlane();
-    plane.getPlane().scale.set(0, 0, 0);
+    //plane.getPlane().scale.set(0, 0, 0);
     scene.add(plane.getPlane());
     const updateModel = () => {
       model.rotation.y += 0.002;
@@ -47,9 +47,8 @@ const registerWebworker = async (scene: any, camera: any, render: any) => {
     };
     updateModel();
     scene.add(model);
-    //loadVueIcon(scene);
-    animateObjectEntry(model);
-    animateObjectEntry(plane.getPlane());
+    loadVueIcon(scene);
+    animateObjectEntry(model, 0.5);
   });
   worker.postMessage('start');
 }
