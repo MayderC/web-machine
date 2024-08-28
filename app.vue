@@ -47,7 +47,7 @@ const registerWebworker = async (scene: any, camera: any, render: any) => {
     };
     updateModel();
     scene.add(model);
-    loadVueIcon(scene);
+    //loadVueIcon(scene);
     animateObjectEntry(model);
     animateObjectEntry(plane.getPlane());
   });
