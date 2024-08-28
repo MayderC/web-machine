@@ -27,7 +27,7 @@
       <h2 class="subtitle">Otras Tecnologías</h2>
       <section class="skills__extras">
         <article class="skill__Nodejs extra">
-          <img src="../assets/img/spring.webp" />
+          <nuxt-img src="/Portfolio/img/h1ulu4xzmmeagp8bwcna" />
         </article>
 
         <article class="skill__Nodejs extra">

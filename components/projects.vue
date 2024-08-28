@@ -351,7 +351,7 @@
         </section>
       </article>
 
-      <article class="proyects__item">
+      <article ref="githubProjects" class="proyects__item">
         <h3 class="subtitle-3">Animaciones CSS</h3>
         <hand-link
           href="https://codepen.io/mayderc/pens/"
@@ -450,6 +450,8 @@ export default {
   },
   methods: {
     async getData() {
+      if (this.data.length) return;
+
       const url = "https://api.github.com/users/MayderC/repos";
       try {
         const { promises, namesToPromises } = await getPercent(url);

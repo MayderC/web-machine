@@ -33,12 +33,13 @@ const addHelpers = (model) => {
 const animateVueIcon = (model) => {
   //move cons on axis x and z to create a circular movement
   const clock = new THREE.Clock();
+  const SPEED = 1
   const animate = () => {
     const time = clock.getElapsedTime();
-    model.position.x = Math.sin(time) * 1.5;
-    model.position.z = Math.cos(time) * 1.5;
+    model.position.x = Math.sin(time*SPEED) * 1.5;
+    model.position.z = Math.cos(time*SPEED) * 1.5;
      //ROTATE ON THE Y AXIS ON THE OF THE CIRCUMLAR MOVEMENT
-     const angle = Math.atan2(Math.cos(time), Math.sin(time));
+     const angle = Math.atan2(Math.cos(time*SPEED), Math.sin(time*SPEED));
      model.rotation.y = angle + Math.PI * -0.5;
     requestAnimationFrame(animate);
   }

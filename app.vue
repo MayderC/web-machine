@@ -18,9 +18,27 @@ import BackgroundShader from "./three/objects/backgroundShader";
 import { loadVueIcon } from "./three/objects/icons/vueIcon";
 import * as THREE from "three";
 import { loadReactIcon } from "./three/objects/icons/reactIcon";
+import { gsap } from 'gsap';
 
 
 const scroll = ref(0);
+
+
+
+const animatePlanetEntry = (object: any) => {
+  gsap.fromTo(object.scale, 
+    { x: 0, y: 0, z: 0 }, // Initial scale
+    { x: 1, y: 1, z: 1, duration: 0.3, ease: 'power3.out' } // Final scale
+  );
+};
+
+const animatePlaneEntry = (object: any) => {
+  gsap.fromTo(object.scale, 
+    { x: 0, y: 0, z: 0 }, // Initial scale
+    { x: 1, y: 1, z: 1, duration: 0.1, ease: 'power3.out' } // Final scale
+  );
+};
+
 
 
 const registerWebworker = async (scene: any, camera: any, render: any) => {
@@ -28,29 +46,26 @@ const registerWebworker = async (scene: any, camera: any, render: any) => {
 
   worker.addEventListener("message", async (event) => {
     const { data } = event;
-
     const { positionArray, normalArray, uvArray, materialData, indexArray } = data;
-
     const model = await createMeshFromBuffer(positionArray, normalArray, uvArray, indexArray, materialData);
     if (!model) return;
-  
     model.position.set(0, 1, 0);
-
-    scene.add(model);
-
-    scrollAnimation();
-      const updateModel = () => {
-        //console.log('model', model);
-        model.rotation.y += 0.002;
-        model.rotation.x += 0.002;
-        camera.position.z = Math.sin((100 - scroll.value / 2) * 0.01) * 10;
-        requestAnimationFrame(updateModel);
-      };
-
+    loadVueIcon(scene);
+    const plane = new BackgroundWaves();
+    plane.animatePlane();
+    plane.getPlane().scale.set(0, 0, 0);
+    scene.add(plane.getPlane());
+    animatePlaneEntry(plane.getPlane());
+    const updateModel = () => {
+      model.rotation.y += 0.002;
+      model.rotation.x += 0.002;
+      camera.position.z = Math.sin((100 - scroll.value / 2) * 0.01) * 10;
+      requestAnimationFrame(updateModel);
+    };
     updateModel();
-    //addRaycasterRotation(camera, render, model, scene);
+    scene.add(model);
+    animatePlanetEntry(model);
   });
-
   worker.postMessage('start');
 }
 
@@ -100,21 +115,16 @@ const createMeshFromBuffer = async(vertexData: any, normalData: any, uvData: any
 
   try {
     const texture = await loadTexture('/textures/Planet_baseColor.png');
-
     const material = new THREE.MeshStandardMaterial({
       ...materialData,
       map: texture,
       side: THREE.FrontSide,
     });
-
     const mesh = new THREE.Mesh(geometry, material);
-
-    console.log('mesh', mesh);
-
     mesh.userData = { name: 'Object_Planet_0' };
     mesh.name = 'Object_Planet_0';
-
     mesh.position.set(0, 0, 0);
+    mesh.scale.set(0, 0, 0);
     return mesh;
   } catch (error) {
     console.error('Error loading texture:', error);
@@ -138,39 +148,13 @@ onMounted(async () => {
   const camera = new Camera();
   const render = new Render({ scene, camera, canvas: "#three" });
   const ambientLight = new AmbientLight(0xffffff, 2);
-  const plane = new BackgroundWaves();
-  //const background = new BackgroundShader();
-  
-  loadVueIcon(scene);
-  //loadReactIcon(scene);
   
   scene.add(ambientLight);
-  //background.animatePlane()
-  //plane.animatePlane();
-
+  scene.position.set(0, -1, 0);
   registerWebworker(scene, camera, render);
 
-  // const axesHelper = new THREE.AxesHelper( 5 );
-  // scene.add( axesHelper );
-  
+  scrollAnimation();
 
-  // scrollAnimation();
-  // const updateModel = () => {
-  //   model.rotation.y //+= 0.002;
-  //   model.rotation.x //+= 0.002;
-  //   camera.position.z = Math.sin((100 - scroll.value / 2) * 0.01) * 10;
-  //   requestAnimationFrame(updateModel);
-  // };
-
-  //updateModel();
-  //addRaycasterRotation(camera, render, model, scene);
-
-  scene.position.set(0, -1, 0);
-  //scene.add(plane.getPlane())
-
-  //scene.add(background.getPlane())  
-  //scene.add(group);
-  
 });
 </script>
 
@@ -181,7 +165,7 @@ onMounted(async () => {
 }
 
 #three {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

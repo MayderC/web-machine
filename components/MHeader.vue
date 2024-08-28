@@ -8,24 +8,24 @@
 
       <div class="skills__items">
         <div class="skill__html skill">
-          <nuxt-img width="30" height="30" class="astro" load="lazy" src="/Portfolio/img/etlv8yh63ngdwzvgq39i" />
+          <nuxt-img width="30" height="30"  load="lazy" src="/Portfolio/img/etlv8yh63ngdwzvgq39i" />
           <p>Nodejs</p>
         </div>
         <div class="skill__js skill">
-          <nuxt-img width="30" height="30" class="astro" load="lazy" src="/Portfolio/img/okhmdg2osnuvtd8p8mqh"/>
+          <nuxt-img width="30" height="30"  load="lazy" src="/Portfolio/img/okhmdg2osnuvtd8p8mqh"/>
           <p>NestJs</p>
         </div>
         <div class="skill__vue skill">
-          <nuxt-img width="30" height="30" class="astro"  load="lazy" src="/Portfolio/img/idyeqmohvouuzroizixw" />
+          <nuxt-img width="30" height="30"  load="lazy" src="/Portfolio/img/idyeqmohvouuzroizixw" />
           <p>Vuejs</p>
         </div>
         <div class="skill__css skill">
-          <nuxt-img width="30" height="30" class="astro" load="lazy" src="/Portfolio/img/obefg1bjzxuxcjatfbcm" />
+          <nuxt-img width="30" height="30"  load="lazy" src="/Portfolio/img/obefg1bjzxuxcjatfbcm" />
           <p>Reacjs</p>
         </div>
 
         <div class="skill__js skill">
-          <nuxt-img width="30" height="30" class="astro" load="lazy" src="/Portfolio/img/eqeepdn59xkcnftnsmwt" />
+          <nuxt-img width="30" height="30"  load="lazy" src="/Portfolio/img/eqeepdn59xkcnftnsmwt" />
           <p>TypeScript</p>
         </div>
       </div>
@@ -35,11 +35,11 @@
 
     <!-- Imagenes -->
     <div class="header__img_astro">
-      <nuxt-img class="astro" load="lazy" src="/Portfolio/img/hy5lxqzc5dranip0ljk4">
+      <nuxt-img class="astro" width="100" height="100" load="lazy" src="/Portfolio/img/hy5lxqzc5dranip0ljk4">
       </nuxt-img>
     </div>
     <div class="header__img_p">
-      <img class="fly" src="../assets/img/fly.webp" />
+      <nuxt-img class="fly" width="100" height="100" load="lazy" src="/Portfolio/img/oibezhs33g2f9awhsv4q" />
     </div>
   </header>
 </template>
