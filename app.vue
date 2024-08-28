@@ -19,25 +19,10 @@ import { loadVueIcon } from "./three/objects/icons/vueIcon";
 import * as THREE from "three";
 import { loadReactIcon } from "./three/objects/icons/reactIcon";
 import { gsap } from 'gsap';
+import { animateObjectEntry } from "./three/helpers/objectEntry";
 
 
 const scroll = ref(0);
-
-
-
-const animatePlanetEntry = (object: any) => {
-  gsap.fromTo(object.scale, 
-    { x: 0, y: 0, z: 0 }, // Initial scale
-    { x: 1, y: 1, z: 1, duration: 0.3, ease: 'power3.out' } // Final scale
-  );
-};
-
-const animatePlaneEntry = (object: any) => {
-  gsap.fromTo(object.scale, 
-    { x: 0, y: 0, z: 0 }, // Initial scale
-    { x: 1, y: 1, z: 1, duration: 0.1, ease: 'power3.out' } // Final scale
-  );
-};
 
 
 
@@ -50,12 +35,10 @@ const registerWebworker = async (scene: any, camera: any, render: any) => {
     const model = await createMeshFromBuffer(positionArray, normalArray, uvArray, indexArray, materialData);
     if (!model) return;
     model.position.set(0, 1, 0);
-    loadVueIcon(scene);
     const plane = new BackgroundWaves();
     plane.animatePlane();
     plane.getPlane().scale.set(0, 0, 0);
     scene.add(plane.getPlane());
-    animatePlaneEntry(plane.getPlane());
     const updateModel = () => {
       model.rotation.y += 0.002;
       model.rotation.x += 0.002;
@@ -64,7 +47,9 @@ const registerWebworker = async (scene: any, camera: any, render: any) => {
     };
     updateModel();
     scene.add(model);
-    animatePlanetEntry(model);
+    loadVueIcon(scene);
+    animateObjectEntry(model);
+    animateObjectEntry(plane.getPlane());
   });
   worker.postMessage('start');
 }
