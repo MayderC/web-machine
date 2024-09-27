@@ -1,5 +1,6 @@
 <template>
   <div class="card__container">
+    <div class="hover-effect"></div>
     <div class="card__item--img">
       <img :src="img" alt="" />
     </div>
@@ -60,6 +61,22 @@ export default {
   height: 486px;
   padding: 16px;
   position: relative;
+}
+.hover-effect{
+  position: absolute;
+  border-radius: 13px;
+  width: 100%;
+  height: 100%;
+  background: #c30e9f;
+  background: linear-gradient(to top, #00000000 10%, #490d42 100%);
+  display: none;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.card__container:hover .hover-effect{
+  display: block;
 }
 
 .card__item--img {

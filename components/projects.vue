@@ -322,7 +322,7 @@
             <proyect-card-transparent
               name="EarthPoints"
               :items="['React', 'Typescript', 'Nestjs', 'REST & GraphQL']"
-              img="https://camo.githubusercontent.com/a464abe0531fc8ecbb07b26136c6d20b6d0a7043d7395201ade388fd88f50de3/68747470733a2f2f692e696d6775722e636f6d2f5630795774396d2e706e67"
+              img="https://camo.githubusercontent.com/6b86cddf78e32798e54260b30a9a0708449397eac3400074c9db10f7eaddcddc/68747470733a2f2f692e696d6775722e636f6d2f5630795774396d2e706e67"
               live="https://earthpoints.vercel.app/"
               github="https://github.com/No-Country/s11-20-m-typescript-react"
               text="Incentiva tus hábitos a través de la acumulación de puntos"

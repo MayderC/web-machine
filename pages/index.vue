@@ -9,15 +9,14 @@
       <h2 class="subtitle">Acerca de mi</h2>
       <section class="about__items">
         <article class="about__img about__item">
-          <nuxt-img
-            loading="lazy"
-            provider="cloudinary"
-            src="/Portfolio/img/plszt3knfrjr9kvzdicn"
-          ></nuxt-img>
+          <img
+            class="avatar-img"
+            src="/assets/img/avatar.webp"
+          ></img>
         </article>
         <article class="about__description about__item">
           <p class="about__text">
-            Mi nombre es Mayder y tengo el grado de Bachillerato en Ingeniería en Tecnologías de la Información. Tengo conocimientos en desarrollo frontend y backend, principalmente con TypeScript.
+            Mi nombre es Mayder, poseo el grado de Bachillerato en Ingeniería en Tecnologías de la Información. Tengo conocimientos en desarrollo frontend y backend, principalmente con TypeScript.
           </p>
         </article>
       </section>
@@ -59,11 +58,9 @@
 .main_index {
   user-select: none;
 }
-
-.about{
-  padding-top: 50px;
+.avatar-img{
+  border-radius: 50%;
 }
-
 .about,
 .extra__section,
 .contact__section,
