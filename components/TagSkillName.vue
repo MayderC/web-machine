@@ -25,4 +25,9 @@ export default {
   color: #e6eefc;
   text-transform: lowercase;
 }
+
+.wrapper:hover{
+  background-color: #a31da5;
+}
+
 </style>

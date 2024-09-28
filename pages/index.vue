@@ -5,22 +5,8 @@
       <m-header title="MayderC" description="Software developer"></m-header>
     </section>
     <section class="header-ghost"></section>
-    <section id="about" class="about">
-      <h2 class="subtitle">Acerca de mi</h2>
-      <section class="about__items">
-        <article class="about__img about__item">
-          <img
-            class="avatar-img"
-            src="/assets/img/avatar.webp"
-          ></img>
-        </article>
-        <article class="about__description about__item">
-          <p class="about__text">
-            Mi nombre es Mayder, poseo el grado de Bachillerato en Ingeniería en Tecnologías de la Información. Tengo conocimientos en desarrollo frontend y backend, principalmente con TypeScript.
-          </p>
-        </article>
-      </section>
-    </section>
+
+    <about-me></about-me>
 
     <section class="extra__section">
       <h2 class="subtitle">Otras Tecnologías</h2>
@@ -28,7 +14,9 @@
         <article class="skill__Nodejs extra">
           <nuxt-img src="/Portfolio/img/h1ulu4xzmmeagp8bwcna" />
         </article>
-
+        <article class="skill__Nodejs extra">
+          <img src="../assets/img/python.svg" />
+        </article>
         <article class="skill__Nodejs extra">
           <img src="../assets/img/mysql-1.svg" />
         </article>
@@ -61,6 +49,17 @@
 .avatar-img{
   border-radius: 50%;
 }
+
+.extra{
+  filter: grayscale(95%);
+  -webkit-filter: grayscale(95%); 
+}
+
+.extra:hover{
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+
 .about,
 .extra__section,
 .contact__section,
@@ -77,7 +76,7 @@ section.header {
 }
 
 .about__img {
-  height: 300px;
+  height: 200px;
 }
 
 .about__text {

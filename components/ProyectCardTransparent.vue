@@ -18,15 +18,15 @@
       </div>
       <footer class="proyect__info">
         <div class="proyect__links">
-          <a :href="live" target="_blank"
-            ><img src="../assets/img/icon-link.svg" alt=""
-          /></a>
-          <a :href="github" target="_blank"
-            ><img src="../assets/img/icon-github.svg" alt=""
-          /></a>
-          <a v-if="info" href="" target="_blank"
-            ><img src="../assets/img/icon-info.svg" alt=""
-          /></a>
+          <a :href="github" target="_blank">
+            <icon-git-hub></icon-git-hub>
+          </a>
+          <a :href="live" target="_blank">
+            <icon-link></icon-link>
+          </a>
+          <a v-if="info" href="" target="_blank">
+            <img src="../assets/img/icon-info.svg" alt=""/>
+          </a>
         </div>
       </footer>
     </div>
@@ -34,15 +34,23 @@
 </template>
 
 <script>
+
+import IconGitHub from './icons/IconGitHub.vue';
+import IconLink from './icons/IconLink.vue';
+
 export default {
   name: "ProyectCardTransparent",
+  components:{
+    IconGitHub,
+    IconLink
+  },
   props: {
     name: { type: String, default: "" },
     img: { type: String, default: "" },
     live: { type: String, default: "" },
     github: { type: String, default: "" },
     text: { type: String, default: "" },
-    info: { type: String, defailt: "" },
+    info: { type: String, default: "" },
     items: { type: Array, default: () => [] },
   },
 };
@@ -59,7 +67,7 @@ export default {
   border-radius: 13px;
   width: 330px;
   height: 486px;
-  padding: 16px;
+  padding: 14px;
   position: relative;
 }
 .hover-effect{
@@ -79,8 +87,18 @@ export default {
   display: block;
 }
 
+.card__container:hover .card__item--img img{
+  transform: scale(1.5);
+  transition: 1s;
+}
+
+.card__item--img img{
+  transition: .5s;
+}
+
+
 .card__item--img {
-  border-radius: 13px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -127,7 +145,7 @@ footer.proyect__info .proyect__links {
   justify-content: flex-end;
   gap: 15px;
 }
-.proyect__links img {
+.proyect__links img, .proyect__links a {
   height: 23px;
   width: 23px;
 }

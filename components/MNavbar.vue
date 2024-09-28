@@ -47,12 +47,11 @@ export default {
   methods: {
     onScrollNavbarColor() {
       const currentScroll = window? window.scrollY: 0
-      if (currentScroll > this.lastScroll) {
+      if (currentScroll > 200) {
         this.isNavOnTop = false
       } else {
         this.isNavOnTop = true
       }
-      this.lastScroll = currentScroll
     },
 
     show() {
