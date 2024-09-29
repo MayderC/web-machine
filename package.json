@@ -14,6 +14,7 @@
     "@tresjs/cientos": "^4.0.0",
     "@tresjs/nuxt": "^3.0.3",
     "@tresjs/post-processing": "^0.7.1",
+    "@vueuse/motion": "^2.2.5",
     "chart.js": "^2.9.4",
     "cors": "^2.8.5",
     "express": "^4.18.2",

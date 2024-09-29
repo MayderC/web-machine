@@ -1,6 +1,8 @@
 <template>
   <section id="about" class="about">
-    <h2 class="subtitle">Acerca de mi</h2>
+    <h2 class="subtitle">
+      Sobre mi
+    </h2>
     <section class="about__items">
       <article class="about__img about__item">
         <img
@@ -39,7 +41,7 @@ const description1 = `Mi nombre es Mayder, poseo el grado de Bachillerato en Ing
 
 const description2 = `Como desarrollador frontend, utilizo Vue.js o React.js. Uso Tailwind CSS o SCSS para estilos, y por ultimo y más importante, consumo APIs REST.`
 
-const description3 = `Como desarrollador backend, creo APIs REST con Node.js, Express.js, Java, y Spring Boot. Uso MVC, arquitectura hexagonal, arquitectura N capas, y JWT para seguridad. Trabajo con MongoDB, SQL y ORMs.`
+const description3 = `Como desarrollador backend, creo APIs REST con Node.js, Nest.js, Java y Spring Boot. Tengo conocimientos en MVC, arquitectura hexagonal, arquitectura N capas, y JWT para autorización. Trabajo con MongoDB, SQL y ORMs.`
 
 const description4 = `Además tengo conocimientos en Git, Docker. Tambien en metodologías ágiles, y tengo experiencia en el uso de herramientas como trello, slack, github projects.
 Actualmente estoy aprendiendo AWS y microservicios. Y de vez en cuando, hago proyectos personales que incluyen tecnologías como Python, IA con LLM, y 3D con Three.js.`
