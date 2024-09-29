@@ -20,7 +20,7 @@
                 'ExpressJS',
                 'SQL',
               ]"
-              :img="chat"
+              img="oncnritxqjf5slpgdtig"
               live="https://frosty-mayer-9c261d.netlify.app/"
               github="https://github.com/MayderC/w-chat-frontend"
               text="App chat en tiempo real version Beta"
@@ -37,7 +37,7 @@
                 'IA Vercel SDK',
                 'Llama 3.1',
               ]"
-              img='https://github.com/MayderC/mind-map-ia/blob/main/home.png?raw=true'
+              img='j40i2ttgxid7znmexuee'
               live="https://mind-map-ia-production.up.railway.app"
               github="https://github.com/MayderC/mind-map-ia"
               text="Aplicación de IA para realizar resumenes de texto y mapas mentales automaticos"
@@ -55,7 +55,7 @@
                 'ExpressJS',
                 'MongoDB',
               ]"
-              :img="link"
+              img="lpsudgb2hvpdb3rk2ogu"
               live="https://fierce-lowlands-38911.herokuapp.com/"
               github="https://github.com/MayderC/linklist-frontend"
               text="App para compartir los diferentes links de tus redes sociales"
@@ -73,7 +73,7 @@
                 'ExpressJS',
                 'MongoDB',
               ]"
-              :img="task"
+              img="rffswghlmyokft5acf2w"
               live="https://tasskapp.netlify.app/#/"
               github="https://github.com/MayderC/taskapp-frontend"
               text="App para guardar tu lista de tareas"
@@ -91,7 +91,7 @@
                 'MongoDB',
                 'MongooseODM',
               ]"
-              :img="uploader"
+              img="eigytkinys2qvecet1ya"
               live="https://comfy-bombolone-1ac23d.netlify.app/"
               github="https://github.com/MayderC/image-uploader-fe"
               text="App subir imagenes y generar un link unico"
@@ -109,7 +109,7 @@
                 'Swagger',
                 'MongoDB',
               ]"
-              :img="unsplash"
+              img="thpq066ev25v4nkyyenj"
               live="https://stirring-frangollo-bfd933.netlify.app/"
               github="https://github.com/MayderC/my-unsplash-fe"
               text="My Unsplash Api"
@@ -127,7 +127,7 @@
                 'Swagger',
                 'MongoDB',
               ]"
-              :img="catwiki"
+              img="us1u4ioszeixnwvqh1nn"
               live="https://phenomenal-sunshine-997127.netlify.app/"
               github="https://github.com/MayderC/cat-wiki-fe"
               text="Catwiki información de gatitos y sus razas"
@@ -143,7 +143,7 @@
                 'NodeJs',
                 'NestJs',
               ]"
-              :img="ioGame"
+              img="hthycfhvlylxdob5ipsz"
               live="https://operation-research-utn-2024.netlify.app/"
               github="https://github.com/MayderC/io-game-proyect-fe"
               text="Juego de matemáticas en tiempo real multijugador, sumas y restas"
@@ -169,7 +169,7 @@
                 'GSAP',
                 'HTML - CSS',
               ]"
-              :img="solarSystem"
+              img="ec7lhrxzy655cxsgaa0y"
               live="https://solar-system-3d-vue-mayderc.netlify.app/"
               github="https://github.com/MayderC/solar-system-3D-vue"
               text="Resumen del sistema solar en 3D"
@@ -180,7 +180,7 @@
             <proyect-card-transparent
               name="3D Haunted House"
               :items="['Vite', 'Javascript', 'ThreeJS', 'HTML - CSS']"
-              :img="houseH"
+              img="s41lu8lpvnt5k5gnbfc5"
               live="https://haunted-house-3d-maydec.netlify.app/"
               github="https://github.com/MayderC/haunted-house-three"
               text="Casa embrujada en 3D"
@@ -191,7 +191,7 @@
             <proyect-card-transparent
               name="Snake game 3D"
               :items="['Nextjs', 'Typescript', 'ThreeJS', 'HTML - CSS']"
-              :img="snakeG"
+              img="xqho7ncews54bnqkwaom"
               live="https://snake-3d-indol.vercel.app/"
               github="https://github.com/MayderC/snake-3d"
               text="Juego de la serpiente en 3D"
@@ -201,7 +201,7 @@
           <section class="vue__item">
             <proyect-card-transparent
               name="Rick and Morty"
-              :img="rick"
+              img="gq35fltva5gl3zympmcf"
               :items="['HTML - CSS', 'Javascript', 'VueJs']"
               live="https://mayderc-rick-and-morty.netlify.app/"
               github="https://github.com/MayderC/rick-morty-frontend-vue"
@@ -213,7 +213,7 @@
             <proyect-card-transparent
               name="Rock paper scissors 3D game"
               :items="['Nextjs', 'Typescript', 'ThreeJS', 'Blender', 'HTML - CSS']"
-              :img="rpsGame"
+              img="gwu3dztvrjqfg7s4knij"
               live="https://3d-three-paper-rock-scissors.vercel.app/"
               github="https://github.com/MayderC/3d-three-paper-rock-scissors"
               text="Juego de piedra papel o tijera en 3D"
@@ -231,7 +231,7 @@
           <section class="react__item">
             <proyect-card-transparent
               name="Country"
-              :img="countryimg"
+              img="uzik7nxtg2qsph41nagx"
               :items="['HTML - CSS', 'Javascript', 'ReactJs']"
               live="https://blissful-easley-831ea3.netlify.app/"
               github="https://github.com/MayderC/countries-practice-react"
@@ -242,7 +242,7 @@
           <section class="vue__item">
             <proyect-card-transparent
               name="Devfinder"
-              :img="dev"
+              img="b6hlrlizvxdhky4u6w6r"
               :items="['HTML - CSS', 'Javascript', 'VueJS']"
               live="https://may-devfinder.netlify.app/"
               github="https://github.com/MayderC/devfinder"
@@ -252,7 +252,7 @@
           <section class="vue__item">
             <proyect-card-transparent
               name="Exchange"
-              img="https://raw.githubusercontent.com/MayderC/exchange/main/home.png"
+              img="wixgeoij1mtfrmacaxpu"
               :items="['HTML - CSS', 'Javascript', 'VueJS']"
               live="https://mayder-exchange-app.netlify.app/"
               github="https://github.com/MayderC/devfinder"
@@ -266,88 +266,34 @@
         <h3 class="subtitle-3">Colaboraciones Fullstack</h3>
         <section class="proyects__vue">
           <blur-effect></blur-effect>
-
-          <section class="vue__item">
+          <section
+          v-motion
+          :initial="{
+            y: 100,
+            opacity: 0,
+            transition: {
+              duration: 0.5,
+            },
+          }"
+          :enter="{
+            y: 0,
+            opacity: 1,
+            transition: {
+              duration: 0.5,
+            },
+          }"
+          class="vue__item" v-for="d in col" :key="d.name">
             <proyect-card-transparent
-              name="MoveNow"
-              :items="['VueJS', 'Typescript', 'Java', 'API REST', 'HTML - CSS']"
-              :img="movenow"
-              live="https://movenow-three.vercel.app/"
-              github="https://github.com/No-Country/s9-08-t-java-vue"
-              text="Movenow, colaboración en No country, Mudanzas y envios"
+              @receive="sort"
+              :name="d.name"
+              :items="d.items"
+              :img="d.img"
+              :live="d.live"
+              :github="d.github"
+              :text="d.text"
             ></proyect-card-transparent>
           </section>
-
-          <section class="vue__item">
-            <proyect-card-transparent
-              name="Calountry"
-              :items="[
-                'VueJS',
-                'Nest Js ',
-                'Typescript',
-                'NodeJs',
-                'API REST',
-                'HTML - CSS',
-              ]"
-              :img="calountry"
-              live="https://github.com/No-Country/C8-39-T-Vue"
-              github="https://github.com/No-Country/C8-39-T-Vue"
-              text="Encuentra la hora ideal para reuniones en equipos, y Agenda de tareas"
-            ></proyect-card-transparent>
-          </section>
-
-          <section class="vue__item">
-            <proyect-card-transparent
-              name="Donafunding"
-              :items="['VueJS', 'Nest Js', 'NodeJs', 'API REST', 'HTML - CSS']"
-              :img="donafunding"
-              live="https://github.com/No-Country/s6-08-t-vue"
-              github="https://github.com/No-Country/s6-08-t-vue"
-              text="Donafunding, colaboración en No country, Donar e invertir en proyectos"
-            ></proyect-card-transparent>
-          </section>
-
-          <section class="vue__item">
-            <proyect-card-transparent
-              name="Devsarrolla IT"
-              :items="['VueJS', 'Nest Js', 'NodeJs', 'API REST', 'HTML - CSS']"
-              :img="devsarrolla"
-              live="https://github.com/No-Country/s7-19-t-nodevue"
-              github="https://github.com/No-Country/s7-19-t-nodevue"
-              text="App para encontrar proyectos de desarrollo colaborativos"
-            ></proyect-card-transparent>
-          </section>
-
-          <section class="vue__item">
-            <proyect-card-transparent
-              name="EarthPoints"
-              :items="['React', 'Typescript', 'Nestjs', 'REST & GraphQL']"
-              img="https://camo.githubusercontent.com/6b86cddf78e32798e54260b30a9a0708449397eac3400074c9db10f7eaddcddc/68747470733a2f2f692e696d6775722e636f6d2f5630795774396d2e706e67"
-              live="https://earthpoints.vercel.app/"
-              github="https://github.com/No-Country/s11-20-m-typescript-react"
-              text="Incentiva tus hábitos a través de la acumulación de puntos"
-            ></proyect-card-transparent>
-          </section>
-          <section class="vue__item">
-            <proyect-card-transparent
-              name="MentorSphere"
-              :items="['React', 'Typescript', 'Nestjs', 'REST']"
-              :img="mentor"
-              live="https://mentorsphere.vercel.app/"
-              github="https://github.com/No-Country/s12-21-tn-nest-react"
-              text="Plataforma que conecta a mentores y estudiantes para fomentar el aprendizaje y el crecimiento personal"
-            ></proyect-card-transparent>
-          </section>
-          <section class="vue__item">
-            <proyect-card-transparent
-              name="RoundPeople"
-              :items="['React', 'Javascript', 'NodeJs', 'REST API']"
-              :img="round"
-              live="https://roundpeople.netlify.app/"
-              github="https://github.com/No-Country/s13-01-m-node-react"
-              text="Una plataforma que te ayuda a derribar las limitaciones y alcanzar tus metas musicales."
-            ></proyect-card-transparent>
-          </section>
+          
         </section>
       </article>
 
@@ -393,62 +339,37 @@
 </template>
 
 <script>
-import taskimg from "~/assets/img/task.webp";
-import devfinder from "~/assets/img/devfinder.png";
-import dona from "~/assets/img/crow.webp";
-import rickMorty from "~/assets/img/rick.webp";
-import linklist from "~/assets/img/link.png";
-import country from "~/assets/img/country.webp";
-import chatpng from "~/assets/img/chat.png";
-import upload from "~/assets/img/uploader.png";
-import unsp from "~/assets/img/unsplash.webp";
-import cat from "~/assets/img/catwiki.webp";
-import calo from "~/assets/img/calountry.png";
-import devti from "~/assets/img/devsarrolla.webp";
-import move from "~/assets/img/movenow.webp";
-import mentorS from "~/assets/img/mentor.webp";
-import roundP from "~/assets/img/round.webp";
-import solar from "~/assets/img/solar.png";
-import snake from "~/assets/img/snake.webp";
-import house from "~/assets/img/house.webp";
-import rps from "~/assets/img/rpsgame.webp";
-import iogame from "~/assets/img/iogame.png";
-
 import { getPercent } from "../fetch-request/github";
+import {collaboratives} from '../fetch-request/proyects.js'
+import {filter} from '../helper/filter.js'
 
 export default {
   name: "Proyects",
   data() {
     return {
-      ioGame: iogame,
-      rpsGame: rps,
-      houseH: house,
-      snakeG: snake,
-      mentor: mentorS,
-      round: roundP,
-      devsarrolla: devti,
-      donafunding: dona,
-      calountry: calo,
-      chat: chatpng,
-      catwiki: cat,
-      task: taskimg,
-      dev: devfinder,
-      rick: rickMorty,
-      link: linklist,
-      countryimg: country,
-      uploader: upload,
-      unsplash: unsp,
-      movenow: move,
-      solarSystem: solar,
+      initial : {
+        y: 100,
+        opacity: 0,
+      },
+      enter : {
+        y: 0,
+        opacity: 1,
+      },
       data: [],
       visibleData: [],
       countProyects: 8,
+      col: collaboratives
     };
   },
   mounted() {
     this.setupObserver()
   },
   methods: {
+
+    sort(str= '') {
+      const result = filter(this.col, (item) => item.items.includes(str))
+      this.col = result
+    },
     async getData() {
       if (this.data.length) return;
 

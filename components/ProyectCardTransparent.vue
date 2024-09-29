@@ -2,7 +2,7 @@
   <div class="card__container">
     <div class="hover-effect"></div>
     <div class="card__item--img">
-      <img :src="img" alt="" />
+      <nuxt-img load="lazy" :src="`Portfolio/img/${img}`"/>
     </div>
     <div class="card__item--body">
       <h3 class="proyect__name">{{ name }}</h3>
@@ -10,8 +10,10 @@
         <p>{{ text }}</p>
       </div>
       <div class="proyect__skills">
+      <!-- emmit name on click-->
         <tag-skill-name
           v-for="item of items"
+          @click="$emit('receive', item)"
           :key="item"
           :name="item"
         ></tag-skill-name>
@@ -25,7 +27,7 @@
             <icon-link></icon-link>
           </a>
           <a v-if="info" href="" target="_blank">
-            <img src="../assets/img/icon-info.svg" alt=""/>
+            <!-- <nuxt-img sou src="../assets/img/icon-info.svg" alt=""/> -->
           </a>
         </div>
       </footer>
