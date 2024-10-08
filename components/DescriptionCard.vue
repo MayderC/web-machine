@@ -31,17 +31,58 @@ const props = defineProps<DescriptionCardProps>();
   width: 50%;
   height: 100%;
   position: absolute;
-  z-index: 10;
+  z-index: 11;
 }
 
-
+.left{
+  left: 0;
+}
 
 .right{
   right: 0;
-  /* background: linear-gradient(to left, #a31d94d8 0%, #362c3e 100%); */
+}
+
+.left::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #a31d937e 0%, #362c3e 100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  z-index: 9;
+  transition: transform 0.5s;
+}
+
+
+.left:hover::after{
+  transform: translateX(100%);
+  transition: transform 0.5s;
+}
+
+/* right yellow */
+
+.right::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #00dc805c 0%, #362c3e 100%);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  z-index: 9;
+  transition: transform 0.5s;
 }
+
+.right:hover::after{
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
 
 .description_card {
   position: relative;
@@ -55,11 +96,12 @@ const props = defineProps<DescriptionCardProps>();
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #362c3e ;
+  overflow: hidden;
 }
 
 .description__text{
   position: relative;
-  z-index: 20;
+  z-index: 12;
 }
 
 .full {

@@ -1,5 +1,6 @@
 <template>
   <section id="about" class="about">
+    <!-- <img src="/assets/img/typescript.webp" width="300" alt="" class="back__about"> -->
     <h2 class="subtitle">
       Sobre mi
     </h2>
@@ -50,11 +51,44 @@ Actualmente estoy aprendiendo AWS y microservicios. Y de vez en cuando, hago pro
 
 <style scoped>
 
-.about{
-  padding-top: 75px;
+.subtitle{
+  position: relative;
+  z-index: 1;
 }
 
+.back__about{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 0;
+  filter: grayscale(100%);
+  /* opacity: 0.5; */
+  opacity: 0.09;
+}
+
+.about{
+  padding-top: 75px;
+  background: none;
+}
+
+.about::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #210e33;
+  background-image: linear-gradient(to top, #080709 0%, #190c25 100%);
+  z-index: -111;
+}
+
+
 .about__items{
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(2, 404px);
   grid-template-areas: 
