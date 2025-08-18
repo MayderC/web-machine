@@ -56,7 +56,7 @@
                 'MongoDB',
               ]"
               img="lpsudgb2hvpdb3rk2ogu"
-              live="https://fierce-lowlands-38911.herokuapp.com/"
+              live="https://link-list-app.netlify.app/MayderC"
               github="https://github.com/MayderC/linklist-frontend"
               text="App para compartir los diferentes links de tus redes sociales"
             ></proyect-card-transparent>
