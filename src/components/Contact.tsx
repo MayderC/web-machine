@@ -188,7 +188,7 @@ export function Contact() {
                   </button>
                 </div>
                 {submitStatus === 'success' && (
-                  <div className="p-4 bg-retro-mint border-2 border-retro-ink text-retro-on-accent font-sans text-xs font-medium flex items-center gap-3" id="form-success">
+                  <div className="p-4 bg-retro-mint border-2 border-retro-ink text-retro-on-accent-2 font-sans text-xs font-medium flex items-center gap-3" id="form-success">
                     <span className="material-symbols-outlined text-retro-ink text-[24px]">check_circle</span>
                     <div>
                       <span className="font-mono font-bold text-sm block">{t('form.successTitle')}</span>

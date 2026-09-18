@@ -247,7 +247,7 @@ export function WireframeCanvas() {
         </div>
         <div className="flex items-center justify-between gap-4">
           <span className="text-retro-muted uppercase">{t('status')}</span>
-          <span className="font-bold text-retro-on-accent bg-retro-mint/80 px-1 border border-retro-ink" ref={rotLabelRef} id="poly-rot-label">ROT_Y: 0°</span>
+          <span className="font-bold text-retro-on-accent-2 bg-retro-mint/80 px-1 border border-retro-ink" ref={rotLabelRef} id="poly-rot-label">ROT_Y: 0°</span>
         </div>
       </div>
       <div className="absolute top-3 right-3 bg-retro-card border-2 border-retro-ink px-2 py-1 font-mono text-[10px] font-bold text-retro-ink pointer-events-none flex items-center gap-1 retro-shadow-sm">

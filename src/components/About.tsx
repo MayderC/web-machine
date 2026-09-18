@@ -23,7 +23,7 @@ export function About() {
                   <span className="w-2.5 h-2.5 bg-retro-ink"></span>
                   <span className="font-bold">DEV_PROFILE // MAYDERC</span>
                 </div>
-                <span className="px-2 py-0.5 border border-retro-ink bg-retro-mint text-retro-on-accent font-bold text-[10px]">ACTIVO</span>
+                <span className="px-2 py-0.5 border border-retro-ink bg-retro-mint text-retro-on-accent-2 font-bold text-[10px]">ACTIVO</span>
               </div>
               <div className="relative w-full h-80 bg-retro-card border-2 border-retro-ink flex flex-col items-center justify-center p-6 text-center">
                 <div className="w-24 h-24 border-2 border-retro-ink bg-retro-yellow text-retro-on-accent flex items-center justify-center mb-4 retro-shadow-sm relative">

@@ -19,15 +19,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: isES
-      ? 'MayderC — Desarrollador Fullstack & 3D Creative'
-      : 'MayderC — Fullstack Developer & 3D Creative',
+      ? 'MayderC — Desarrollador Fullstack'
+      : 'MayderC — Fullstack Developer',
     description: isES
       ? 'Desarrollador de software especializado en React/Next.js, TypeScript, Python, integración de IA (LLMs, RAG, Agentes) y gráficos 3D web. Disponible para freelance y consultoría.'
       : 'Software developer specializing in React/Next.js, TypeScript, Python, AI integration (LLMs, RAG, Agents), and 3D web graphics. Available for freelance and consulting.',
     openGraph: {
       title: isES
-        ? 'MayderC — Desarrollador Fullstack & 3D Creative'
-        : 'MayderC — Fullstack Developer & 3D Creative',
+        ? 'MayderC — Desarrollador Fullstack'
+        : 'MayderC — Fullstack Developer',
       description: isES
         ? 'Desarrollador de software especializado en React/Next.js, TypeScript, Python, integración de IA y gráficos 3D web.'
         : 'Software developer specializing in React/Next.js, TypeScript, Python, AI integration, and 3D web graphics.',

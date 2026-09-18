@@ -12,7 +12,10 @@
     "cta": "Let's Talk",
     "langES": "ES",
     "langEN": "EN",
-    "themeToggle": "Toggle Theme"
+    "themeToggle": "Toggle Theme",
+    "themeLabel": "Theme",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "badge": "AVAILABLE FOR NEW PROJECTS",
@@ -168,7 +171,7 @@
     ],
     "profile": {
       "name": "Mayder",
-      "role": "Fullstack & 3D Creative Developer",
+      "role": "Fullstack Developer",
       "location": "COSTA RICA · UTC-6",
       "remote": "GLOBAL REMOTE",
       "tech": ["React / Next.js", "Node & Python", "WebGL & Shaders", "PostgreSQL"]
@@ -258,7 +261,7 @@
     }
   },
   "footer": {
-    "description": "Independent software development focused on well-built interfaces, practical backend and interactive graphics without fluff or inflated jargon.",
+    "description": "Independent software development focused on well-built interfaces, practical backend and interactive graphics.",
     "navigation": "Navigation",
     "links": "Links",
     "copyright": "© 2025 MayderC · Built with attention to detail.",

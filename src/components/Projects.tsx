@@ -44,7 +44,7 @@ function FeaturedCase({ item }: FeaturedCaseProps) {
           </div>
           <div className="flex items-center justify-between pt-2 border-t-2 border-retro-ink font-mono text-xs">
             <a className="inline-flex items-center gap-1.5 font-bold text-retro-ink hover:underline" href={item.github} target="_blank" rel="noopener noreferrer">
-              <span className="material-symbols-outlined text-[16px]">terminal</span>
+              <span className="material-symbols-outlined text-[16px]">open_in_new</span>
               <span>{item.linkLabel ?? t('viewDemo')}</span>
             </a>
             <span className="text-neutral-400">·</span>
@@ -56,9 +56,9 @@ function FeaturedCase({ item }: FeaturedCaseProps) {
             <div className="flex items-center justify-between pb-2 mb-2 px-1 text-white font-mono text-xs border-b border-white/20">
               <div className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 bg-white inline-block" data-no-invert></span>
-                <span className="text-white font-bold">dashboard/agent-flow</span>
+                <span className="text-white font-bold">zyntia.ai/agent</span>
               </div>
-              <span className="bg-retro-yellow text-retro-on-accent font-bold px-1.5 py-0.5 text-[10px]">STREAM_ACTIVE</span>
+              <span className="bg-retro-yellow text-retro-on-accent font-bold px-1.5 py-0.5 text-[10px]">VOICE_LIVE</span>
             </div>
             <div className="w-full aspect-[4/3] bg-[#1a1a1a] border border-white/20 flex items-center justify-center">
               <div className="text-center p-4 text-white/50 font-mono text-xs">
@@ -83,7 +83,7 @@ function ProjectCard({ item }: ProjectCardProps) {
     <div className="bg-retro-card border-2 border-retro-ink p-6 flex flex-col justify-between retro-shadow-lg">
       <div>
         <div className="flex items-center justify-between font-mono text-xs mb-2">
-          <span className={`font-bold ${item.color === 'yellow' ? 'bg-retro-yellow text-retro-on-accent' : item.color === 'mint' ? 'bg-retro-mint text-retro-on-accent' : 'bg-retro-orange text-white'} px-1.5 py-0.5 border border-retro-ink`}>
+          <span className={`font-bold ${item.color === 'yellow' ? 'bg-retro-yellow text-retro-on-accent' : item.color === 'mint' ? 'bg-retro-mint text-retro-on-accent-2' : 'bg-retro-orange text-white'} px-1.5 py-0.5 border border-retro-ink`}>
             {item.id} / {item.type}
           </span>
           <span className="text-retro-muted font-bold">{item.year}</span>
@@ -125,7 +125,7 @@ interface ExperimentCardProps {
 function ExperimentCard({ item }: ExperimentCardProps) {
   const colorMap = {
     yellow: 'hover:bg-retro-yellow hover:text-retro-on-accent',
-    mint: 'hover:bg-retro-mint hover:text-retro-on-accent',
+    mint: 'hover:bg-retro-mint hover:text-retro-on-accent-2',
     orange: 'hover:bg-retro-orange hover:text-white',
   };
   const colorClass = colorMap[item.color];

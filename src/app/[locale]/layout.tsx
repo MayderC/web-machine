@@ -21,8 +21,8 @@ export async function generateMetadata({
     metadataBase: new URL('https://mayderc.dev'),
     title: {
       default: isES
-        ? 'MayderC — Desarrollador Fullstack & 3D Creative'
-        : 'MayderC — Fullstack Developer & 3D Creative',
+        ? 'MayderC — Desarrollador Fullstack'
+        : 'MayderC — Fullstack Developer',
       template: '%s | MayderC',
     },
     description: isES
@@ -60,8 +60,8 @@ export async function generateMetadata({
       url: `https://mayderc.dev/${locale}`,
       siteName: 'MayderC',
       title: isES
-        ? 'MayderC — Desarrollador Fullstack & 3D Creative'
-        : 'MayderC — Fullstack Developer & 3D Creative',
+        ? 'MayderC — Desarrollador Fullstack'
+        : 'MayderC — Fullstack Developer',
       description: isES
         ? 'Desarrollador de software especializado en React/Next.js, TypeScript, Python, integración de IA y gráficos 3D web.'
         : 'Software developer specializing in React/Next.js, TypeScript, Python, AI integration, and 3D web graphics.',
@@ -77,8 +77,8 @@ export async function generateMetadata({
     twitter: {
       card: 'summary_large_image',
       title: isES
-        ? 'MayderC — Desarrollador Fullstack & 3D Creative'
-        : 'MayderC — Fullstack Developer & 3D Creative',
+        ? 'MayderC — Desarrollador Fullstack'
+        : 'MayderC — Fullstack Developer',
       description: isES
         ? 'Desarrollador de software especializado en React/Next.js, TypeScript, Python, integración de IA y gráficos 3D web.'
         : 'Software developer specializing in React/Next.js, TypeScript, Python, AI integration, and 3D web graphics.',
@@ -115,7 +115,7 @@ export default async function LocaleLayout({
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "(function(){try{var m=localStorage.getItem('mode');if(m==='dark'||(!m&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})();",
+              "(function(){try{var r=document.documentElement;var t=localStorage.getItem('theme');if(t){r.dataset.theme=t}var m=localStorage.getItem('mode');if(m==='dark'||(!m&&window.matchMedia('(prefers-color-scheme: dark)').matches)){r.classList.add('dark')}}catch(e){}})();",
           }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -156,7 +156,7 @@ export default async function LocaleLayout({
                 'RAG',
                 'AI Agents',
               ],
-              jobTitle: 'Fullstack Developer & Creative Technologist',
+              jobTitle: 'Fullstack Developer',
               worksFor: {
                 '@type': 'Organization',
                 name: 'Freelance',

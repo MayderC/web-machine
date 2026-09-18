@@ -55,7 +55,7 @@ export function Hero() {
                 <span className="text-neutral-400">·</span>
                 <span className="bg-retro-yellow/60 text-retro-on-accent px-1 border border-retro-ink font-bold">{heroT('typescript')}</span>
                 <span className="text-neutral-400">·</span>
-                <span className="bg-retro-mint/60 text-retro-on-accent px-1 border border-retro-ink font-bold">{heroT('python')}</span>
+                <span className="bg-retro-mint/60 text-retro-on-accent-2 px-1 border border-retro-ink font-bold">{heroT('python')}</span>
                 <span className="text-neutral-400">·</span>
                 <span className="font-bold underline decoration-2">{heroT('llms')}</span>
                 <span className="text-neutral-400">·</span>

@@ -84,7 +84,7 @@ export async function GET() {
               maxWidth: '800px',
             }}
           >
-            Software Developer & Creative Technologist
+            Software Developer
           </div>
 
           {/* Tech tags */}

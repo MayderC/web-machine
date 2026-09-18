@@ -13,7 +13,7 @@ function ServiceCard({ item }: ServiceCardProps) {
   const t = useTranslations('serviceCard');
   const colorMap = {
     yellow: 'bg-retro-yellow text-retro-on-accent',
-    mint: 'bg-retro-mint text-retro-on-accent',
+    mint: 'bg-retro-mint text-retro-on-accent-2',
     orange: 'bg-retro-orange text-white',
   };
   const colorClass = colorMap[item.color];
