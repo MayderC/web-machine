@@ -128,7 +128,7 @@ export function Header() {
             </span>
           </button>
           <Link
-            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 border-2 border-retro-ink font-mono text-xs font-bold bg-retro-yellow text-retro-on-accent hover:bg-retro-ink hover:text-retro-bg transition-colors retro-shadow-sm active:translate-x-0.5 active:translate-y-0.5"
+            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 border-2 border-retro-ink font-mono text-xs font-bold bg-retro-yellow text-retro-on-accent retro-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_var(--c-shadow)] transition-all"
             href={`/${locale}#contacto`}
           >
             <span>{t('cta')}</span>
@@ -171,7 +171,7 @@ export function Header() {
               {languageSwitcher}
               <Link
                 onClick={() => setMobileOpen(false)}
-                className="inline-flex items-center gap-1.5 px-4 py-2 border-2 border-retro-ink font-mono text-xs font-bold bg-retro-yellow text-retro-on-accent retro-shadow-sm active:translate-x-0.5 active:translate-y-0.5"
+                className="inline-flex items-center gap-1.5 px-4 py-2 border-2 border-retro-ink font-mono text-xs font-bold bg-retro-yellow text-retro-on-accent retro-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_var(--c-shadow)] transition-all"
                 href={`/${locale}#contacto`}
               >
                 <span>{t('cta')}</span>
