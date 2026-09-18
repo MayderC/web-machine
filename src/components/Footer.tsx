@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { contactEmail, whatsappUrl, whatsappNumber } from '@/lib/config';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -41,8 +42,13 @@ export function Footer() {
               <a className="text-retro-ink hover:underline flex items-center gap-1" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                 <span className="material-symbols-outlined text-[14px]">work</span> LinkedIn
               </a>
-              <a className="text-retro-ink hover:underline flex items-center gap-1" href="mailto:contacto@mayderc.dev">
-                <span className="material-symbols-outlined text-[14px]">mail</span> contacto@mayderc.dev
+              {whatsappUrl && (
+                <a className="text-retro-ink hover:underline flex items-center gap-1" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  <span className="material-symbols-outlined text-[14px]">chat</span> {`WhatsApp // ${whatsappNumber}`}
+                </a>
+              )}
+              <a className="text-retro-ink hover:underline flex items-center gap-1" href={`mailto:${contactEmail}`}>
+                <span className="material-symbols-outlined text-[14px]">mail</span> {contactEmail}
               </a>
             </div>
           </div>

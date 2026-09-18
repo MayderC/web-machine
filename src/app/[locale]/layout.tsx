@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { Providers } from '@/components/Providers';
 import { getProvidersProps } from '@/lib/get-messages';
 import { locales, Locale } from '@/i18n/config';
+import { siteUrl } from '@/lib/config';
 import '../globals.css';
 
 export function generateStaticParams() {
@@ -18,7 +19,7 @@ export async function generateMetadata({
   const isES = locale === 'es';
 
   return {
-    metadataBase: new URL('https://mayderc.dev'),
+    metadataBase: new URL(siteUrl),
     title: {
       default: isES
         ? 'MayderC — Desarrollador Fullstack'
@@ -42,22 +43,22 @@ export async function generateMetadata({
       'webgl',
       'freelance',
     ],
-    authors: [{ name: 'MayderC', url: 'https://mayderc.dev' }],
+    authors: [{ name: 'MayderC', url: siteUrl }],
     creator: 'MayderC',
     publisher: 'MayderC',
     robots: 'index, follow',
     alternates: {
-      canonical: `https://mayderc.dev/${locale}`,
+      canonical: `${siteUrl}/${locale}`,
       languages: {
-        es: 'https://mayderc.dev/es',
-        en: 'https://mayderc.dev/en',
+        es: `${siteUrl}/es`,
+        en: `${siteUrl}/en`,
       },
     },
     openGraph: {
       type: 'website',
       locale: isES ? 'es_ES' : 'en_US',
       alternateLocale: isES ? 'en_US' : 'es_ES',
-      url: `https://mayderc.dev/${locale}`,
+      url: `${siteUrl}/${locale}`,
       siteName: 'MayderC',
       title: isES
         ? 'MayderC — Desarrollador Fullstack'
@@ -121,7 +122,7 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block"
           rel="stylesheet"
         />
         <link
@@ -135,7 +136,7 @@ export default async function LocaleLayout({
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'MayderC',
-              url: 'https://mayderc.dev',
+              url: siteUrl,
               sameAs: [
                 'https://github.com/mayderc',
                 'https://linkedin.com/in/mayderc',

@@ -5,6 +5,7 @@ import { useState, FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import { getContactServices } from '@/lib/data';
 import { Locale } from '@/i18n/config';
+import { contactEmail, whatsappUrl, whatsappNumber } from '@/lib/config';
 
 export function Contact() {
   const locale = useLocale();
@@ -86,10 +87,16 @@ export function Contact() {
                 <span className="font-bold text-retro-muted uppercase mb-1">
                   {t('channels.label')}
                 </span>
-                <a className="font-bold text-retro-ink hover:underline flex items-center gap-2 py-1" href={`mailto:${t('channels.email')}`}>
+                <a className="font-bold text-retro-ink hover:underline flex items-center gap-2 py-1" href={`mailto:${contactEmail}`}>
                   <span className="material-symbols-outlined text-[18px]">mail</span>
-                  <span>{t('channels.email')}</span>
+                  <span>{contactEmail}</span>
                 </a>
+                {whatsappUrl && (
+                  <a className="font-bold text-retro-ink hover:underline flex items-center gap-2 py-1" href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                    <span className="material-symbols-outlined text-[18px]">chat</span>
+                    <span>{`${t('channels.whatsapp')} // ${whatsappNumber}`}</span>
+                  </a>
+                )}
                 <a className="font-bold text-retro-ink hover:underline flex items-center gap-2 py-1" href={t('channels.github')} target="_blank" rel="noopener noreferrer">
                   <span className="material-symbols-outlined text-[18px]">terminal</span>
                   <span>{t('channels.github')}</span>

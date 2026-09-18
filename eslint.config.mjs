@@ -20,6 +20,9 @@ const eslintConfig = defineConfig([
     files: ["src/app/**/*.tsx"],
     rules: {
       "@next/next/no-page-custom-font": "off",
+      // Material Symbols is an icon font: `display=block` is required to avoid
+      // the ligature names briefly rendering as text while the font loads.
+      "@next/next/google-font-display": "off",
     },
   },
 ]);

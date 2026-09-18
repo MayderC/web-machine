@@ -1,7 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { locales } from '@/i18n/config';
-
-const baseUrl = 'https://mayderc.dev';
+import { siteUrl as baseUrl } from '@/lib/config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const languages = Object.fromEntries(
