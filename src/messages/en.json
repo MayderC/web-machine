@@ -1,0 +1,281 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Real Work",
+    "about": "About Me",
+    "contact": "Contact"
+  },
+  "header": {
+    "title": "MayderC",
+    "subtitle": "FULLSTACK // WEB & AI",
+    "cta": "Let's Talk",
+    "langES": "ES",
+    "langEN": "EN",
+    "themeToggle": "Toggle Theme"
+  },
+  "hero": {
+    "badge": "AVAILABLE FOR NEW PROJECTS",
+    "badgeSub": "FREELANCE & CONSULTING",
+    "headline": "Software development and AI integration.",
+    "description": "I'm Mayder, a software developer. I work on web applications, backend and APIs, integrating AI technologies like LLMs, agents, RAG, transcription, OCR and voice. My main working languages are TypeScript and Python.",
+    "ctaPrimary": "Let's talk about your project",
+    "ctaSecondary": "View real work",
+    "capabilities": {
+      "frontend": "Frontend",
+      "react": "React / Next.js",
+      "backend": "Backend",
+      "apis": "APIs",
+      "typescript": "TypeScript",
+      "python": "Python",
+      "llms": "LLMs",
+      "rag": "RAG",
+      "agents": "Agents",
+      "voice": "Voice",
+      "ocr": "OCR"
+    }
+  },
+  "services": {
+    "label": "WORK AREAS",
+    "headline": "Where I can add concrete value.",
+    "description": "I collaborate as an independent developer or integrated into your existing team to deliver features, MVPs or key refactors.",
+    "items": [
+      {
+        "id": "01",
+        "category": "FRONTEND",
+        "title": "Web Applications & Frontend",
+        "description": "Fluid interfaces, reusable components and safe typing. Focus on real load speed, accessibility and polished experience.",
+        "tech": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+        "icon": "web",
+        "color": "yellow"
+      },
+      {
+        "id": "02",
+        "category": "BACKEND",
+        "title": "Backend, APIs & Automation",
+        "description": "Fast and maintainable services, webhooks, background processing queues and reliable cross-platform synchronization.",
+        "tech": ["Node.js", "Express / FastAPI", "PostgreSQL", "Redis"],
+        "icon": "terminal",
+        "color": "mint"
+      },
+      {
+        "id": "03",
+        "category": "PRACTICAL AI",
+        "title": "Model Integration & AI",
+        "description": "Direct connection with LLM APIs (OpenAI, Claude), document search flows (RAG) and tool calling (function calling).",
+        "tech": ["OpenAI / Anthropic", "pgvector", "LangChain", "Streaming UI"],
+        "icon": "smart_toy",
+        "color": "orange"
+      },
+      {
+        "id": "04",
+        "category": "GRAPHICS & 3D",
+        "title": "3D Web & Interactive Graphics",
+        "description": "Interactive data visualizations, 3D models in the browser, canvas animations and lightweight shaders that don't block user rendering.",
+        "tech": ["Three.js", "WebGL", "HTML5 Canvas", "Shaders GLSL"],
+        "icon": "view_in_ar",
+        "color": "yellow"
+      }
+    ]
+  },
+  "projects": {
+    "label": "TANGIBLE PROJECTS",
+    "headline": "Work built with real code.",
+    "subtitle": "Systems in production and public code",
+    "detailsLabel": "What I built exactly:",
+    "viewDemo": "View demo repository",
+    "featured": [
+      {
+        "id": "01",
+        "year": "2024",
+        "type": "WEB PLATFORM",
+        "title": "Zyntia — Agent Orchestrator with Streaming UI",
+        "description": "Interactive panel to configure assistance agents that query internal documents. Focused on fast UX: character-by-character streaming responses, source traceability and token management.",
+        "details": "Next.js App Router architecture for frontend with Server-Sent Events (SSE), FastAPI backend for embedding pipeline with pgvector and Redis cache to avoid repeated LLM calls.",
+        "tech": ["Next.js 14", "TypeScript", "FastAPI", "PostgreSQL + pgvector", "Redis"],
+        "status": "In active use",
+        "github": "https://github.com/mayderc"
+      },
+      {
+        "id": "02",
+        "year": "2024",
+        "type": "AUTOMATION",
+        "title": "Task & Ops Flow — Event Pipeline",
+        "description": "Service to sync order and billing states between payment gateways and internal systems. Handles retries with exponential backoff and Slack alerts on provider downtime.",
+        "tech": ["Node.js", "BullMQ", "Redis", "Webhooks"],
+        "details": "Auditable background queues",
+        "github": "https://github.com/mayderc"
+      },
+      {
+        "id": "03",
+        "year": "2023–2024",
+        "type": "MOBILITY & MAPS",
+        "title": "ColabCountry / MoveNow — Logistics App",
+        "description": "Real-time route and transport unit tracking panel. Built with Leaflet and WebSocket sync, optimized for low-coverage mobile networks.",
+        "tech": ["React", "Leaflet Maps", "Supabase", "WebSockets"],
+        "details": "Offline-first support for drivers",
+        "github": "https://github.com/mayderc"
+      }
+    ],
+    "experiments": {
+      "label": "3D, WebGL Experiments & Open Tools",
+      "github": "View all on GitHub (@mayderc)",
+      "items": [
+        {
+          "name": "Math Game 2D",
+          "tech": "Canvas · JS",
+          "description": "Interactive 2D engine for math exercises and logic with direct Canvas rendering.",
+          "color": "yellow"
+        },
+        {
+          "name": "Shader Viewport",
+          "tech": "WebGL · GLSL",
+          "description": "Interactive fragment shader viewer with real-time variable controls.",
+          "color": "mint"
+        },
+        {
+          "name": "LinkList",
+          "tech": "Next.js · DB",
+          "description": "Personal link manager with automatic OpenGraph previews.",
+          "color": "yellow"
+        },
+        {
+          "name": "DevFinder",
+          "tech": "GitHub API",
+          "description": "GitHub profile explorer with commit metrics and featured repositories.",
+          "color": "orange"
+        }
+      ]
+    }
+  },
+  "about": {
+    "label": "ABOUT ME",
+    "headline": "I'm passionate about building honest, useful and visually-crafted code.",
+    "bio": [
+      "My name is Mayder. I hold a Bachelor's degree in Information Technology Engineering and I work mainly with TypeScript, on both frontend and backend.",
+      "On the frontend I use React or Vue, with Tailwind CSS or SCSS for styling, and I consume REST APIs. On the backend I build APIs with Node.js and NestJS, and I've also worked with Java and Spring Boot. I'm comfortable with MongoDB, SQL and ORMs, and I use Git and Docker daily.",
+      "I keep learning: right now I'm looking into AWS and microservices. Now and then I build personal projects with Python, AI (LLMs) and 3D with Three.js."
+    ],
+    "values": [
+      {
+        "title": "Your project belongs to you",
+        "description": "Repositories, deployments and access always in your hands from day one."
+      },
+      {
+        "title": "Clear and close treatment",
+        "description": "Realistic deliveries, constant feedback and total respect for your time."
+      }
+    ],
+    "profile": {
+      "name": "Mayder",
+      "role": "Fullstack & 3D Creative Developer",
+      "location": "COSTA RICA · UTC-6",
+      "remote": "GLOBAL REMOTE",
+      "tech": ["React / Next.js", "Node & Python", "WebGL & Shaders", "PostgreSQL"]
+    }
+  },
+  "techStack": {
+    "label": "TOOLS & STACK",
+    "headline": "Technologies I work with daily.",
+    "description": "Tools I master and use day-to-day to create stable applications.",
+    "categories": [
+      {
+        "title": "Frontend",
+        "color": "yellow",
+        "items": [
+          { "name": "TypeScript", "detail": "Daily use" },
+          { "name": "React / Next.js", "detail": "App Router" },
+          { "name": "Tailwind CSS", "detail": "Fast design" },
+          { "name": "State (Zustand / TanStack)", "detail": "React Query" }
+        ]
+      },
+      {
+        "title": "Backend & Data",
+        "color": "mint",
+        "items": [
+          { "name": "Node.js / Express", "detail": "REST / Webhooks" },
+          { "name": "Python / FastAPI", "detail": "Services & AI" },
+          { "name": "PostgreSQL / pgvector", "detail": "Database" },
+          { "name": "Redis", "detail": "Queues & cache" }
+        ]
+      },
+      {
+        "title": "Graphics & 3D",
+        "color": "orange",
+        "items": [
+          { "name": "Three.js", "detail": "3D Scenes" },
+          { "name": "HTML5 Canvas 2D", "detail": "Simulations" },
+          { "name": "WebGL / GLSL", "detail": "Custom shaders" },
+          { "name": "Framer Motion", "detail": "UI Animations" }
+        ]
+      },
+      {
+        "title": "Infra & Env",
+        "color": "neutral",
+        "items": [
+          { "name": "Git & GitHub", "detail": "CI / Actions" },
+          { "name": "Docker", "detail": "Containers" },
+          { "name": "Vercel / Railway", "detail": "Deployments" },
+          { "name": "Supabase / Cloudflare", "detail": "BaaS / DNS" }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "label": "DIRECT CONTACT",
+    "headline": "Got an idea or need technical support?",
+    "description": "Tell me what you're working on. If it fits what I do, I'll reply within 24 hours with an honest technical opinion and possible approaches.",
+    "guarantee": {
+      "title": "Guaranteed response",
+      "description": "If the project doesn't fit my specialty, I'll tell you straight up so you don't waste time."
+    },
+    "channels": {
+      "label": "Direct channels",
+      "email": "contacto@mayderc.dev",
+      "github": "GitHub // @mayderc",
+      "linkedin": "LinkedIn // MayderC"
+    },
+    "form": {
+      "nameLabel": "Your name or company *",
+      "namePlaceholder": "Ex. Carlos Mendoza",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "carlos@company.com",
+      "serviceLabel": "How can I help? *",
+      "services": [
+        "Frontend / Web App",
+        "Backend & APIs",
+        "3D Graphics / WebGL",
+        "Other technical challenge"
+      ],
+      "messageLabel": "Briefly describe the project or need *",
+      "messagePlaceholder": "What do you need to build or solve? If you have defined technologies or estimated dates, mention them...",
+      "disclaimer": "No spam or annoying automated emails.",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "success": "Message sent",
+      "successTitle": "Message received",
+      "successDescription": "I'll review your message and get back to you shortly with a concrete response."
+    }
+  },
+  "footer": {
+    "description": "Independent software development focused on well-built interfaces, practical backend and interactive graphics without fluff or inflated jargon.",
+    "navigation": "Navigation",
+    "links": "Links",
+    "copyright": "© 2025 MayderC · Built with attention to detail.",
+    "timezone": "UTC-6",
+    "version": "v2.5.0-clean"
+  },
+  "canvas3d": {
+    "title": "CANVAS_3D // INTERACTIVE",
+    "fps": "FPS",
+    "engine": "VECTOR_ENGINE",
+    "object": "OBJECT",
+    "objectValue": "Regular Icosahedron",
+    "status": "STATUS",
+    "dragHint": "Drag to rotate",
+    "matrixNote": "3D MATRIX IN 2D CANVAS"
+  },
+  "serviceCard": {
+    "techLabel": "Usual Technologies"
+  }
+}

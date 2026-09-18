@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design tokens
+   Only colors live here. Layout, typography, spacing, components and the 3D
+   design are intentionally untouched so themes never affect structure.
+--------------------------------------------------------------------------- */
+
+:root {
+  --c-bg: #f7f6f0;
+  --c-surface: #ffffff;
+  --c-ink: #121212;
+  --c-ink-soft: #888888;
+  --c-muted: #555555;
+  --c-border: #121212;
+  --c-yellow: #f6e05e;
+  --c-mint: #a7f3d0;
+  --c-orange: #ff8c42;
+  --c-on-accent: #121212;
+  --c-shadow: #121212;
+  --grid-line: rgba(18, 18, 18, 0.05);
+}
+
+html.dark {
+  --c-bg: #101217;
+  --c-surface: #171a20;
+  --c-ink: #f1f1ec;
+  --c-ink-soft: #6b7280;
+  --c-muted: #a8a8a2;
+  --c-border: #d0d0c8;
+  --c-yellow: #f2d84b;
+  --c-mint: #6fa486;
+  --c-orange: #e68a4e;
+  --c-on-accent: #121212;
+  --c-shadow: #000000;
+  --grid-line: rgba(208, 208, 200, 0.06);
+}
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+@theme inline {
+  --color-retro-bg: var(--c-bg);
+  --color-retro-card: var(--c-surface);
+  --color-retro-ink: var(--c-ink);
+  --color-retro-muted: var(--c-muted);
+  --color-retro-border: var(--c-border);
+  --color-retro-yellow: var(--c-yellow);
+  --color-retro-mint: var(--c-mint);
+  --color-retro-orange: var(--c-orange);
+  --color-retro-on-accent: var(--c-on-accent);
+}
+
+@utility retro-shadow-sm {
+  box-shadow: 2px 2px 0 var(--c-shadow);
+}
+
+@utility retro-shadow {
+  box-shadow: 4px 4px 0 var(--c-shadow);
+}
+
+@utility retro-shadow-lg {
+  box-shadow: 6px 6px 0 var(--c-shadow);
+}
+
+@utility grid-paper {
+  background-size: 24px 24px;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--c-bg);
+    color: var(--c-ink);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--c-yellow);
+    color: var(--c-ink);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--c-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--c-ink);
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center h-12 px-6 border-2 border-retro-ink font-mono text-xs font-bold bg-retro-yellow text-retro-on-accent transition-all;
+    box-shadow: 4px 4px 0 var(--c-shadow);
+  }
+
+  .btn-primary:hover,
+  .btn-primary:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--c-shadow);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center h-12 px-6 border-2 border-retro-ink font-mono text-xs font-bold bg-retro-card text-retro-ink transition-all;
+    box-shadow: 4px 4px 0 var(--c-shadow);
+  }
+
+  .btn-secondary:hover,
+  .btn-secondary:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--c-shadow);
+  }
+
+  .input-field {
+    @apply w-full bg-retro-bg px-3.5 py-2.5 border-2 border-retro-ink font-sans text-sm text-retro-ink placeholder:text-neutral-400 focus:outline-none focus:bg-retro-card transition-all rounded-none;
+  }
+
+  .label-field {
+    @apply font-mono text-xs font-bold text-retro-ink mb-1.5 block;
+  }
+
+  .card-base {
+    @apply bg-retro-card border-2 border-retro-ink;
+    box-shadow: 4px 4px 0 var(--c-shadow);
+  }
+
+  .card-hover {
+    @apply transition-all;
+  }
+
+  .card-hover:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--c-shadow);
+  }
+
+  .section-divider {
+    @apply border-b-2 border-retro-ink;
+  }
+
+  .tag-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 border-2 border-retro-ink font-mono text-xs font-bold text-retro-ink bg-retro-card;
+  }
+
+  .pill-btn {
+    @apply px-2.5 py-2 border-2 border-retro-ink font-mono text-xs font-bold text-center transition-all;
+  }
+
+  .pill-btn-active {
+    @apply bg-retro-ink text-retro-bg;
+  }
+
+  .pill-btn-inactive {
+    @apply bg-retro-bg text-retro-ink hover:bg-retro-card;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 md:px-8 w-full;
+  }
+
+  .heading-display {
+    @apply font-sans font-extrabold text-4xl sm:text-5xl lg:text-6xl text-retro-ink tracking-tight leading-[1.08];
+  }
+
+  .heading-lg {
+    @apply font-sans font-extrabold text-3xl sm:text-4xl text-retro-ink tracking-tight;
+  }
+
+  .heading-md {
+    @apply font-sans font-bold text-xl text-retro-ink;
+  }
+
+  .body-lg {
+    @apply font-sans text-base sm:text-lg text-retro-muted font-normal leading-relaxed;
+  }
+
+  .body-md {
+    @apply font-sans text-sm sm:text-base text-retro-muted leading-relaxed;
+  }
+
+  .meta-strip {
+    @apply font-mono text-xs font-bold uppercase tracking-widest text-retro-ink;
+  }
+}

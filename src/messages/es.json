@@ -1,0 +1,281 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "projects": "Trabajos reales",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "header": {
+    "title": "MayderC",
+    "subtitle": "FULLSTACK // WEB & AI",
+    "cta": "Hablemos",
+    "langES": "ES",
+    "langEN": "EN",
+    "themeToggle": "Cambiar tema"
+  },
+  "hero": {
+    "badge": "DISPONIBLE PARA NUEVOS PROYECTOS",
+    "badgeSub": "FREELANCE & CONSULTORÍA",
+    "headline": "Desarrollo de software e integración de IA.",
+    "description": "Soy Mayder, desarrollador de software. Trabajo en aplicaciones web, backend y APIs, integrando tecnologías de IA como LLMs, agentes, RAG, transcripción, OCR y voz. Mis lenguajes principales de trabajo son TypeScript y Python.",
+    "ctaPrimary": "Hablemos de tu proyecto",
+    "ctaSecondary": "Ver trabajos reales",
+    "capabilities": {
+      "frontend": "Frontend",
+      "react": "React / Next.js",
+      "backend": "Backend",
+      "apis": "APIs",
+      "typescript": "TypeScript",
+      "python": "Python",
+      "llms": "LLMs",
+      "rag": "RAG",
+      "agents": "Agentes",
+      "voice": "Voz",
+      "ocr": "OCR"
+    }
+  },
+  "services": {
+    "label": "ÁREAS DE TRABAJO",
+    "headline": "En qué áreas concretas puedo aportar valor.",
+    "description": "Colaboro como desarrollador independiente o integrado a tu equipo existente para sacar adelante features, MVPs o refactorizaciones clave.",
+    "items": [
+      {
+        "id": "01",
+        "category": "FRONTEND",
+        "title": "Aplicaciones Web & Frontend",
+        "description": "Interfaces fluidas, componentes reutilizables y tipado seguro. Enfoque en velocidad de carga real, accesibilidad y experiencia cuidada.",
+        "tech": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+        "icon": "web",
+        "color": "yellow"
+      },
+      {
+        "id": "02",
+        "category": "BACKEND",
+        "title": "Backend, APIs & Automatizaciones",
+        "description": "Servicios rápidos y mantenibles, webhooks, colas de procesamiento en segundo plano y sincronizaciones fiables entre plataformas.",
+        "tech": ["Node.js", "Express / FastAPI", "PostgreSQL", "Redis"],
+        "icon": "terminal",
+        "color": "mint"
+      },
+      {
+        "id": "03",
+        "category": "IA PRÁCTICA",
+        "title": "Integración de Modelos e IA",
+        "description": "Conexión directa con APIs de modelos de lenguaje (OpenAI, Claude), flujos de búsqueda sobre documentos (RAG) y llamadas a herramientas (function calling).",
+        "tech": ["OpenAI / Anthropic", "pgvector", "LangChain", "Streaming UI"],
+        "icon": "smart_toy",
+        "color": "orange"
+      },
+      {
+        "id": "04",
+        "category": "GRÁFICOS & 3D",
+        "title": "3D Web & Gráficos Interactivos",
+        "description": "Visualizaciones de datos interactivas, modelos 3D en el navegador, animaciones por canvas y shaders ligeros que no bloquean el renderizado del usuario.",
+        "tech": ["Three.js", "WebGL", "HTML5 Canvas", "Shaders GLSL"],
+        "icon": "view_in_ar",
+        "color": "yellow"
+      }
+    ]
+  },
+  "projects": {
+    "label": "PROYECTOS TANGIBLES",
+    "headline": "Trabajos construidos con código real.",
+    "subtitle": "Sistemas en producción y código público",
+    "detailsLabel": "Qué construí exactamente:",
+    "viewDemo": "Ver repositorio demo",
+    "featured": [
+      {
+        "id": "01",
+        "year": "2024",
+        "type": "PLATAFORMA WEB",
+        "title": "Zyntia — Orquestador de Agentes con Streaming UI",
+        "description": "Panel interactivo para configurar agentes de asistencia que consultan documentos internos. Enfocado en una experiencia de usuario rápida: respuestas por streaming caracter por caracter, trazabilidad de fuentes y gestión de tokens.",
+        "details": "Arquitectura Next.js App Router para frontend con Server-Sent Events (SSE), API backend en FastAPI para el pipeline de embedding con pgvector y cache en Redis para evitar llamadas repetidas a los LLMs.",
+        "tech": ["Next.js 14", "TypeScript", "FastAPI", "PostgreSQL + pgvector", "Redis"],
+        "status": "En uso activo",
+        "github": "https://github.com/mayderc"
+      },
+      {
+        "id": "02",
+        "year": "2024",
+        "type": "AUTOMATIZACIÓN",
+        "title": "Task & Ops Flow — Pipeline de Eventos",
+        "description": "Servicio para sincronizar estados de pedidos y facturación entre pasarelas de pago y sistemas internos. Maneja reintentos con backoff exponencial y alertas a Slack ante caídas de proveedores.",
+        "tech": ["Node.js", "BullMQ", "Redis", "Webhooks"],
+        "details": "Colas en segundo plano auditables",
+        "github": "https://github.com/mayderc"
+      },
+      {
+        "id": "03",
+        "year": "2023–2024",
+        "type": "MOVILIDAD & MAPAS",
+        "title": "ColabCountry / MoveNow — App Logística",
+        "description": "Panel de seguimiento de rutas y unidades de transporte en tiempo real. Desarrollado con Leaflet y sincronización por WebSockets, optimizado para operar con redes móviles de baja cobertura.",
+        "tech": ["React", "Leaflet Maps", "Supabase", "WebSockets"],
+        "details": "Soporte offline-first para choferes",
+        "github": "https://github.com/mayderc"
+      }
+    ],
+    "experiments": {
+      "label": "Experimentos 3D, WebGL y herramientas abiertas",
+      "github": "Ver todos en GitHub (@mayderc)",
+      "items": [
+        {
+          "name": "Math Game 2D",
+          "tech": "Canvas · JS",
+          "description": "Motor interactivo 2D para ejercicios y lógica matemática con renderizado directo en Canvas.",
+          "color": "yellow"
+        },
+        {
+          "name": "Shader Viewport",
+          "tech": "WebGL · GLSL",
+          "description": "Visualizador interactivo de fragment shaders con controles de variables en tiempo real.",
+          "color": "mint"
+        },
+        {
+          "name": "LinkList",
+          "tech": "Next.js · DB",
+          "description": "Gestor personal de enlaces con previsualizaciones OpenGraph automáticas.",
+          "color": "yellow"
+        },
+        {
+          "name": "DevFinder",
+          "tech": "API GitHub",
+          "description": "Explorador de perfiles de GitHub con métricas de commits y repositorios destacados.",
+          "color": "orange"
+        }
+      ]
+    }
+  },
+  "about": {
+    "label": "SOBRE MÍ",
+    "headline": "Me apasiona construir código honesto, útil y cuidado visualmente.",
+    "bio": [
+      "Mi nombre es Mayder. Soy Bachiller en Ingeniería en Tecnologías de la Información y trabajo principalmente con TypeScript, tanto en frontend como en backend.",
+      "En frontend uso React o Vue, con Tailwind CSS o SCSS para los estilos, y consumo APIs REST. En backend construyo APIs con Node.js y NestJS, y también he trabajado con Java y Spring Boot. Me manejo con MongoDB, SQL y ORMs, y uso Git y Docker a diario.",
+      "Sigo aprendiendo: ahora estoy viendo AWS y microservicios. De vez en cuando armo proyectos personales con Python, IA (LLMs) y 3D con Three.js."
+    ],
+    "values": [
+      {
+        "title": "Tu proyecto te pertenece",
+        "description": "Repositorios, despliegues y accesos siempre en tu poder desde el primer día."
+      },
+      {
+        "title": "Trato claro y cercano",
+        "description": "Entregas realistas, feedback constante y respeto total por tu tiempo."
+      }
+    ],
+    "profile": {
+      "name": "Mayder",
+      "role": "Fullstack & 3D Creative Developer",
+      "location": "COSTA RICA · UTC-6",
+      "remote": "REMOTO GLOBAL",
+      "tech": ["React / Next.js", "Node & Python", "WebGL & Shaders", "PostgreSQL"]
+    }
+  },
+  "techStack": {
+    "label": "HERRAMIENTAS & STACK",
+    "headline": "Tecnologías con las que trabajo habitualmente.",
+    "description": "Herramientas que domino y utilizo en el día a día para crear aplicaciones estables.",
+    "categories": [
+      {
+        "title": "Frontend",
+        "color": "yellow",
+        "items": [
+          { "name": "TypeScript", "detail": "Uso diario" },
+          { "name": "React / Next.js", "detail": "App Router" },
+          { "name": "Tailwind CSS", "detail": "Diseño rápido" },
+          { "name": "State (Zustand / TanStack)", "detail": "React Query" }
+        ]
+      },
+      {
+        "title": "Backend & Datos",
+        "color": "mint",
+        "items": [
+          { "name": "Node.js / Express", "detail": "REST / Webhooks" },
+          { "name": "Python / FastAPI", "detail": "Servicios & AI" },
+          { "name": "PostgreSQL / pgvector", "detail": "Base de datos" },
+          { "name": "Redis", "detail": "Colas y caché" }
+        ]
+      },
+      {
+        "title": "Gráficos & 3D",
+        "color": "orange",
+        "items": [
+          { "name": "Three.js", "detail": "Escenas 3D" },
+          { "name": "HTML5 Canvas 2D", "detail": "Simulaciones" },
+          { "name": "WebGL / GLSL", "detail": "Custom shaders" },
+          { "name": "Framer Motion", "detail": "Animaciones UI" }
+        ]
+      },
+      {
+        "title": "Infra & Entorno",
+        "color": "neutral",
+        "items": [
+          { "name": "Git & GitHub", "detail": "CI / Actions" },
+          { "name": "Docker", "detail": "Contenedores" },
+          { "name": "Vercel / Railway", "detail": "Despliegues" },
+          { "name": "Supabase / Cloudflare", "detail": "BaaS / DNS" }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "label": "CONTACTO DIRECTO",
+    "headline": "¿Tienes una idea o necesitas soporte técnico?",
+    "description": "Cuéntame en qué estás trabajando. Si encaja con lo que hago, te responderé en menos de 24 horas con una opinión técnica honesta y posibles caminos para abordarlo.",
+    "guarantee": {
+      "title": "Respuesta garantizada",
+      "description": "Si el proyecto no se ajusta a mi especialidad, te lo diré con franqueza para no hacerte perder tiempo."
+    },
+    "channels": {
+      "label": "Canales directos",
+      "email": "contacto@mayderc.dev",
+      "github": "GitHub // @mayderc",
+      "linkedin": "LinkedIn // MayderC"
+    },
+    "form": {
+      "nameLabel": "Tu nombre o empresa *",
+      "namePlaceholder": "Ej. Carlos Mendoza",
+      "emailLabel": "Correo electrónico *",
+      "emailPlaceholder": "carlos@empresa.com",
+      "serviceLabel": "¿En qué puedo ayudarte? *",
+      "services": [
+        "Frontend / Web App",
+        "Backend & APIs",
+        "Gráficos 3D / WebGL",
+        "Otro reto técnico"
+      ],
+      "messageLabel": "Cuéntame brevemente el proyecto o necesidad *",
+      "messagePlaceholder": "¿Qué necesitas construir o solucionar? Si ya tienes tecnologías definidas o fechas estimadas, puedes mencionarlas...",
+      "disclaimer": "Sin spam ni correos automáticos molestos.",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando...",
+      "success": "Mensaje enviado",
+      "successTitle": "Mensaje recibido",
+      "successDescription": "Revisaré tu mensaje y te responderé a la brevedad con una respuesta concreta."
+    }
+  },
+  "footer": {
+    "description": "Desarrollo de software independiente enfocado en interfaces bien construidas, backend práctico y gráficos interactivos sin rodeos ni jerga inflada.",
+    "navigation": "Navegación",
+    "links": "Enlaces",
+    "copyright": "© 2025 MayderC · Hecho con atención al detalle y sin humo.",
+    "timezone": "UTC-6",
+    "version": "v2.5.0-clean"
+  },
+  "canvas3d": {
+    "title": "CANVAS_3D // INTERACTIVO",
+    "fps": "FPS",
+    "engine": "VECTOR_ENGINE",
+    "object": "OBJETO",
+    "objectValue": "Icosaedro regular",
+    "status": "ESTADO",
+    "dragHint": "Arrastra para rotar",
+    "matrixNote": "MATRIZ 3D EN CANVAS 2D"
+  },
+  "serviceCard": {
+    "techLabel": "Tecnologías habituales"
+  }
+}
