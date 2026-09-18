@@ -37,6 +37,8 @@ export function AdminMessages({ initialMessages, loadError }: AdminMessagesProps
   const [messages, setMessages] = useState(initialMessages);
   const [filter, setFilter] = useState<'all' | MessageStatus>('all');
   const [busyId, setBusyId] = useState<string | null>(null);
+  const [fromDate, setFromDate] = useState('');
+  const [toDate, setToDate] = useState('');
 
   const updateStatus = async (id: string, status: MessageStatus) => {
     setBusyId(id);
@@ -66,12 +68,16 @@ export function AdminMessages({ initialMessages, loadError }: AdminMessagesProps
     router.refresh();
   };
 
-  const visible =
-    filter === 'all'
-      ? messages
-      : messages.filter((item) => item.status === filter);
+  const visible = messages.filter((item) => {
+    if (filter !== 'all' && item.status !== filter) return false;
+    const day = item.createdAt.slice(0, 10);
+    if (fromDate && day < fromDate) return false;
+    if (toDate && day > toDate) return false;
+    return true;
+  });
 
   const newCount = messages.filter((item) => item.status === 'new').length;
+  const hasDateFilter = Boolean(fromDate || toDate);
 
   return (
     <div className="flex flex-col gap-6">
@@ -113,21 +119,59 @@ export function AdminMessages({ initialMessages, loadError }: AdminMessagesProps
         </div>
       ) : (
         <>
-          <div className="flex flex-wrap gap-2">
-            {FILTERS.map((item) => (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => setFilter(item.id)}
-                className={`px-3 py-1.5 border-2 border-retro-ink font-mono text-xs font-bold transition-colors ${
-                  filter === item.id
-                    ? 'bg-retro-ink text-retro-bg'
-                    : 'bg-retro-card text-retro-ink hover:bg-retro-bg'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div className="flex flex-wrap gap-2">
+              {FILTERS.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => setFilter(item.id)}
+                  className={`px-3 py-1.5 border-2 border-retro-ink font-mono text-xs font-bold transition-colors ${
+                    filter === item.id
+                      ? 'bg-retro-ink text-retro-bg'
+                      : 'bg-retro-card text-retro-ink hover:bg-retro-bg'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+            <div className="flex flex-wrap items-end gap-2">
+              <label className="flex flex-col gap-1">
+                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-retro-muted">
+                  Desde
+                </span>
+                <input
+                  type="date"
+                  value={fromDate}
+                  onChange={(event) => setFromDate(event.target.value)}
+                  className="bg-retro-bg px-2 py-1.5 border-2 border-retro-ink font-mono text-xs text-retro-ink rounded-none focus:outline-none focus:bg-retro-card"
+                />
+              </label>
+              <label className="flex flex-col gap-1">
+                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-retro-muted">
+                  Hasta
+                </span>
+                <input
+                  type="date"
+                  value={toDate}
+                  onChange={(event) => setToDate(event.target.value)}
+                  className="bg-retro-bg px-2 py-1.5 border-2 border-retro-ink font-mono text-xs text-retro-ink rounded-none focus:outline-none focus:bg-retro-card"
+                />
+              </label>
+              {hasDateFilter && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setFromDate('');
+                    setToDate('');
+                  }}
+                  className="px-3 py-1.5 border-2 border-retro-ink font-mono text-xs font-bold bg-retro-card text-retro-ink hover:bg-retro-bg transition-colors"
+                >
+                  Limpiar
+                </button>
+              )}
+            </div>
           </div>
 
           {visible.length === 0 ? (
