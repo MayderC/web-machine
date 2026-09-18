@@ -15,6 +15,7 @@ export function Contact() {
     email: '',
     service: '',
     message: '',
+    company: '',
   });
   const [selectedService, setSelectedService] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,7 +45,7 @@ export function Contact() {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', service: '', message: '' });
+        setFormData({ name: '', email: '', service: '', message: '', company: '' });
         setSelectedService('');
       } else {
         setSubmitStatus('error');
@@ -110,6 +111,18 @@ export function Contact() {
             {/* Formulario Conciso */}
             <div className="lg:col-span-7 bg-retro-card p-6 md:p-8 border-2 border-retro-ink retro-shadow">
               <form onSubmit={handleSubmit} className="flex flex-col gap-5" id="contact-form">
+                <div className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+                  <label htmlFor="contact-company">No completar</label>
+                  <input
+                    id="contact-company"
+                    name="company"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                  />
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="flex flex-col gap-1.5">
                     <label className="label-field" htmlFor="contact-name">
