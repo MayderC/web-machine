@@ -111,7 +111,7 @@ export default async function LocaleLayout({
   const { messages, timeZone, now } = await getProvidersProps(locale as Locale);
 
   return (
-    <html lang={locale} className="h-full antialiased">
+    <html lang={locale} className="h-full antialiased" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
