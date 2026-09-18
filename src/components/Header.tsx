@@ -14,7 +14,6 @@ export function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLang, setActiveLang] = useState<'es' | 'en'>('es');
   const [mobileOpen, setMobileOpen] = useState(false);
   const { isDark, toggleMode } = useMode();
 
@@ -27,9 +26,16 @@ export function Header() {
   }, []);
 
   const handleLangSwitch = (lang: 'es' | 'en') => {
-    setActiveLang(lang);
-    const newPath = pathname.replace(`/${locale}`, `/${lang}`);
-    router.push(newPath);
+    setMobileOpen(false);
+    if (lang === locale) return;
+
+    // Replace the locale segment, keeping the rest of the path.
+    const segments = pathname.split('/');
+    segments[1] = lang;
+    const newPath = segments.join('/') || `/${lang}`;
+    const hash = typeof window !== 'undefined' ? window.location.hash : '';
+
+    router.push(`${newPath}${hash}`);
   };
 
   const links = [
@@ -48,21 +54,21 @@ export function Header() {
     >
       <button
         className={`px-2 py-0.5 font-mono text-[11px] font-bold ${
-          activeLang === 'es' ? 'bg-retro-ink text-retro-bg' : 'text-retro-ink hover:bg-retro-bg'
+          locale === 'es' ? 'bg-retro-ink text-retro-bg' : 'text-retro-ink hover:bg-retro-bg'
         }`}
         onClick={() => handleLangSwitch('es')}
         type="button"
-        aria-pressed={activeLang === 'es'}
+        aria-current={locale === 'es' ? 'true' : undefined}
       >
         ES
       </button>
       <button
         className={`px-2 py-0.5 font-mono text-[11px] font-bold ${
-          activeLang === 'en' ? 'bg-retro-ink text-retro-bg' : 'text-retro-ink hover:bg-retro-bg'
+          locale === 'en' ? 'bg-retro-ink text-retro-bg' : 'text-retro-ink hover:bg-retro-bg'
         }`}
         onClick={() => handleLangSwitch('en')}
         type="button"
-        aria-pressed={activeLang === 'en'}
+        aria-current={locale === 'en' ? 'true' : undefined}
       >
         EN
       </button>
