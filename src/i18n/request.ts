@@ -6,7 +6,7 @@ export default getRequestConfig(async ({ locale }) => {
     locale && (locales as readonly string[]).includes(locale) ? locale : 'es';
   return {
     locale: validLocale,
-    timeZone: 'America/Bogota',
+    timeZone: 'America/Costa_Rica',
     now: new Date(),
     messages: (await import(`../messages/${validLocale}.json`)).default,
   };

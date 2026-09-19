@@ -1,0 +1,19 @@
+# MayderC
+
+> Desarrollo web en Costa Rica. Aplicaciones web, backend y APIs con React, Next.js, TypeScript y Python, integración de IA (LLMs, RAG, agentes) y gráficos 3D web. Freelance y consultoría para todo Costa Rica.
+
+## Información
+- Desarrollador: MayderC
+- Ubicación: Costa Rica (UTC-6)
+- Idiomas: español (principal), inglés
+- Servicios: desarrollo de aplicaciones web, backend y APIs, integración de IA, gráficos 3D y WebGL, e-commerce
+- Sitio web: https://mayderc.dev
+
+## Páginas
+- [Desarrollo Web en Costa Rica (ES)](https://mayderc.dev/es)
+- [Web Development in Costa Rica (EN)](https://mayderc.dev/en)
+
+## Contacto
+- Email: contacto@mayderc.dev
+- GitHub: https://github.com/mayderc
+- LinkedIn: https://linkedin.com/in/mayderc

@@ -748,7 +748,7 @@ The shape language is strictly **Sharp (`0`)**.
 </div>
 </div>
 <div class="flex items-center justify-between font-mono text-xs font-bold pt-1">
-<span>COLOMBIA · UTC-5</span>
+<span>COSTA RICA · UTC-6</span>
 <span class="bg-white px-2 py-0.5 border border-retro-ink flex items-center gap-1">
 <span class="material-symbols-outlined text-[14px]">public</span> REMOTO GLOBAL
           </span>
@@ -1041,7 +1041,7 @@ The shape language is strictly **Sharp (`0`)**.
 <div class="pt-6 border-t-2 border-retro-ink flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs">
 <span class="text-retro-muted">© 2025 MayderC · Hecho con atención al detalle y sin humo.</span>
 <div class="flex items-center gap-4">
-<span class="text-retro-muted">UTC-5</span>
+<span class="text-retro-muted">UTC-6</span>
 <span class="bg-retro-ink text-retro-bg px-2 py-0.5 font-bold">v2.5.0-clean</span>
 </div>
 </div>

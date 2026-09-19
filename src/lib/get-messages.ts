@@ -5,7 +5,7 @@ export async function getProvidersProps(locale: Locale) {
   return {
     locale,
     messages,
-    timeZone: 'America/Bogota',
+    timeZone: 'America/Costa_Rica',
     now: new Date(),
   };
 }

@@ -2,7 +2,10 @@ import { ImageResponse } from '@vercel/og';
 
 export const runtime = 'edge';
 
-export async function GET() {
+export async function GET(request: Request) {
+  const lang = new URL(request.url).searchParams.get('lang');
+  const isES = lang !== 'en';
+
   return new ImageResponse(
     (
       <div
@@ -84,7 +87,7 @@ export async function GET() {
               maxWidth: '800px',
             }}
           >
-            Software Developer
+            {isES ? 'Desarrollo Web en Costa Rica' : 'Web Development in Costa Rica'}
           </div>
 
           {/* Tech tags */}
