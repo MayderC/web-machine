@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web Machine
 
-## Getting Started
+Dos sitios independientes en un mismo repositorio:
 
-First, run the development server:
+- **`mayderc/`** — portafolio personal de MayderC (Next.js + i18n).
+- **`danvrix/`** — sitio comercial de Danvrix.dev (Next.js, español).
+
+Cada carpeta tiene su propio `package.json`, `tsconfig.json`, build y deploy. No comparten middleware, variables de entorno ni configuración de Vercel.
+
+## Desarrollo
 
 ```bash
+# MayderC
+cd mayderc
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Danvrix
+cd danvrix
+npm install
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+También puedes usar los scripts desde la raíz:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev:mayderc
+npm run dev:danvrix
+npm run build:mayderc
+npm run build:danvrix
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy en Vercel
 
-## Learn More
+Crea dos proyectos separados desde este mismo repositorio:
 
-To learn more about Next.js, take a look at the following resources:
+| Proyecto | Root Directory | Dominio |
+|---|---|---|
+| MayderC | `mayderc` | `mayderc.dev` |
+| Danvrix | `danvrix` | `danvrix.dev` |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+No hace falta configurar el enrutamiento por dominio: cada proyecto se despliega desde su carpeta y tiene su propio build. Solo conecta el dominio correspondiente a cada proyecto cuando los tengas.

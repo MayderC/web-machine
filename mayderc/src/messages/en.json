@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "header": {
+    "title": "MayderC",
+    "subtitle": "FULLSTACK // WEB & AI",
+    "cta": "Contact",
+    "themeToggle": "Toggle theme",
+    "themeLabel": "Theme",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "badge": "FULLSTACK DEVELOPER",
+    "badgeSub": "COSTA RICA · REMOTE",
+    "headline": "I build web applications, APIs and AI integrations.",
+    "description": "I'm MayderC, a fullstack developer based in Costa Rica. I work with TypeScript and Python across frontend, backend and AI-powered products: LLMs, agents, RAG, voice and OCR.",
+    "ctaPrimary": "View projects",
+    "ctaSecondary": "Contact",
+    "capabilities": {
+      "frontend": "Frontend",
+      "react": "React / Next.js",
+      "backend": "Backend",
+      "apis": "APIs",
+      "typescript": "TypeScript",
+      "python": "Python",
+      "llms": "LLMs",
+      "rag": "RAG",
+      "agents": "Agents",
+      "voice": "Voice",
+      "ocr": "OCR"
+    }
+  },
+  "expertise": {
+    "label": "AREAS OF EXPERIENCE",
+    "headline": "Where I add technical value.",
+    "description": "Hands-on experience across frontend, backend, AI integration and 3D graphics. I work with teams and products in production."
+  },
+  "expertiseCard": {
+    "techLabel": "Usual technologies"
+  },
+  "projects": {
+    "label": "SELECTED WORK",
+    "headline": "Projects I've built.",
+    "subtitle": "Production & open source",
+    "detailsLabel": "My role and contribution:",
+    "viewDemo": "View project",
+    "experiments": {
+      "label": "Experiments and open projects",
+      "github": "View all on GitHub"
+    }
+  },
+  "about": {
+    "label": "ABOUT ME",
+    "headline": "I care about building honest, useful and visually polished code.",
+    "profile": {
+      "name": "MayderC",
+      "role": "Fullstack Developer",
+      "location": "COSTA RICA · UTC-6",
+      "remote": "GLOBAL REMOTE"
+    }
+  },
+  "techStack": {
+    "label": "TOOLS & STACK",
+    "headline": "Technologies I work with regularly.",
+    "description": "Tools I use day to day to build stable applications."
+  },
+  "contact": {
+    "label": "CONTACT",
+    "headline": "Shall we talk about an opportunity or collaboration?",
+    "description": "If you have a role, a collaboration or just want to connect, send me a message. I reply within 24–48 hours.",
+    "guarantee": {
+      "title": "Open to opportunities",
+      "description": "Available for fullstack roles, remote or in Costa Rica, and for open-source collaborations."
+    },
+    "channels": {
+      "label": "Direct channels",
+      "whatsapp": "WhatsApp",
+      "github": "GitHub // @mayderc",
+      "linkedin": "LinkedIn // MayderC"
+    },
+    "form": {
+      "nameLabel": "Your name *",
+      "namePlaceholder": "e.g. Carlos Mendoza",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "carlos@email.com",
+      "serviceLabel": "Reason for contact *",
+      "messageLabel": "Tell me briefly *",
+      "messagePlaceholder": "Is it a role, a collaboration or a technical question? Share the context...",
+      "disclaimer": "No spam or automated emails.",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "success": "Message sent",
+      "successTitle": "Message received",
+      "successDescription": "I'll review your message and get back to you shortly."
+    }
+  },
+  "footer": {
+    "description": "Fullstack developer focused on web applications, backend, APIs and AI integration. MayderC's personal portfolio.",
+    "navigation": "Navigation",
+    "links": "Links",
+    "copyright": "© 2026 MayderC · Built with attention to detail.",
+    "timezone": "UTC-6",
+    "version": "v3.0.0-portfolio"
+  },
+  "canvas3d": {
+    "title": "CANVAS_3D // INTERACTIVE",
+    "fps": "FPS",
+    "engine": "VECTOR_ENGINE",
+    "object": "OBJECT",
+    "objectValue": "Regular icosahedron",
+    "status": "STATUS",
+    "dragHint": "Drag to rotate",
+    "matrixNote": "3D MATRIX IN 2D CANVAS"
+  }
+}

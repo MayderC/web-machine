@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="520" viewBox="0 0 600 520" fill="none" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Desarrollo web, aplicaciones e inteligencia artificial</title>
+  <desc id="heroDesc">Ilustración modular con un panel de software y tres componentes conectados: web, aplicaciones e IA.</desc>
+  <defs>
+    <filter id="shadow" x="-35%" y="-45%" width="170%" height="200%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#10213D" flood-opacity="0.10"/>
+    </filter>
+    <filter id="softShadow" x="-35%" y="-45%" width="170%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="13" flood-color="#10213D" flood-opacity="0.09"/>
+    </filter>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#356CFF"/>
+      <stop offset="1" stop-color="#1E49CF"/>
+    </linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#4677FF" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#4677FF" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#CBD7EB"/>
+    </pattern>
+    <clipPath id="clipMain"><rect x="100" y="92" width="392" height="299" rx="19"/></clipPath>
+  </defs>
+
+  <!-- Fondo decorativo: no hay una caja que compita con el texto del hero -->
+  <g id="fondo" aria-hidden="true">
+    <rect x="58" y="46" width="496" height="424" fill="url(#dots)" opacity="0.40"/>
+    <path d="M49 284C49 163 152 64 273 64H486" stroke="#D5DFEE" stroke-width="1.4" stroke-dasharray="4 8"/>
+    <path d="M117 453H444C506 453 554 405 554 343" stroke="#D5DFEE" stroke-width="1.4" stroke-dasharray="4 8"/>
+    <circle cx="49" cy="284" r="4" fill="#356CFF"/>
+    <circle cx="554" cy="343" r="4" fill="#356CFF"/>
+  </g>
+
+  <!-- Conectores separados para animar con stroke-dashoffset -->
+  <g id="conexiones" stroke-width="2" stroke-linecap="round">
+    <path id="conexion-ia" d="M380 126C410 126 408 100 430 100" stroke="#356CFF"/>
+    <path id="conexion-web" d="M188 342C170 342 164 363 152 363" stroke="#356CFF"/>
+    <path id="conexion-app" d="M392 326C437 326 438 390 469 390" stroke="#356CFF"/>
+  </g>
+
+  <!-- Ventana central de producto: cuerpo principal -->
+  <g id="panel-principal" filter="url(#shadow)">
+    <rect x="100" y="92" width="392" height="299" rx="19" fill="#FFFFFF" stroke="#CAD7E8"/>
+    <g clip-path="url(#clipMain)">
+      <rect x="100" y="92" width="392" height="48" fill="#F6F8FC"/>
+      <path d="M100 140H492" stroke="#DCE4EF"/>
+      <circle cx="123" cy="116" r="4" fill="#F6A6A6"/>
+      <circle cx="137" cy="116" r="4" fill="#F5CC81"/>
+      <circle cx="151" cy="116" r="4" fill="#91CEB4"/>
+      <rect x="208" y="104" width="168" height="25" rx="7" fill="#FFFFFF" stroke="#E2E9F2"/>
+      <circle cx="224" cy="116" r="3.5" stroke="#8394AC" stroke-width="1.5"/>
+      <path d="M227 119L231 123" stroke="#8394AC" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="240" y="120" fill="#73839C" font-size="10" font-family="Arial, sans-serif">mi-negocio.app</text>
+
+      <!-- Navegación lateral -->
+      <rect x="114" y="154" width="99" height="220" rx="11" fill="#F6F8FC"/>
+      <rect x="123" y="165" width="81" height="32" rx="7" fill="#E4ECFF"/>
+      <rect x="135" y="176" width="10" height="10" rx="2" fill="#2D5BE3"/>
+      <text x="153" y="185" fill="#234CBF" font-size="10" font-weight="700" font-family="Arial, sans-serif">Inicio</text>
+      <rect x="135" y="215" width="10" height="10" rx="2" stroke="#9AAAC0"/>
+      <path d="M138 218H142M138 222H142" stroke="#9AAAC0" stroke-width="1.2"/>
+      <text x="153" y="224" fill="#7C8CA3" font-size="10" font-family="Arial, sans-serif">Proyectos</text>
+      <circle cx="140" cy="255" r="5" stroke="#9AAAC0"/>
+      <path d="M140 252V258M137 255H143" stroke="#9AAAC0" stroke-width="1.2"/>
+      <text x="153" y="259" fill="#7C8CA3" font-size="10" font-family="Arial, sans-serif">Servicios</text>
+      <path d="M127 287H199" stroke="#DFE6F1"/>
+      <rect x="127" y="301" width="72" height="7" rx="3.5" fill="#E1E8F2"/>
+      <rect x="127" y="317" width="55" height="7" rx="3.5" fill="#E1E8F2"/>
+      <rect x="127" y="333" width="63" height="7" rx="3.5" fill="#E1E8F2"/>
+
+      <!-- Vista de la aplicación -->
+      <text x="233" y="167" fill="#8493A9" font-size="9" font-weight="700" letter-spacing="1.6" font-family="Arial, sans-serif">PANEL DE CONTROL</text>
+      <text x="233" y="188" fill="#10213D" font-size="19" font-weight="700" font-family="Arial, sans-serif">Todo conectado.</text>
+      <rect x="233" y="202" width="112" height="58" rx="9" fill="#F2F6FF" stroke="#E0E9FB"/>
+      <circle cx="251" cy="219" r="6" fill="#356CFF" opacity="0.16"/>
+      <path d="M248 219H254M251 216V222" stroke="#356CFF" stroke-width="1.5"/>
+      <text x="263" y="222" fill="#71839C" font-size="9" font-family="Arial, sans-serif">Proyectos</text>
+      <text x="248" y="247" fill="#10213D" font-size="19" font-weight="700" font-family="Arial, sans-serif">12</text>
+      <path d="M302 239L309 232L315 236L324 225L330 228" stroke="#356CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="357" y="202" width="112" height="58" rx="9" fill="#F7F9FC" stroke="#E2E9F2"/>
+      <circle cx="376" cy="219" r="6" fill="#16A48B" opacity="0.13"/>
+      <path d="M373 219L375 221L379 217" stroke="#16A48B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="388" y="222" fill="#71839C" font-size="9" font-family="Arial, sans-serif">Actividad</text>
+      <text x="373" y="247" fill="#10213D" font-size="19" font-weight="700" font-family="Arial, sans-serif">+28%</text>
+      <rect x="233" y="272" width="236" height="102" rx="10" fill="#FFFFFF" stroke="#E2E9F2"/>
+      <text x="246" y="291" fill="#253754" font-size="10" font-weight="700" font-family="Arial, sans-serif">Evolución del proyecto</text>
+      <path d="M246 354H457M246 330H457M246 306H457" stroke="#E9EEF6" stroke-width="1"/>
+      <path d="M246 351C267 346 277 335 295 339C315 344 322 315 340 324C357 332 372 304 390 308C413 314 428 297 455 300V360H246Z" fill="url(#area)"/>
+      <path id="linea-grafico" d="M246 351C267 346 277 335 295 339C315 344 322 315 340 324C357 332 372 304 390 308C413 314 428 297 455 300" stroke="#356CFF" stroke-width="2.5" stroke-linecap="round"/>
+      <circle id="punto-grafico" cx="455" cy="300" r="5" fill="#356CFF" stroke="white" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Módulo IA: flujo y nodos, sin robot ni burbujas de chat -->
+  <g id="modulo-ia" filter="url(#softShadow)">
+    <rect x="423" y="31" width="151" height="128" rx="16" fill="#10213D"/>
+    <text x="439" y="55" fill="#AFC4FF" font-size="9" font-weight="700" letter-spacing="1.4" font-family="Arial, sans-serif">03 / IA</text>
+    <text x="439" y="75" fill="#FFFFFF" font-size="13" font-weight="700" font-family="Arial, sans-serif">Automatización</text>
+    <g id="nodos-ia">
+      <path d="M451 115L477 96L513 121L547 99" stroke="#6B93FF" stroke-width="2" stroke-linecap="round"/>
+      <path d="M477 96L484 132L513 121" stroke="#6B93FF" stroke-opacity="0.50" stroke-width="1.5"/>
+      <circle cx="451" cy="115" r="6" fill="#FFFFFF"/>
+      <circle cx="477" cy="96" r="6" fill="#5E89FF" stroke="#B9CAFF" stroke-width="2"/>
+      <circle cx="484" cy="132" r="4" fill="#5E89FF"/>
+      <circle cx="513" cy="121" r="7" fill="#FFFFFF" stroke="#6B93FF" stroke-width="3"/>
+      <circle cx="547" cy="99" r="6" fill="#5E89FF" stroke="#B9CAFF" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Módulo web: una interfaz simple -->
+  <g id="modulo-web" filter="url(#softShadow)">
+    <rect x="36" y="317" width="173" height="126" rx="15" fill="#FFFFFF" stroke="#CBD7E8"/>
+    <text x="51" y="340" fill="#356CFF" font-size="9" font-weight="700" letter-spacing="1.4" font-family="Arial, sans-serif">01 / WEB</text>
+    <text x="51" y="358" fill="#10213D" font-size="13" font-weight="700" font-family="Arial, sans-serif">Experiencias</text>
+    <rect x="51" y="372" width="143" height="53" rx="7" fill="#F7F9FD" stroke="#DEE6F2"/>
+    <path d="M51 384H194" stroke="#DEE6F2"/>
+    <circle cx="59" cy="378" r="2" fill="#9EAFCC"/>
+    <circle cx="66" cy="378" r="2" fill="#9EAFCC"/>
+    <rect x="61" y="394" width="44" height="5" rx="2.5" fill="#D2DCF0"/>
+    <rect x="61" y="405" width="55" height="4" rx="2" fill="#E0E7F2"/>
+    <rect x="61" y="413" width="40" height="4" rx="2" fill="#E0E7F2"/>
+    <rect x="133" y="393" width="49" height="23" rx="5" fill="#DCE7FF"/>
+    <path d="M142 409L152 400L158 406L165 399L175 409" stroke="#356CFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Módulo app: bloques interconectados -->
+  <g id="modulo-app" filter="url(#softShadow)">
+    <rect x="391" y="363" width="177" height="115" rx="16" fill="#FFFFFF" stroke="#CBD7E8"/>
+    <text x="408" y="387" fill="#356CFF" font-size="9" font-weight="700" letter-spacing="1.4" font-family="Arial, sans-serif">02 / APP</text>
+    <text x="408" y="406" fill="#10213D" font-size="13" font-weight="700" font-family="Arial, sans-serif">Integraciones</text>
+    <g id="nodos-app">
+      <path d="M432 444H466M480 444H527" stroke="#9FB6E5" stroke-width="2" stroke-linecap="round"/>
+      <rect x="413" y="430" width="26" height="28" rx="6" fill="#EAF0FF" stroke="#AFC4FC"/>
+      <path d="M420 441H432M420 447H428" stroke="#356CFF" stroke-width="1.5" stroke-linecap="round"/>
+      <rect x="463" y="430" width="27" height="28" rx="6" fill="#356CFF"/>
+      <path d="M470 442L475 447L483 438" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="514" y="430" width="37" height="28" rx="6" fill="#F3F6FC" stroke="#CFDAEC"/>
+      <circle cx="526" cy="444" r="4" fill="#356CFF" opacity="0.35"/>
+      <circle cx="539" cy="444" r="4" fill="#356CFF" opacity="0.9"/>
+    </g>
+  </g>
+
+  <!-- Puntos de contacto; pueden recibir animaciones de pulso -->
+  <g id="acentos" aria-hidden="true">
+    <circle cx="100" cy="92" r="3" fill="#356CFF"/>
+    <circle cx="492" cy="391" r="3" fill="#356CFF"/>
+    <path d="M289 46V61M281 54H296" stroke="#356CFF" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M315 462V476M308 469H322" stroke="#B1C3E5" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+</svg>

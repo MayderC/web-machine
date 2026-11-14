@@ -1,0 +1,27 @@
+# Danvrix.dev
+
+> Desarrollo web y software a medida para pequeños negocios: sitios, aplicaciones y asistentes de IA. Chat, voz, integraciones y automatizaciones.
+
+## Información
+- Estudio: Danvrix.dev
+- Ubicación: Costa Rica (UTC-6)
+- Idiomas: español
+- Enfoque: desarrollo web, aplicaciones a medida, asistentes de IA (chat y voz) e integraciones
+- Sitio web: https://danvrix.dev
+- Email: hola@danvrix.dev
+
+## Servicios
+- Desarrollo de sitios web y landing pages
+- Aplicaciones web a medida
+- Chatbots de IA para web
+- Llamadas en tiempo real desde la web
+- Integraciones con catálogo, agenda, documentos o CRM
+- Puesta en marcha, pruebas y soporte
+
+## Proyectos
+- Zyntia: plataforma de agentes de IA para chat y voz. https://www.zyntia.ai
+- Zayrel Studio: e-commerce con probador virtual y mockup 3D. https://www.zayrelstudio.com
+- ColabCountry / MoveNow: panel logístico con mapas en tiempo real.
+
+## Contacto
+- Email: hola@danvrix.dev

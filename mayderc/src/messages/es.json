@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "header": {
+    "title": "MayderC",
+    "subtitle": "FULLSTACK // WEB & AI",
+    "cta": "Contacto",
+    "themeToggle": "Cambiar tema",
+    "themeLabel": "Tema",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "hero": {
+    "badge": "DESARROLLADOR FULLSTACK",
+    "badgeSub": "COSTA RICA · REMOTO",
+    "headline": "Construyo aplicaciones web, APIs e integraciones de IA.",
+    "description": "Soy MayderC, desarrollador fullstack en Costa Rica. Trabajo con TypeScript y Python en frontend, backend y productos que integran IA: LLMs, agentes, RAG, voz y OCR.",
+    "ctaPrimary": "Ver proyectos",
+    "ctaSecondary": "Contacto",
+    "capabilities": {
+      "frontend": "Frontend",
+      "react": "React / Next.js",
+      "backend": "Backend",
+      "apis": "APIs",
+      "typescript": "TypeScript",
+      "python": "Python",
+      "llms": "LLMs",
+      "rag": "RAG",
+      "agents": "Agentes",
+      "voice": "Voz",
+      "ocr": "OCR"
+    }
+  },
+  "expertise": {
+    "label": "ÁREAS DE EXPERIENCIA",
+    "headline": "Dónde aporto valor técnico.",
+    "description": "Experiencia práctica en frontend, backend, integración de IA y gráficos 3D. Trabajo con equipos y productos en producción."
+  },
+  "expertiseCard": {
+    "techLabel": "Tecnologías habituales"
+  },
+  "projects": {
+    "label": "TRABAJO SELECCIONADO",
+    "headline": "Proyectos que he construido.",
+    "subtitle": "Producción y código abierto",
+    "detailsLabel": "Mi rol y contribución:",
+    "viewDemo": "Ver proyecto",
+    "experiments": {
+      "label": "Experimentos y proyectos abiertos",
+      "github": "Ver todos en GitHub"
+    }
+  },
+  "about": {
+    "label": "SOBRE MÍ",
+    "headline": "Me apasiona construir código honesto, útil y cuidado visualmente.",
+    "profile": {
+      "name": "MayderC",
+      "role": "Fullstack Developer",
+      "location": "COSTA RICA · UTC-6",
+      "remote": "REMOTO GLOBAL"
+    }
+  },
+  "techStack": {
+    "label": "HERRAMIENTAS & STACK",
+    "headline": "Tecnologías con las que trabajo habitualmente.",
+    "description": "Herramientas que uso en el día a día para construir aplicaciones estables."
+  },
+  "contact": {
+    "label": "CONTACTO",
+    "headline": "¿Hablamos de una oportunidad o colaboración?",
+    "description": "Si tienes una vacante, una colaboración o simplemente quieres conectar, escríbeme. Respondo en menos de 24–48 horas.",
+    "guarantee": {
+      "title": "Abierto a oportunidades",
+      "description": "Disponible para roles fullstack, remotos o en Costa Rica, y para colaboraciones en proyectos open source."
+    },
+    "channels": {
+      "label": "Canales directos",
+      "whatsapp": "WhatsApp",
+      "github": "GitHub // @mayderc",
+      "linkedin": "LinkedIn // MayderC"
+    },
+    "form": {
+      "nameLabel": "Tu nombre *",
+      "namePlaceholder": "Ej. Carlos Mendoza",
+      "emailLabel": "Correo electrónico *",
+      "emailPlaceholder": "carlos@email.com",
+      "serviceLabel": "Motivo de contacto *",
+      "messageLabel": "Cuéntame brevemente *",
+      "messagePlaceholder": "¿Es una oportunidad, una colaboración o una pregunta técnica? Cuéntame el contexto...",
+      "disclaimer": "Sin spam ni correos automáticos.",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando...",
+      "success": "Mensaje enviado",
+      "successTitle": "Mensaje recibido",
+      "successDescription": "Revisaré tu mensaje y te responderé a la brevedad."
+    }
+  },
+  "footer": {
+    "description": "Desarrollador fullstack enfocado en aplicaciones web, backend, APIs e integración de IA. Portafolio personal de MayderC.",
+    "navigation": "Navegación",
+    "links": "Enlaces",
+    "copyright": "© 2026 MayderC · Hecho con atención al detalle.",
+    "timezone": "UTC-6",
+    "version": "v3.0.0-portfolio"
+  },
+  "canvas3d": {
+    "title": "CANVAS_3D // INTERACTIVO",
+    "fps": "FPS",
+    "engine": "VECTOR_ENGINE",
+    "object": "OBJETO",
+    "objectValue": "Icosaedro regular",
+    "status": "ESTADO",
+    "dragHint": "Arrastra para rotar",
+    "matrixNote": "MATRIZ 3D EN CANVAS 2D"
+  }
+}

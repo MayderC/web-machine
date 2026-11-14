@@ -1,0 +1,24 @@
+# MayderC
+
+> Portafolio personal de MayderC, desarrollador fullstack en Costa Rica. Aplicaciones web, backend, APIs e integración de IA (LLMs, RAG, agentes, voz y OCR) con TypeScript, Python, React y Next.js.
+
+## Información
+- Desarrollador: MayderC
+- Ubicación: Costa Rica (UTC-6)
+- Idiomas: español (principal), inglés
+- Enfoque: desarrollo fullstack, backend y APIs, integración de IA, gráficos 3D y WebGL
+- Sitio web: https://mayderc.dev
+
+## Páginas
+- [Portafolio (ES)](https://mayderc.dev/es)
+- [Portfolio (EN)](https://mayderc.dev/en)
+
+## Proyectos
+- Zyntia — Agentes de IA conversacionales: RAG sobre documentos y catálogo, búsqueda de productos, herramientas de agendamiento y voz en tiempo real.
+- Zayrel Studio — E-commerce con mockup 3D: catálogo, probador virtual y editor de diseño para camisetas personalizadas.
+- ColabCountry / MoveNow — App de logística: panel de rutas y mapas en tiempo real con soporte offline-first.
+
+## Contacto
+- Email: contacto@mayderc.dev
+- GitHub: https://github.com/mayderc
+- LinkedIn: https://linkedin.com/in/mayderc

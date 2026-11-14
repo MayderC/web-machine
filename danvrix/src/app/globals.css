@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Danvrix design tokens
+   Navy, white and a single blue accent. No neon, no gradients.
+--------------------------------------------------------------------------- */
+
+:root,
+[data-theme="danvrix"] {
+  --c-bg: #f7f9fc;
+  --c-surface: #ffffff;
+  --c-ink: #0b1f3a;
+  --c-ink-soft: #8a9aaf;
+  --c-muted: #5b6b7f;
+  --c-border: #d6dfea;
+  --c-yellow: #1d4ed8;
+  --c-mint: #e8eef7;
+  --c-orange: #12345b;
+  --c-on-accent: #ffffff;
+  --c-on-accent-2: #0b1f3a;
+  --c-shadow: #0b1f3a;
+
+  --dv-navy: #0b1f3a;
+  --dv-navy-soft: #12345b;
+  --dv-blue: #1d4ed8;
+  --dv-blue-soft: #e8eef7;
+  --dv-border: #d6dfea;
+  --dv-muted: #5b6b7f;
+  --dv-bg: #f7f9fc;
+}
+
+@theme {
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
+  --font-mono: var(--font-space-mono), "Space Mono", monospace;
+}
+
+@theme inline {
+  --color-retro-bg: var(--c-bg);
+  --color-retro-card: var(--c-surface);
+  --color-retro-ink: var(--c-ink);
+  --color-retro-muted: var(--c-muted);
+  --color-retro-border: var(--c-border);
+  --color-dv-navy: var(--dv-navy);
+  --color-dv-navy-soft: var(--dv-navy-soft);
+  --color-dv-blue: var(--dv-blue);
+  --color-dv-blue-soft: var(--dv-blue-soft);
+  --color-dv-border: var(--dv-border);
+  --color-dv-muted: var(--dv-muted);
+  --color-dv-bg: var(--dv-bg);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--c-bg);
+    color: var(--c-ink);
+    font-family: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--dv-blue);
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--c-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--c-ink);
+  }
+
+  section[id] {
+    scroll-margin-top: 88px;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Hero illustration interactions
+--------------------------------------------------------------------------- */
+
+.dv-module-highlight {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.dv-hero-module:hover .dv-module-highlight {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dv-module-highlight {
+    transition: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Motion
+--------------------------------------------------------------------------- */
+
+@keyframes dv-dot {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+.dv-dot {
+  animation: dv-dot 1.2s ease-in-out infinite;
+}
+
+.dv-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.dv-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes dv-wave {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.dv-wave-bar {
+  animation: dv-wave 1.1s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dv-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .dv-dot,
+  .dv-wave-bar {
+    animation: none;
+  }
+}
+
+@media print {
+  .dv-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
