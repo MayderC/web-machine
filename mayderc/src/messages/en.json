@@ -18,7 +18,7 @@
   "hero": {
     "badge": "FULLSTACK DEVELOPER",
     "badgeSub": "COSTA RICA · REMOTE",
-    "headline": "I build web applications, APIs and AI integrations.",
+    "headline": "I work on web applications, APIs and AI integrations.",
     "description": "I'm MayderC, a fullstack developer based in Costa Rica. I work with TypeScript and Python across frontend, backend and AI-powered products: LLMs, agents, RAG, voice and OCR.",
     "ctaPrimary": "View projects",
     "ctaSecondary": "Contact",
@@ -38,14 +38,14 @@
   },
   "expertise": {
     "label": "AREAS OF EXPERIENCE",
-    "headline": "Where I add technical value.",
-    "description": "Hands-on experience across frontend, backend, AI integration and 3D graphics. I work with teams and products in production."
+    "headline": "Areas I work in.",
+    "description": "Frontend, backend, AI integration and 3D graphics. Areas I use in real projects."
   },
   "expertiseCard": {
     "techLabel": "Usual technologies"
   },
   "projects": {
-    "label": "SELECTED WORK",
+    "label": "PROJECTS",
     "headline": "Projects I've built.",
     "subtitle": "Production & open source",
     "detailsLabel": "My role and contribution:",
@@ -57,29 +57,29 @@
   },
   "about": {
     "label": "ABOUT ME",
-    "headline": "I care about building honest, useful and visually polished code.",
+    "headline": "Fullstack developer. I like building things that work and make sense.",
     "profile": {
       "name": "MayderC",
       "role": "Fullstack Developer",
       "location": "COSTA RICA · UTC-6",
-      "remote": "GLOBAL REMOTE"
+      "remote": "REMOTE"
     }
   },
   "techStack": {
     "label": "TOOLS & STACK",
     "headline": "Technologies I work with regularly.",
-    "description": "Tools I use day to day to build stable applications."
+    "description": "Tools I use day to day."
   },
   "contact": {
     "label": "CONTACT",
-    "headline": "Shall we talk about an opportunity or collaboration?",
-    "description": "If you have a role, a collaboration or just want to connect, send me a message. I reply within 24–48 hours.",
+    "headline": "Let's talk.",
+    "description": "If you want to talk about a project, a role or an idea, send me a message. I'll reply when I can.",
     "guarantee": {
-      "title": "Open to opportunities",
-      "description": "Available for fullstack roles, remote or in Costa Rica, and for open-source collaborations."
+      "title": "Quick facts",
+      "description": "Costa Rica · UTC-6 · Remote · Spanish and English."
     },
     "channels": {
-      "label": "Direct channels",
+      "label": "Links",
       "whatsapp": "WhatsApp",
       "github": "GitHub // @mayderc",
       "linkedin": "LinkedIn // MayderC"
@@ -90,21 +90,21 @@
       "emailLabel": "Email *",
       "emailPlaceholder": "carlos@email.com",
       "serviceLabel": "Reason for contact *",
-      "messageLabel": "Tell me briefly *",
-      "messagePlaceholder": "Is it a role, a collaboration or a technical question? Share the context...",
+      "messageLabel": "Tell me what you have in mind *",
+      "messagePlaceholder": "An idea, a role, a technical question...",
       "disclaimer": "No spam or automated emails.",
       "submit": "Send message",
       "submitting": "Sending...",
       "success": "Message sent",
       "successTitle": "Message received",
-      "successDescription": "I'll review your message and get back to you shortly."
+      "successDescription": "Thanks. I'll reply when I can."
     }
   },
   "footer": {
-    "description": "Fullstack developer focused on web applications, backend, APIs and AI integration. MayderC's personal portfolio.",
+    "description": "Fullstack developer. MayderC's portfolio.",
     "navigation": "Navigation",
     "links": "Links",
-    "copyright": "© 2026 MayderC · Built with attention to detail.",
+    "copyright": "© 2026 MayderC.",
     "timezone": "UTC-6",
     "version": "v3.0.0-portfolio"
   },

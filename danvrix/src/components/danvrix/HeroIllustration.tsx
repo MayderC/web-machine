@@ -459,7 +459,7 @@ export function HeroIllustration() {
           <rect x="423" y="31" width="151" height="128" rx="16" fill="#10213D" />
           <text
             x="439"
-            y="55"
+            y="52"
             fill="#AFC4FF"
             fontSize="9"
             fontWeight="700"
@@ -470,7 +470,7 @@ export function HeroIllustration() {
           </text>
           <text
             x="439"
-            y="75"
+            y="78"
             fill="#FFFFFF"
             fontSize="13"
             fontWeight="700"
@@ -510,7 +510,7 @@ export function HeroIllustration() {
           <rect x="36" y="317" width="173" height="126" rx="15" fill="#FFFFFF" stroke="#CBD7E8" />
           <text
             x="51"
-            y="340"
+            y="337"
             fill="#356CFF"
             fontSize="9"
             fontWeight="700"
@@ -521,7 +521,7 @@ export function HeroIllustration() {
           </text>
           <text
             x="51"
-            y="358"
+            y="362"
             fill="#10213D"
             fontSize="13"
             fontWeight="700"
@@ -567,7 +567,7 @@ export function HeroIllustration() {
           <rect x="391" y="363" width="177" height="115" rx="16" fill="#FFFFFF" stroke="#CBD7E8" />
           <text
             x="408"
-            y="387"
+            y="384"
             fill="#356CFF"
             fontSize="9"
             fontWeight="700"
@@ -578,7 +578,7 @@ export function HeroIllustration() {
           </text>
           <text
             x="408"
-            y="406"
+            y="409"
             fill="#10213D"
             fontSize="13"
             fontWeight="700"

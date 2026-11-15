@@ -22,7 +22,7 @@ const services = [
     category: 'IA APLICADA',
     title: 'Asistentes de IA',
     description:
-      'Chatbots que responden preguntas, capturan datos y agendan citas con la información real de tu negocio.',
+      'Chatbots que responden preguntas, capturan datos y agendan citas. Puedo implementarlo con Zyntia o construir una solución a medida.',
     tags: ['RAG', 'Widget', 'Chat'],
   },
   {

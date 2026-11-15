@@ -1,5 +1,6 @@
 const siteLinks = [
   ['Servicios', '#servicios'],
+  ['Asistentes', '#asistentes'],
   ['Proyectos', '#proyectos'],
   ['Proceso', '#proceso'],
   ['Estudio', '#estudio'],

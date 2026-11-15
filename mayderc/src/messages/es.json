@@ -18,7 +18,7 @@
   "hero": {
     "badge": "DESARROLLADOR FULLSTACK",
     "badgeSub": "COSTA RICA · REMOTO",
-    "headline": "Construyo aplicaciones web, APIs e integraciones de IA.",
+    "headline": "Trabajo en aplicaciones web, APIs e integraciones de IA.",
     "description": "Soy MayderC, desarrollador fullstack en Costa Rica. Trabajo con TypeScript y Python en frontend, backend y productos que integran IA: LLMs, agentes, RAG, voz y OCR.",
     "ctaPrimary": "Ver proyectos",
     "ctaSecondary": "Contacto",
@@ -38,14 +38,14 @@
   },
   "expertise": {
     "label": "ÁREAS DE EXPERIENCIA",
-    "headline": "Dónde aporto valor técnico.",
-    "description": "Experiencia práctica en frontend, backend, integración de IA y gráficos 3D. Trabajo con equipos y productos en producción."
+    "headline": "Áreas en las que trabajo.",
+    "description": "Frontend, backend, integración de IA y gráficos 3D. Áreas que uso en proyectos reales."
   },
   "expertiseCard": {
     "techLabel": "Tecnologías habituales"
   },
   "projects": {
-    "label": "TRABAJO SELECCIONADO",
+    "label": "PROYECTOS",
     "headline": "Proyectos que he construido.",
     "subtitle": "Producción y código abierto",
     "detailsLabel": "Mi rol y contribución:",
@@ -57,29 +57,29 @@
   },
   "about": {
     "label": "SOBRE MÍ",
-    "headline": "Me apasiona construir código honesto, útil y cuidado visualmente.",
+    "headline": "Desarrollador fullstack. Me gusta construir cosas que funcionan y se entienden.",
     "profile": {
       "name": "MayderC",
       "role": "Fullstack Developer",
       "location": "COSTA RICA · UTC-6",
-      "remote": "REMOTO GLOBAL"
+      "remote": "REMOTO"
     }
   },
   "techStack": {
     "label": "HERRAMIENTAS & STACK",
     "headline": "Tecnologías con las que trabajo habitualmente.",
-    "description": "Herramientas que uso en el día a día para construir aplicaciones estables."
+    "description": "Herramientas que uso en el día a día."
   },
   "contact": {
     "label": "CONTACTO",
-    "headline": "¿Hablamos de una oportunidad o colaboración?",
-    "description": "Si tienes una vacante, una colaboración o simplemente quieres conectar, escríbeme. Respondo en menos de 24–48 horas.",
+    "headline": "Hablemos.",
+    "description": "Si quieres conversar sobre un proyecto, una vacante o una idea, escríbeme. Te responderé cuando pueda.",
     "guarantee": {
-      "title": "Abierto a oportunidades",
-      "description": "Disponible para roles fullstack, remotos o en Costa Rica, y para colaboraciones en proyectos open source."
+      "title": "Datos rápidos",
+      "description": "Costa Rica · UTC-6 · Remoto · Español e inglés."
     },
     "channels": {
-      "label": "Canales directos",
+      "label": "Enlaces",
       "whatsapp": "WhatsApp",
       "github": "GitHub // @mayderc",
       "linkedin": "LinkedIn // MayderC"
@@ -90,21 +90,21 @@
       "emailLabel": "Correo electrónico *",
       "emailPlaceholder": "carlos@email.com",
       "serviceLabel": "Motivo de contacto *",
-      "messageLabel": "Cuéntame brevemente *",
-      "messagePlaceholder": "¿Es una oportunidad, una colaboración o una pregunta técnica? Cuéntame el contexto...",
+      "messageLabel": "Cuéntame qué tienes en mente *",
+      "messagePlaceholder": "Una idea, una vacante, una pregunta técnica...",
       "disclaimer": "Sin spam ni correos automáticos.",
       "submit": "Enviar mensaje",
       "submitting": "Enviando...",
       "success": "Mensaje enviado",
       "successTitle": "Mensaje recibido",
-      "successDescription": "Revisaré tu mensaje y te responderé a la brevedad."
+      "successDescription": "Gracias. Te responderé cuando pueda."
     }
   },
   "footer": {
-    "description": "Desarrollador fullstack enfocado en aplicaciones web, backend, APIs e integración de IA. Portafolio personal de MayderC.",
+    "description": "Desarrollador fullstack. Portafolio de MayderC.",
     "navigation": "Navegación",
     "links": "Enlaces",
-    "copyright": "© 2026 MayderC · Hecho con atención al detalle.",
+    "copyright": "© 2026 MayderC.",
     "timezone": "UTC-6",
     "version": "v3.0.0-portfolio"
   },

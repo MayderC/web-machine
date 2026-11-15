@@ -58,14 +58,14 @@ export function getBio(locale: Locale): string[] {
   
   if (isES) {
     return [
-      'Mi nombre es MayderC. Soy Bachiller en Ingeniería en Tecnologías de la Información y trabajo principalmente con TypeScript, tanto en frontend como en backend.',
+      'Soy MayderC, Bachiller en Ingeniería en Tecnologías de la Información. Trabajo principalmente con TypeScript, tanto en frontend como en backend.',
       'En frontend uso React o Vue, con Tailwind CSS o SCSS para los estilos, y consumo APIs REST. En backend construyo APIs con Node.js y NestJS, y también he trabajado con Java y Spring Boot. Me manejo con MongoDB, SQL y ORMs, y uso Git y Docker a diario.',
       'Sigo aprendiendo: ahora estoy viendo AWS y microservicios. De vez en cuando armo proyectos personales con Python, IA (LLMs) y 3D con Three.js.'
     ];
   }
   
   return [
-    'My name is MayderC. I hold a Bachelor\'s degree in Information Technology Engineering and I work mainly with TypeScript, on both frontend and backend.',
+    'I\'m MayderC. I hold a Bachelor\'s degree in Information Technology Engineering and I work mainly with TypeScript, on both frontend and backend.',
     'On the frontend I use React or Vue, with Tailwind CSS or SCSS for styling, and I consume REST APIs. On the backend I build APIs with Node.js and NestJS, and I\'ve also worked with Java and Spring Boot. I\'m comfortable with MongoDB, SQL and ORMs, and I use Git and Docker daily.',
     'I keep learning: right now I\'m looking into AWS and microservices. Now and then I build personal projects with Python, AI (LLMs) and 3D with Three.js.'
   ];
@@ -80,7 +80,7 @@ export function getExpertiseData(locale: Locale): ExpertiseItem[] {
         id: '01',
         category: 'FRONTEND',
         title: 'Frontend & Aplicaciones Web',
-        description: 'Interfaces fluidas, componentes reutilizables y tipado seguro. Enfoque en velocidad de carga real, accesibilidad y experiencia cuidada.',
+        description: 'Interfaces con React y Next.js, componentes reutilizables y tipado con TypeScript. Trabajo accesibilidad, rendimiento y estados de carga.',
         tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
         icon: 'web',
         color: 'yellow',
@@ -89,7 +89,7 @@ export function getExpertiseData(locale: Locale): ExpertiseItem[] {
         id: '02',
         category: 'BACKEND',
         title: 'Backend, APIs & Automatización',
-        description: 'Servicios rápidos y mantenibles, webhooks, colas de procesamiento en segundo plano y sincronizaciones fiables entre plataformas.',
+        description: 'APIs con Node.js y FastAPI, webhooks, colas en segundo plano y sincronización entre plataformas.',
         tech: ['Node.js', 'Express / FastAPI', 'PostgreSQL', 'Redis'],
         icon: 'terminal',
         color: 'mint',
@@ -98,7 +98,7 @@ export function getExpertiseData(locale: Locale): ExpertiseItem[] {
         id: '03',
         category: 'IA PRÁCTICA',
         title: 'Integración de IA',
-        description: 'Conexión directa con APIs de modelos de lenguaje (OpenAI, Claude), flujos de búsqueda sobre documentos (RAG) y llamadas a herramientas (function calling).',
+        description: 'Conexión con APIs de modelos (OpenAI, Claude), búsqueda sobre documentos (RAG) y llamadas a herramientas.',
         tech: ['OpenAI / Anthropic', 'pgvector', 'LangChain', 'Streaming UI'],
         icon: 'smart_toy',
         color: 'orange',
@@ -107,7 +107,7 @@ export function getExpertiseData(locale: Locale): ExpertiseItem[] {
         id: '04',
         category: 'GRÁFICOS & 3D',
         title: 'Gráficos 3D & WebGL',
-        description: 'Visualizaciones de datos interactivas, modelos 3D en el navegador, animaciones por canvas y shaders ligeros que no bloquean el renderizado del usuario.',
+        description: 'Visualizaciones interactivas, modelos 3D en el navegador, animaciones por canvas y shaders con WebGL/GLSL.',
         tech: ['Three.js', 'WebGL', 'HTML5 Canvas', 'Shaders GLSL'],
         icon: 'view_in_ar',
         color: 'yellow',
@@ -120,7 +120,7 @@ export function getExpertiseData(locale: Locale): ExpertiseItem[] {
       id: '01',
       category: 'FRONTEND',
       title: 'Frontend & Web Applications',
-      description: 'Fluid interfaces, reusable components and safe typing. Focus on real load speed, accessibility and polished experience.',
+      description: 'React and Next.js interfaces, reusable components and TypeScript typing. I work on accessibility, performance and loading states.',
       tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
       icon: 'web',
       color: 'yellow',
@@ -129,7 +129,7 @@ export function getExpertiseData(locale: Locale): ExpertiseItem[] {
       id: '02',
       category: 'BACKEND',
       title: 'Backend, APIs & Automation',
-      description: 'Fast and maintainable services, webhooks, background processing queues and reliable cross-platform synchronization.',
+      description: 'APIs with Node.js and FastAPI, webhooks, background queues and cross-platform synchronization.',
       tech: ['Node.js', 'Express / FastAPI', 'PostgreSQL', 'Redis'],
       icon: 'terminal',
       color: 'mint',
@@ -138,7 +138,7 @@ export function getExpertiseData(locale: Locale): ExpertiseItem[] {
       id: '03',
       category: 'PRACTICAL AI',
       title: 'AI Integration',
-      description: 'Direct connection with LLM APIs (OpenAI, Claude), document search flows (RAG) and tool calling (function calling).',
+      description: 'Model APIs (OpenAI, Claude), document search with RAG and tool calling.',
       tech: ['OpenAI / Anthropic', 'pgvector', 'LangChain', 'Streaming UI'],
       icon: 'smart_toy',
       color: 'orange',
@@ -147,7 +147,7 @@ export function getExpertiseData(locale: Locale): ExpertiseItem[] {
       id: '04',
       category: 'GRAPHICS & 3D',
       title: '3D Graphics & WebGL',
-      description: 'Interactive data visualizations, 3D models in the browser, canvas animations and lightweight shaders that don\'t block user rendering.',
+      description: 'Interactive visualizations, 3D models in the browser, canvas animations and WebGL/GLSL shaders.',
       tech: ['Three.js', 'WebGL', 'HTML5 Canvas', 'Shaders GLSL'],
       icon: 'view_in_ar',
       color: 'yellow',
@@ -403,24 +403,24 @@ export function getAboutValues(locale: Locale): AboutValue[] {
   if (isES) {
     return [
       {
-        title: 'Código mantenible',
-        description: 'Priorizo claridad, tipado y decisiones que el siguiente equipo pueda sostener.',
+        title: 'Código claro',
+        description: 'Prefiero soluciones simples, tipadas y fáciles de mantener.',
       },
       {
-        title: 'Aprendizaje continuo',
-        description: 'Exploro nuevas herramientas y las aplico con criterio, no por moda.',
+        title: 'Aprendizaje constante',
+        description: 'Me gusta probar herramientas nuevas en proyectos reales.',
       },
     ];
   }
   
   return [
     {
-      title: 'Maintainable code',
-      description: 'I prioritize clarity, typing and decisions the next team can sustain.',
+      title: 'Clear code',
+      description: 'I prefer simple, typed solutions that are easy to maintain.',
     },
     {
-      title: 'Continuous learning',
-      description: 'I explore new tools and apply them with judgment, not hype.',
+      title: 'Always learning',
+      description: 'I like trying new tools on real projects.',
     },
   ];
 }

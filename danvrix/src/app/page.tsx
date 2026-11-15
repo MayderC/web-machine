@@ -4,6 +4,7 @@ import { DanvrixHeader } from '@/components/danvrix/DanvrixHeader';
 import { DanvrixHero } from '@/components/danvrix/DanvrixHero';
 import { DanvrixServices } from '@/components/danvrix/DanvrixServices';
 import { DanvrixZyntia } from '@/components/danvrix/DanvrixZyntia';
+import { DanvrixAIServices } from '@/components/danvrix/DanvrixAIServices';
 import { DanvrixWork } from '@/components/danvrix/DanvrixWork';
 import { DanvrixProcess } from '@/components/danvrix/DanvrixProcess';
 import { DanvrixAbout } from '@/components/danvrix/DanvrixAbout';
@@ -80,6 +81,7 @@ export default function DanvrixPage() {
         <DanvrixHero />
         <DanvrixServices />
         <DanvrixZyntia />
+        <DanvrixAIServices />
         <DanvrixWork />
         <DanvrixProcess />
         <DanvrixAbout />
