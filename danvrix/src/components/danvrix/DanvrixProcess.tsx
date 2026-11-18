@@ -37,46 +37,38 @@ export function DanvrixProcess() {
       <div className="mx-auto w-full max-w-7xl px-4 py-16 md:px-8 md:py-24">
         <Reveal>
           <div className="max-w-2xl">
-            <div className="mb-3 flex items-center gap-3">
-              <span className="h-px w-8 bg-dv-blue" />
-              <span className="font-mono text-[11px] font-bold tracking-[0.18em] text-dv-muted">
-                CÓMO TRABAJO
-              </span>
-            </div>
-            <h2 className="font-sans text-3xl font-extrabold tracking-tight text-dv-navy sm:text-4xl">
-              De la idea a una solución funcionando.
+            <p className="dv-eyebrow">Cómo trabajo</p>
+            <h2 className="mt-4 text-[28px] font-medium leading-[1.15] tracking-[-0.02em] text-dv-ink sm:text-[32px]">
+              De la idea a una solución funcionando
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-dv-muted">
-              Un proceso corto y ordenado. Tú conoces tu negocio; yo me encargo de la
-              parte técnica.
+            <p className="mt-4 text-[15px] leading-[1.6] text-dv-ink-2">
+              Un proceso corto y ordenado. Tú conoces tu negocio; yo me encargo de la parte
+              técnica.
             </p>
           </div>
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-0 lg:grid-cols-4">
           {steps.map((step, index) => (
-            <Reveal key={step.number} delay={index * 90}>
+            <Reveal key={step.number} delay={index * 50}>
               <div className="relative border-l border-dv-border pb-8 pl-6 last:pb-0 lg:border-l-0 lg:border-t lg:pb-0 lg:pl-0 lg:pr-6 lg:pt-8">
-                <span className="absolute -left-[5px] top-0 h-2.5 w-2.5 rounded-full border-2 border-white bg-dv-blue lg:-top-[5px] lg:left-0" />
-                <span className="font-mono text-[11px] font-bold tracking-[0.18em] text-dv-blue">
+                <span className="absolute -left-[4px] top-0 h-2 w-2 border-2 border-dv-bg bg-dv-accent lg:-top-[5px] lg:left-0" />
+                <span className="dv-num font-mono text-[11px] text-dv-accent-ink">
                   {step.number}
                 </span>
-                <h3 className="mt-3 text-lg font-bold text-dv-navy">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-dv-muted">
+                <h3 className="mt-3 text-[17px] font-medium text-dv-ink">{step.title}</h3>
+                <p className="mt-2 text-[14px] leading-[1.6] text-dv-ink-2">
                   {step.description}
                 </p>
-                <p className="mt-4 font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-dv-muted">
-                  {step.detail}
-                </p>
+                <p className="mt-4 text-[11px] text-dv-muted">{step.detail}</p>
               </div>
             </Reveal>
           ))}
         </div>
 
         <Reveal delay={120}>
-          <div className="mt-10 flex items-start gap-3 rounded-lg border border-dv-border bg-white p-5">
-            <span className="mt-2 h-px w-4 shrink-0 bg-dv-blue" />
-            <p className="text-sm leading-relaxed text-dv-muted">
+          <div className="mt-10 border-t border-dv-border pt-6">
+            <p className="max-w-3xl text-[14px] leading-[1.6] text-dv-ink-2">
               Definimos el alcance y las preguntas clave antes de configurar nada. Así la
               solución resuelve lo que realmente necesita tu negocio.
             </p>

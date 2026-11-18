@@ -7,51 +7,45 @@ export function DanvrixChatPreview() {
       role="img"
       aria-label="Vista previa de un asistente de IA respondiendo preguntas y atendiendo una llamada en tiempo real"
     >
-      <div className="overflow-hidden rounded-xl border border-dv-border bg-white shadow-[0_24px_60px_rgba(11,31,58,0.12)]">
-        <div className="flex items-center justify-between border-b border-dv-border bg-dv-bg px-4 py-3">
+      <div className="overflow-hidden rounded-2xl border border-dv-border bg-dv-surface shadow-[0_16px_40px_rgba(30,42,35,0.08)]">
+        <div className="flex items-center justify-between border-b border-dv-border bg-dv-raised px-4 py-3">
           <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-dv-blue" />
-            <span className="font-mono text-[11px] font-bold tracking-wider text-dv-navy">
-              ASISTENTE · DEMO
-            </span>
+            <span className="h-[6px] w-[6px] bg-dv-accent-line" />
+            <span className="text-[13px] font-medium text-dv-ink">Asistente · demo</span>
           </div>
-          <span className="font-mono text-[10px] font-bold tracking-wider text-dv-muted">
-            EN LÍNEA
-          </span>
+          <span className="text-[11px] text-dv-muted">En línea</span>
         </div>
 
         <div className="space-y-4 p-5">
-          <div className="ml-auto max-w-[86%] rounded-2xl rounded-br-sm bg-dv-blue px-4 py-3 text-sm leading-relaxed text-white">
+          <div className="ml-auto max-w-[86%] rounded-xl rounded-br-[4px] bg-dv-primary px-4 py-3 text-[14px] leading-[1.5] text-dv-on-primary">
             Hola, quiero saber si hacen envíos a Heredia.
           </div>
 
-          <div className="max-w-[86%] rounded-2xl rounded-bl-sm border border-dv-border bg-white px-4 py-3 text-sm leading-relaxed text-dv-navy">
+          <div className="max-w-[86%] rounded-xl rounded-bl-[4px] border border-dv-border bg-dv-raised px-4 py-3 text-[14px] leading-[1.5] text-dv-ink">
             Sí, hacemos envíos a todo Costa Rica. ¿Quieres que te comparta tiempos y costo?
           </div>
 
-          <div className="flex w-fit items-center gap-1.5 rounded-2xl rounded-bl-sm border border-dv-border bg-white px-4 py-3">
-            <span className="dv-dot h-1.5 w-1.5 rounded-full bg-dv-blue" />
-            <span className="dv-dot h-1.5 w-1.5 rounded-full bg-dv-blue" />
-            <span className="dv-dot h-1.5 w-1.5 rounded-full bg-dv-blue" />
+          <div className="flex w-fit items-center gap-1.5 rounded-xl rounded-bl-[4px] border border-dv-border bg-dv-raised px-4 py-3">
+            <span className="dv-dot h-1.5 w-1.5 rounded-full bg-dv-muted" />
+            <span className="dv-dot h-1.5 w-1.5 rounded-full bg-dv-muted" />
+            <span className="dv-dot h-1.5 w-1.5 rounded-full bg-dv-muted" />
           </div>
         </div>
 
         <div className="flex items-center gap-2 border-t border-dv-border px-4 py-3">
-          <div className="flex-1 rounded-full border border-dv-border bg-dv-bg px-4 py-2 text-xs text-dv-muted">
-            Escribe tu pregunta...
+          <div className="flex-1 rounded-lg border border-dv-border bg-dv-bg px-4 py-2 text-[12px] text-dv-muted">
+            Escribe tu pregunta
           </div>
-          <span className="material-symbols-outlined text-[20px] text-dv-blue">send</span>
+          <span className="material-symbols-outlined text-[18px] text-dv-muted">send</span>
         </div>
       </div>
 
-      <div className="mt-4 flex items-center justify-between gap-4 rounded-xl border border-dv-border bg-white p-4 shadow-[0_12px_30px_rgba(11,31,58,0.08)]">
+      <div className="mt-4 flex items-center justify-between gap-4 rounded-xl border border-dv-border bg-dv-surface p-4">
         <div className="flex items-center gap-3">
-          <span className="h-9 w-px bg-dv-blue" />
+          <span className="h-9 w-px bg-dv-accent-line" />
           <div>
-            <p className="text-xs font-bold text-dv-navy">Llamada en tiempo real</p>
-            <p className="font-mono text-[10px] font-bold tracking-wider text-dv-muted">
-              00:12 · EN VIVO
-            </p>
+            <p className="text-[13px] font-medium text-dv-ink">Llamada en tiempo real</p>
+            <p className="dv-num text-[11px] text-dv-muted">00:12 · En vivo</p>
           </div>
         </div>
 
@@ -59,8 +53,8 @@ export function DanvrixChatPreview() {
           {waveBars.map((height, index) => (
             <span
               key={index}
-              className="dv-wave-bar w-0.5 rounded-full bg-dv-blue/70"
-              style={{ height: `${height}px`, animationDelay: `${index * 70}ms` }}
+              className="w-0.5 rounded-full bg-dv-accent-line/60"
+              style={{ height: `${height}px` }}
             />
           ))}
         </div>

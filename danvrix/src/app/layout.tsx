@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#0b1f3a',
+  themeColor: '#f8f7fa',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -88,7 +88,7 @@ export default function DanvrixLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-retro-bg font-sans text-retro-ink antialiased min-h-full">
+      <body className="min-h-full bg-dv-bg font-sans text-dv-ink antialiased">
         {children}
       </body>
     </html>

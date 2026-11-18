@@ -15,14 +15,14 @@ export function DanvrixHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-dv-border bg-white/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-dv-border bg-dv-bg">
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 md:px-8">
-        <a className="group flex items-center gap-2.5" href="#inicio">
-          <span className="flex h-8 w-8 items-center justify-center rounded-md bg-dv-navy font-mono text-sm font-bold text-white">
+        <a className="flex items-center gap-2.5" href="#inicio">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-dv-primary text-[13px] font-medium text-dv-on-primary">
             D
           </span>
-          <span className="font-sans text-lg font-extrabold tracking-tight text-dv-navy">
-            Danvrix<span className="text-dv-blue">.dev</span>
+          <span className="text-[17px] font-medium tracking-[-0.01em] text-dv-ink">
+            Danvrix<span className="text-dv-accent-ink">.dev</span>
           </span>
         </a>
 
@@ -30,7 +30,7 @@ export function DanvrixHeader() {
           {links.map((link) => (
             <a
               key={link.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-dv-muted transition-colors hover:bg-dv-blue-soft hover:text-dv-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dv-blue"
+              className="rounded-lg px-3 py-2 text-sm text-dv-ink-2 transition-colors hover:bg-dv-raised hover:text-dv-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dv-accent"
               href={link.href}
             >
               {link.label}
@@ -39,10 +39,7 @@ export function DanvrixHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            className="hidden items-center gap-1.5 rounded-md bg-dv-navy px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-dv-navy-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dv-blue sm:inline-flex"
-            href="#contacto"
-          >
+          <a className="dv-btn dv-btn-primary dv-btn-quiet hidden sm:inline-flex" href="#contacto">
             Hablemos
             <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
           </a>
@@ -51,10 +48,10 @@ export function DanvrixHeader() {
             aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={open}
             aria-controls="danvrix-mobile-menu"
-            className="flex h-9 w-9 items-center justify-center rounded-md border border-dv-border text-dv-navy transition-colors hover:bg-dv-blue-soft md:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-dv-border text-dv-ink transition-colors hover:bg-dv-raised focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dv-accent md:hidden"
             onClick={() => setOpen((value) => !value)}
           >
-            <span className="material-symbols-outlined text-[20px]">
+            <span className="material-symbols-outlined text-[18px]">
               {open ? 'close' : 'menu'}
             </span>
           </button>
@@ -62,12 +59,15 @@ export function DanvrixHeader() {
       </div>
 
       {open && (
-        <div id="danvrix-mobile-menu" className="border-t border-dv-border bg-white md:hidden">
-          <nav className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-4 py-4" aria-label="Navegación móvil">
+        <div id="danvrix-mobile-menu" className="border-t border-dv-border bg-dv-surface md:hidden">
+          <nav
+            className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-4 py-4"
+            aria-label="Navegación móvil"
+          >
             {links.map((link) => (
               <a
                 key={link.href}
-                className="rounded-md px-3 py-2.5 text-sm font-medium text-dv-muted transition-colors hover:bg-dv-blue-soft hover:text-dv-navy"
+                className="rounded-lg px-3 py-2.5 text-sm text-dv-ink-2 transition-colors hover:bg-dv-raised hover:text-dv-ink"
                 href={link.href}
                 onClick={() => setOpen(false)}
               >
@@ -75,7 +75,7 @@ export function DanvrixHeader() {
               </a>
             ))}
             <a
-              className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-md bg-dv-navy px-4 py-2.5 text-sm font-semibold text-white"
+              className="dv-btn dv-btn-primary mt-2"
               href="#contacto"
               onClick={() => setOpen(false)}
             >

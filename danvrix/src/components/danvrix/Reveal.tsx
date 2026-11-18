@@ -14,10 +14,14 @@ export function Reveal({ children, className = '', delay = 0 }: RevealProps) {
   return (
     <motion.div
       className={`dv-reveal ${className}`}
-      initial={reduce ? false : { opacity: 0, y: 14 }}
-      whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 8 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '0px 0px -40px 0px' }}
-      transition={{ duration: 0.8, delay: delay / 1000, ease: 'easeOut' }}
+      transition={{
+        duration: reduce ? 0 : 0.45,
+        delay: reduce ? 0 : delay / 1000,
+        ease: [0.22, 1, 0.36, 1],
+      }}
     >
       {children}
     </motion.div>

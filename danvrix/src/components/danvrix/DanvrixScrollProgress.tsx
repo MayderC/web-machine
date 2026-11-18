@@ -5,15 +5,15 @@ import { motion, useScroll, useSpring } from 'motion/react';
 export function DanvrixScrollProgress() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
-    stiffness: 120,
-    damping: 30,
+    stiffness: 260,
+    damping: 40,
     mass: 0.2,
   });
 
   return (
     <motion.div
       aria-hidden="true"
-      className="fixed left-0 top-0 z-[60] h-0.5 w-full origin-left bg-dv-blue"
+      className="fixed left-0 top-0 z-[60] h-0.5 w-full origin-left bg-dv-accent-line"
       style={{ scaleX }}
     />
   );

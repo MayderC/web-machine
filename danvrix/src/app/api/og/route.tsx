@@ -12,7 +12,7 @@ export async function GET() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          backgroundColor: '#0b1f3a',
+          backgroundColor: '#292334',
           padding: '64px',
           fontFamily: 'sans-serif',
         }}
@@ -25,20 +25,20 @@ export async function GET() {
               justifyContent: 'center',
               width: '56px',
               height: '56px',
-              borderRadius: '8px',
-              backgroundColor: '#ffffff',
-              color: '#0b1f3a',
+              borderRadius: '10px',
+              backgroundColor: '#f8f7fa',
+              color: '#292334',
               fontSize: '30px',
-              fontWeight: '800',
+              fontWeight: '500',
             }}
           >
             D
           </div>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-            <span style={{ color: '#ffffff', fontSize: '38px', fontWeight: '800', letterSpacing: '-0.02em' }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '2px' }}>
+            <span style={{ color: '#f8f7fa', fontSize: '38px', fontWeight: '500' }}>
               Danvrix
             </span>
-            <span style={{ color: '#9db8d8', fontSize: '38px', fontWeight: '800', letterSpacing: '-0.02em' }}>
+            <span style={{ color: '#c9c3d4', fontSize: '38px', fontWeight: '500' }}>
               .dev
             </span>
           </div>
@@ -50,28 +50,26 @@ export async function GET() {
               display: 'flex',
               alignItems: 'center',
               gap: '10px',
-              color: '#9db8d8',
+              color: '#c9c3d4',
               fontSize: '18px',
-              fontWeight: '700',
-              letterSpacing: '0.12em',
             }}
           >
-            <div style={{ width: '32px', height: '2px', backgroundColor: '#1d4ed8' }} />
-            DESARROLLO WEB & SOFTWARE
+            <div style={{ width: '6px', height: '6px', backgroundColor: '#66d9b1' }} />
+            Desarrollo web y software
           </div>
           <div
             style={{
-              color: '#ffffff',
-              fontSize: '64px',
-              fontWeight: '800',
-              lineHeight: '1.08',
-              letterSpacing: '-0.03em',
+              color: '#f8f7fa',
+              fontSize: '62px',
+              fontWeight: '500',
+              lineHeight: '1.06',
+              letterSpacing: '-0.02em',
             }}
           >
-            Desarrollo web y software a medida.
+            Desarrollo web y software a medida
           </div>
-          <div style={{ color: '#c7d6e8', fontSize: '26px', lineHeight: '1.4' }}>
-            Sitios, aplicaciones y asistentes de IA para pequeños negocios.
+          <div style={{ color: '#c9c3d4', fontSize: '26px', lineHeight: '1.4' }}>
+            Sitios, aplicaciones y asistentes de IA para pequeños negocios
           </div>
         </div>
 
@@ -84,11 +82,9 @@ export async function GET() {
                 alignItems: 'center',
                 padding: '10px 18px',
                 borderRadius: '6px',
-                border: '1px solid rgba(255,255,255,0.18)',
-                backgroundColor: 'rgba(255,255,255,0.06)',
-                color: '#dbe6f2',
+                border: '1px solid rgba(248,247,250,0.22)',
+                color: '#c9c3d4',
                 fontSize: '18px',
-                fontWeight: '700',
               }}
             >
               {tag}
